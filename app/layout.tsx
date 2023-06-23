@@ -1,3 +1,4 @@
+import MainHeader from '@/components/MainHeader'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,7 +16,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={inter.className} suppressHydrationWarning={true}>
+        <header className="text-center">
+          <MainHeader />
+        </header>
+        {children}
+        <footer className="text-center">foot</footer>
+      </body>
     </html>
   )
 }
