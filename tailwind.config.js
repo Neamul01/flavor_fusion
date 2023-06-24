@@ -18,6 +18,13 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Roboto', 'Arial', 'sans-serif'],
+        jost: ['var(--font-jost)'],
+        cormorant_garamond: [
+          'var(--font-cormorant_garamond)',
+          'Roboto',
+          'Arial',
+          'sans-serif',
+        ],
       },
     },
   },

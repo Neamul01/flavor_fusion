@@ -32,3 +32,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+p button h4 h5 h6 {
+  font-family: var(--font-jost);
+}
+
+h1 h2 h3 {
+  font-family: var(--font-cormorant_garamond);
+}

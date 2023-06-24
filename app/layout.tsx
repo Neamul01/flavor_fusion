@@ -1,6 +1,6 @@
 import MainHeader from '@/components/MainHeader'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Cormorant_Garamond, Inter, Jost } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,6 +9,20 @@ export const metadata = {
   description: 'Take test to find your favourite food flavor',
 }
 
+const jost = Jost({
+  weight: ['400', '500', '600', '800'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jost',
+})
+
+const cormorantGaramond = Cormorant_Garamond({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-cormorant_garamond',
+})
+
 export default function RootLayout({
   children,
 }: {
@@ -16,18 +30,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={inter.className} suppressHydrationWarning={true}>
+      <body
+        className={`${jost.variable}, ${cormorantGaramond.variable}`}
+        suppressHydrationWarning={true}
+      >
         <header className="text-center">
           <MainHeader />
         </header>
-        {children}
-        <footer className="text-center">foot</footer>
+        <main className={`${jost.variable}`}>{children}</main>
+        <footer className={`text-center font-jost ${jost.className}`}>
+          foot
+        </footer>
       </body>
     </html>
   )
