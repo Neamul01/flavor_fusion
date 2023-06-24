@@ -11,9 +11,7 @@ export const metadata = {
 
 const jost = Jost({
   weight: ['400', '500', '600', '800'],
-  style: ['normal', 'italic'],
   subsets: ['latin'],
-  display: 'swap',
   variable: '--font-jost',
 })
 
@@ -31,16 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jost.variable}, ${cormorantGaramond.variable}`}
+        className={` ${cormorantGaramond.variable} ${jost.variable}`}
         suppressHydrationWarning={true}
       >
         <header className="text-center">
           <MainHeader />
         </header>
-        <main className={`${jost.variable}`}>{children}</main>
-        <footer className={`text-center font-jost ${jost.className}`}>
-          foot
-        </footer>
+        <main>{children}</main>
+        <footer className={`text-center font-jost`}>foot</footer>
       </body>
     </html>
   )

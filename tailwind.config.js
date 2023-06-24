@@ -14,17 +14,12 @@ module.exports = {
       },
       colors: {
         primary: '#c9933f',
-        secondary: '#04161d',
+        secondary: 'var(--secondary-color)',
       },
       fontFamily: {
         sans: ['Roboto', 'Arial', 'sans-serif'],
         jost: ['var(--font-jost)'],
-        cormorant_garamond: [
-          'var(--font-cormorant_garamond)',
-          'Roboto',
-          'Arial',
-          'sans-serif',
-        ],
+        cormorant: ['var(--font-cormorant_garamond)'],
       },
     },
   },

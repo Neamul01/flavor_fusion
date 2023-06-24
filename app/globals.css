@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --secondary-color: #04161d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,7 +25,7 @@
 } */
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--secondary-color);
   background: linear-gradient(
       to bottom,
       transparent,
@@ -33,10 +34,17 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-p button h4 h5 h6 {
+p,
+button,
+h4,
+h5,
+h6,
+a {
   font-family: var(--font-jost);
 }
 
-h1 h2 h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-cormorant_garamond);
 }

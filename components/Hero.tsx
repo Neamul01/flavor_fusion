@@ -6,8 +6,8 @@ function Hero() {
   // return <div className={`${jost.className}`}>Hero</div>
   return (
     <div>
-      <h1 className="text-4xl">Hero item</h1>
-      <p className={`font-jost`}>
+      <h1 className="text-4xl font-cormorant">Hero item</h1>
+      <p className="text-secondary">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nesciunt
         aut enim. Illo, adipisci pariatur?
       </p>
