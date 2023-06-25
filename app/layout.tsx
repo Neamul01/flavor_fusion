@@ -39,7 +39,9 @@ export default function RootLayout({
           <MainHeader />
         </header>
         <main>{children}</main>
-        <footer className={`text-center font-jost h-40`}>foot</footer>
+        <footer className={`text-center font-jost h-20 bg-white border-t-4`}>
+          foot
+        </footer>
       </body>
     </html>
   )

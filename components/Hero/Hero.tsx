@@ -19,6 +19,11 @@ function Hero() {
         direction={'vertical'}
         pagination={pagination}
         modules={[Pagination]}
+        autoplay={{
+          delay: 500,
+          disableOnInteraction: false,
+          reverseDirection: true,
+        }}
         className="mySwiper w-full h-[calc(100vh-4rem)]"
       >
         {/* <div slot="container-start">
