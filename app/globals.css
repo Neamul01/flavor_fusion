@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-color: #c9933f;
   --secondary-color: #04161d;
 }
 
@@ -26,12 +27,7 @@
 
 body {
   color: var(--secondary-color);
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--secondary-color);
 }
 
 p,
@@ -47,4 +43,5 @@ h1,
 h2,
 h3 {
   font-family: var(--font-cormorant_garamond);
+  color: var(--secondary-color);
 }

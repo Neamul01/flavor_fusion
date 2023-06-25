@@ -1,6 +1,7 @@
 import MainHeader from '@/components/MainHeader'
 import './globals.css'
 import { Cormorant_Garamond, Inter, Jost } from 'next/font/google'
+import 'swiper/swiper.min.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
