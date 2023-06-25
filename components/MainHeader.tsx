@@ -146,7 +146,7 @@ function MainHeader() {
   return (
     <Header
       height={80}
-      className="bg-white text-secondary rounded-full max-w-[100rem] mx-auto"
+      className="bg-white text-secondary rounded-full max-w-layout mx-auto"
     >
       <div className={`${classes.inner} h-full w-full md:px-8 px-4`}>
         <Link href={'/'} className="w-44 cursor-pointer">

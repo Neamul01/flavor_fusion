@@ -10,6 +10,10 @@
   --secondary-color: #04161d;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
