@@ -3,7 +3,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
-import './foodCarousel.module.css'
+import './foodCarousel.css'
 
 function FoodCarousel() {
   return (
@@ -16,17 +16,14 @@ function FoodCarousel() {
           }}
           watchSlidesProgress={true}
           slidesPerView={4}
-          className="mySwiper"
+          className="mySwiper-food"
         >
           {[1, 2, 3, 4, 5, 6].map((a) => {
             return (
               <SwiperSlide
                 key={a}
-                style={{
-                  height: 300,
-                  marginRight: 2,
-                  backgroundColor: 'white',
-                }}
+                style={{}}
+                className="flex justify-center items-center swiper-slide-food"
               >
                 Slide 1
               </SwiperSlide>

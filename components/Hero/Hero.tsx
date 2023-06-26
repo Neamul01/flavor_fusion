@@ -24,14 +24,14 @@ function Hero() {
           disableOnInteraction: false,
           reverseDirection: true,
         }}
-        className="mySwiper w-full h-[calc(100vh-4rem)]"
+        className="mySwiper-hero w-full h-[calc(100vh-4rem)]"
       >
         {/* <div slot="container-start">
           <div className="text-black h-40">Container Start</div>
         </div> */}
         {[1, 2, 3].map((a) => {
           return (
-            <SwiperSlide key={a} className="text-left">
+            <SwiperSlide key={a} className="text-left swiper-slide-hero">
               <BannerItem />
             </SwiperSlide>
           )
