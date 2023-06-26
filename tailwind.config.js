@@ -20,7 +20,7 @@ module.exports = {
       },
       colors: {
         primary: '#c9933f',
-        secondary: 'var(--secondary-color)',
+        secondary: '#04161d',
       },
       fontFamily: {
         sans: ['Roboto', 'Arial', 'sans-serif'],
