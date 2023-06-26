@@ -59,7 +59,7 @@ function FoodCarousel() {
   ]
   return (
     <div className="text-primary bg-white w-full h-full relative">
-      <div className="max-w-layout mx-auto overflow-hidden h-[300px] box-border mt-4">
+      <div className="max-w-layout mx-auto my-24">
         <Swiper
           loop={true}
           autoplay={{

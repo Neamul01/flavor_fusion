@@ -35,7 +35,7 @@ export default function RootLayout({
         className={` ${cormorantGaramond.variable} ${jost.variable}`}
         suppressHydrationWarning={true}
       >
-        <header className="text-center sticky top-0">
+        <header className="text-center sticky top-0 z-50">
           <MainHeader />
         </header>
         <main>{children}</main>
