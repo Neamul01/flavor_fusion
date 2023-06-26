@@ -34,6 +34,7 @@ function BannerItem() {
         </p>
         <Button
           leftIcon={<BsArrowUpRightCircle size={'1.3rem'} />}
+          name="discover-more"
           className="text-primary border-primary rounded-full hover:bg-primary hover:text-white"
           size="lg"
         >

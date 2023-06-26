@@ -1,6 +1,6 @@
 import MainHeader from '@/components/MainHeader'
 import './globals.css'
-import { Cormorant_Garamond, Inter, Jost } from 'next/font/google'
+import { Cormorant, Inter, Jost } from 'next/font/google'
 import 'swiper/swiper.min.css'
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -15,12 +15,14 @@ export const metadata = {
 const jost = Jost({
   weight: ['400', '500', '600', '800'],
   subsets: ['latin'],
+  display: 'swap',
   variable: '--font-jost',
 })
 
-const cormorantGaramond = Cormorant_Garamond({
+const cormorantGaramond = Cormorant({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
+  display: 'swap',
   variable: '--font-cormorant_garamond',
 })
 
