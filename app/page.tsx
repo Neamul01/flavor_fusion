@@ -1,6 +1,7 @@
 import AboutTo from '@/components/AboutTo'
 import FoodCarousel from '@/components/FoodCarousel'
 import Hero from '@/components/Hero/Hero'
+import NewItem from '@/components/NewItem/NewItem'
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <FoodCarousel />
       <AboutTo />
+      <NewItem />
     </main>
   )
 }

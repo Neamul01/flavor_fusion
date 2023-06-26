@@ -1,0 +1,12 @@
+/* .mySwiper-newItem {
+  width: 700px;
+  height: 700px;
+} */
+.swiper-slide-newItem {
+  width: 300px;
+  line-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}

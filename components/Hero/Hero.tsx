@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper'
+import { Autoplay, Navigation, Pagination } from 'swiper'
 import BannerItem from './BannerItem'
 
 function Hero() {
@@ -17,11 +17,13 @@ function Hero() {
     <div className="bg-secondary w-full">
       <div className="text-white w-full mx-auto max-w-layout">
         <Swiper
+          loop={true}
+          navigation={true}
           direction={'vertical'}
           pagination={pagination}
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay, Navigation]}
           autoplay={{
-            delay: 500,
+            delay: 2500,
             disableOnInteraction: false,
             reverseDirection: true,
           }}
