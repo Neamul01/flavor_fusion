@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import CustomButton from './Common/CustomButton'
 
 function AboutTo() {
   return (
@@ -35,6 +36,8 @@ function AboutTo() {
             publishing software like Aldus PageMaker including versions of Lorem
             Ipsum.
           </p>
+
+          <CustomButton name="Discover more" text="Discoder more" />
         </div>
       </div>
     </div>

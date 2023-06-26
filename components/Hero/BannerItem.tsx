@@ -5,6 +5,7 @@ import { Button } from '@mantine/core'
 import { BsArrowUpRightCircle } from 'react-icons/bs'
 import Image from 'next/image'
 import './hero.css'
+import CustomButton from '../Common/CustomButton'
 
 function BannerItem() {
   return (
@@ -32,14 +33,15 @@ function BannerItem() {
           It is a long established fact that a reader will be distracted by the
           readable content of a page.
         </p>
-        <Button
+        <CustomButton name="discover-more" text="Discover More" />
+        {/* <Button
           leftIcon={<BsArrowUpRightCircle size={'1.3rem'} />}
           name="discover-more"
           className="text-primary border-primary rounded-full hover:bg-primary hover:text-white"
           size="lg"
         >
           Discover More
-        </Button>
+        </Button> */}
       </div>
       <div className="relative flex">
         <div className="w-80 h-80">
