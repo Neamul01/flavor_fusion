@@ -2,11 +2,48 @@
 
 import Image from 'next/image'
 import React from 'react'
-import { Navigation, Pagination } from 'swiper'
+import { Autoplay, Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import './newItem.css'
 
 function NewItem() {
+  const newItems = [
+    {
+      id: 1,
+      name: 'Noodles',
+      description:
+        'It is a long established fact that a reader will be distracted.',
+      img: '/newItem/regular-items11.png',
+    },
+    {
+      id: 1,
+      name: 'Noodles',
+      description:
+        'It is a long established fact that a reader will be distracted.',
+      img: '/newItem/regular-items12.png',
+    },
+    {
+      id: 1,
+      name: 'Noodles',
+      description:
+        'It is a long established fact that a reader will be distracted.',
+      img: '/newItem/regular-items13.png',
+    },
+    {
+      id: 1,
+      name: 'Noodles',
+      description:
+        'It is a long established fact that a reader will be distracted.',
+      img: '/newItem/regular-items11.png',
+    },
+    {
+      id: 1,
+      name: 'Noodles',
+      description:
+        'It is a long established fact that a reader will be distracted.',
+      img: '/newItem/regular-items12.png',
+    },
+  ]
   return (
     <div className="text-secondary bg-[linear-gradient(rgba(9,22,29,.8),rgba(9,22,29,.8)),url('/regular-items-bg.png')] bg-cover bg-no-repeat h-auto w-full">
       <div className="max-w-layout mx-auto flex flex-col justify-center items-center h-full gap-4 mb-20 pt-20">
@@ -36,67 +73,38 @@ function NewItem() {
           <Swiper
             slidesPerView={3}
             pagination={{
-              type: 'progressbar',
+              type: 'fraction',
             }}
             navigation={true}
-            modules={[Pagination, Navigation]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            speed={1000}
+            loop={true}
+            modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper-newItem w-layout"
           >
-            {[1, 2, 3, 4, 5].map((item) => {
+            {newItems.map((item) => {
               return (
-                <SwiperSlide key={item} className="swiper-slide-newItem">
+                <SwiperSlide key={item.id} className="swiper-slide-newItem">
                   <div className="flex gap-3 flex-col items-center">
                     <Image
-                      src={'/newItem/regular-items11.png'}
-                      alt="new item 1"
+                      src={item.img}
+                      alt={item.name}
                       height={417}
                       width={416}
                     />
                     <div className="px-10 text-center max-w-[19.5rem]">
-                      <h3 className="text-3xl text-white">Noodles</h3>
+                      <h3 className="text-3xl text-white">{item.name}</h3>
                       <p className="text-white/75 text-base">
-                        It is a long established fact that a reader will be
-                        distracted.
+                        {item.description}
                       </p>
                     </div>
                   </div>
                 </SwiperSlide>
               )
             })}
-            {/* <SwiperSlide className="swiper-slide-newItem">
-              <div className="flex gap-3  flex-col items-center">
-                <Image
-                  src={'/newItem/regular-items12.png'}
-                  alt="new item 1"
-                  height={417}
-                  width={416}
-                />
-                <div className="px-10 text-center max-w-[19.5rem]">
-                  <h3 className="text-3xl text-white">Noodles</h3>
-                  <p className="text-white/75 text-base">
-                    It is a long established fact that a reader will be
-                    distracted.
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide-newItem">
-              <div className="flex gap-3  flex-col items-center">
-                <Image
-                  src={'/newItem/regular-items13.png'}
-                  alt="new item 1"
-                  height={417}
-                  width={416}
-                />
-                <div className="px-10 text-center max-w-[19.5rem]">
-                  <h3 className="text-3xl text-white">Noodles</h3>
-                  <p className="text-white/75 text-base">
-                    It is a long established fact that a reader will be
-                    distracted.
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide> */}
           </Swiper>
         </div>
       </div>
