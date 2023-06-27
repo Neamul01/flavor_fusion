@@ -15,11 +15,14 @@ function MenuList() {
           </div>
           <CustomButton name="view-more" text="View More" color="secondary" />
         </div>
-        <div className=" grid grid-cols-12 gap-10">
+        <div className=" grid grid-cols-12 gap-y-8 mt-12">
           {[1, 2, 3, 4, 5, 6].map((item) => {
             return (
-              <div className="col-span-4" key={item}>
-                <div className="">
+              <div
+                className="col-span-4 border rounded-xl max-w-[26rem]"
+                key={item}
+              >
+                <div className="border rounded-t-xl overflow-hidden">
                   <Image
                     src={'/MenuItem/food-item-1.png'}
                     alt="food Item"
@@ -27,7 +30,15 @@ function MenuList() {
                     height={320}
                   />
                 </div>
-                div.flex.items-center
+                <div className="flex flex-col items-center mt-4 mb-6">
+                  <h2 className="text-3xl font-cormorant font-semibold my-4">
+                    Full Chicken
+                  </h2>
+                  <p className="text-secondary/75 leading-7 font-jost max-w-[15.625rem] text-center">
+                    It is a long established fact that a reader will be
+                    distracted.
+                  </p>
+                </div>
               </div>
             )
           })}
