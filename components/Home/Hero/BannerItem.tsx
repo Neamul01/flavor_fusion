@@ -5,7 +5,7 @@ import { Button } from '@mantine/core'
 import { BsArrowUpRightCircle } from 'react-icons/bs'
 import Image from 'next/image'
 import './hero.css'
-import CustomButton from '../Common/CustomButton'
+import CustomButton from '../../Common/CustomButton'
 
 function BannerItem() {
   return (

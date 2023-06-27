@@ -23,10 +23,11 @@ function Hero() {
           pagination={pagination}
           modules={[Pagination, Autoplay, Navigation]}
           autoplay={{
-            delay: 2500,
+            delay: 3500,
             disableOnInteraction: false,
             reverseDirection: true,
           }}
+          speed={1500}
           className="mySwiper-hero w-full h-[calc(100vh-4rem)]"
         >
           {[1, 2, 3].map((a) => {

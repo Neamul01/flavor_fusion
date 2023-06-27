@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import CustomButton from './Common/CustomButton'
+import CustomButton from '../Common/CustomButton'
 
 function AboutTo() {
   return (

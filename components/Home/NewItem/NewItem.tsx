@@ -14,6 +14,7 @@ function NewItem() {
       description:
         'It is a long established fact that a reader will be distracted.',
       img: '/newItem/regular-items11.png',
+      price: '37',
     },
     {
       id: 1,
@@ -21,6 +22,7 @@ function NewItem() {
       description:
         'It is a long established fact that a reader will be distracted.',
       img: '/newItem/regular-items12.png',
+      price: '45',
     },
     {
       id: 1,
@@ -28,6 +30,7 @@ function NewItem() {
       description:
         'It is a long established fact that a reader will be distracted.',
       img: '/newItem/regular-items13.png',
+      price: '33',
     },
     {
       id: 1,
@@ -35,6 +38,7 @@ function NewItem() {
       description:
         'It is a long established fact that a reader will be distracted.',
       img: '/newItem/regular-items11.png',
+      price: '36',
     },
     {
       id: 1,
@@ -42,6 +46,7 @@ function NewItem() {
       description:
         'It is a long established fact that a reader will be distracted.',
       img: '/newItem/regular-items12.png',
+      price: '25',
     },
   ]
   return (
@@ -89,12 +94,19 @@ function NewItem() {
               return (
                 <SwiperSlide key={item.id} className="swiper-slide-newItem">
                   <div className="flex gap-3 flex-col items-center">
-                    <Image
-                      src={item.img}
-                      alt={item.name}
-                      height={417}
-                      width={416}
-                    />
+                    <div className="relative">
+                      <Image
+                        src={item.img}
+                        alt={item.name}
+                        height={417}
+                        width={416}
+                      />
+                      <div className="w-14 h-14 bg-white hover:bg-primary flex items-center justify-center transform rotate-45 rounded-md absolute bottom-8 left-[43%]">
+                        <span className="text-xl font-semibold text-secondary/80 transform -rotate-45">
+                          ${item.price}
+                        </span>
+                      </div>
+                    </div>
                     <div className="px-10 text-center max-w-[19.5rem]">
                       <h3 className="text-3xl text-white">{item.name}</h3>
                       <p className="text-white/75 text-base">

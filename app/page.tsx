@@ -1,7 +1,7 @@
-import AboutTo from '@/components/AboutTo'
-import FoodCarousel from '@/components/FoodCarousel'
-import Hero from '@/components/Hero/Hero'
-import NewItem from '@/components/NewItem/NewItem'
+import AboutTo from '@/components/Home/AboutTo'
+import FoodCarousel from '@/components/Home/FoodCarousel'
+import Hero from '@/components/Home/Hero/Hero'
+import NewItem from '@/components/Home/NewItem/NewItem'
 
 export default function Home() {
   return (
