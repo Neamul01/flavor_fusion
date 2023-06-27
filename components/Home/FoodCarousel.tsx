@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper'
 import './foodCarousel.css'
 import Image from 'next/image'
+import HomeLayout from './Common/HomeLayout'
 
 function FoodCarousel() {
   const foodItems = [
@@ -58,52 +59,50 @@ function FoodCarousel() {
     },
   ]
   return (
-    <div className="text-primary bg-white w-full h-full relative">
-      <div className="max-w-layout mx-auto my-32">
-        <Swiper
-          loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          speed={2000}
-          watchSlidesProgress={true}
-          slidesPerView={4}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation, Autoplay]}
-          className="mySwiper-food"
-        >
-          {foodItems.map((food) => {
-            return (
-              <SwiperSlide
-                key={food.id}
-                className="relative swiper-slide-food px-16"
-              >
-                <div className="food-img absolute left-0">
-                  <Image
-                    src={food.img}
-                    alt={food.name}
-                    height={150}
-                    width={150}
-                  />
-                </div>
-                <div className="flex flex-col border ml-auto w-full pl-28">
-                  <a className="text-2xl text-secondary font-cormorant">
-                    {food.name}
-                  </a>
-                  <p className="text-sm max-w-[10rem] text-secondary/50 font-jost">
-                    {food.description}
-                  </p>
-                </div>
-              </SwiperSlide>
-            )
-          })}
-        </Swiper>
-      </div>
-    </div>
+    <HomeLayout customClass="my-32">
+      <Swiper
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        speed={2000}
+        watchSlidesProgress={true}
+        slidesPerView={4}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation, Autoplay]}
+        className="mySwiper-food"
+      >
+        {foodItems.map((food) => {
+          return (
+            <SwiperSlide
+              key={food.id}
+              className="relative swiper-slide-food px-16"
+            >
+              <div className="food-img absolute left-0">
+                <Image
+                  src={food.img}
+                  alt={food.name}
+                  height={150}
+                  width={150}
+                />
+              </div>
+              <div className="flex flex-col border ml-auto w-full pl-28">
+                <a className="text-2xl text-secondary font-cormorant">
+                  {food.name}
+                </a>
+                <p className="text-sm max-w-[10rem] text-secondary/50 font-jost">
+                  {food.description}
+                </p>
+              </div>
+            </SwiperSlide>
+          )
+        })}
+      </Swiper>
+    </HomeLayout>
   )
 }
 
