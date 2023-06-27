@@ -5,7 +5,7 @@ function H2heading({
   color = 'secondary' || 'white',
 }: {
   text: string
-  color: string
+  color?: string
 }) {
   return (
     <h2
