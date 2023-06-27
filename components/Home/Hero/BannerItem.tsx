@@ -6,26 +6,13 @@ import { BsArrowUpRightCircle } from 'react-icons/bs'
 import Image from 'next/image'
 import './hero.css'
 import CustomButton from '../../Common/CustomButton'
+import TopHeading from '../Common/TopHeading'
 
 function BannerItem() {
   return (
     <div className="grid grid-cols-2">
       <div className="flex flex-col items-start gap-4 ">
-        <div className="text-primary text-md flex gap-2">
-          <p className="w-5">
-            <Image
-              src={'sub-title-vec.svg'}
-              className="object-contain"
-              alt="vec"
-              width={0.2}
-              height={0.2}
-            />
-          </p>
-          <p>Welcome to Flavor Fusion</p>
-          <p className="w-5">
-            <Image src={'sub-title-vec.svg'} alt="vec" width={1} height={1} />
-          </p>
-        </div>
+        <TopHeading text="Welcome to Flavor Fusion" />
         <h2 className="text-7xl capitalize text-white text-left font-bold">
           Find your best healthy and testy food
         </h2>

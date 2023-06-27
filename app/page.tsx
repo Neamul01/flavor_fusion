@@ -1,6 +1,7 @@
 import AboutTo from '@/components/Home/AboutTo'
 import FoodCarousel from '@/components/Home/FoodCarousel'
 import Hero from '@/components/Home/Hero/Hero'
+import MenuList from '@/components/Home/MenuList/MenuList'
 import NewItem from '@/components/Home/NewItem/NewItem'
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <FoodCarousel />
       <AboutTo />
       <NewItem />
+      <MenuList />
     </main>
   )
 }

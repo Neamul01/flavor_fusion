@@ -5,6 +5,8 @@ import React from 'react'
 import { Autoplay, Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import './newItem.css'
+import H2heading from '../Common/H2heading'
+import TopHeading from '../Common/TopHeading'
 
 function NewItem() {
   const newItems = [
@@ -52,24 +54,9 @@ function NewItem() {
   return (
     <div className="text-secondary bg-[linear-gradient(rgba(9,22,29,.8),rgba(9,22,29,.8)),url('/regular-items-bg.png')] bg-cover bg-no-repeat h-auto w-full">
       <div className="max-w-layout mx-auto flex flex-col justify-center items-center h-full gap-4 mb-20 pt-20">
-        <div className="text-primary text-md flex items-center gap-2">
-          <p className="w-5 h-5 relative">
-            <Image
-              src={'/sub-title-vec.svg'}
-              className="object-contain"
-              alt="vec"
-              fill
-            />
-          </p>
-          <p className="text-base">Our New Items</p>
-          <p className="w-5 h-5 relative">
-            <Image src={'/sub-title-vec.svg'} alt="vec" fill />
-          </p>
-        </div>
+        <TopHeading text="Our New Items" />
         <div className="flex flex-col items-center gap-4">
-          <h2 className="text-6xl font-bold text-white">
-            Flavor Fusion New Items List
-          </h2>
+          <H2heading text="Flavor Fusion New Items List" color="white" />
           <p className="text-xl text-white">
             Various versions have evolved over the years, sometimes on purpose.
           </p>

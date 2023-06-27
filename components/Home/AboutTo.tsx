@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 import CustomButton from '../Common/CustomButton'
+import H2heading from './Common/H2heading'
+import TopHeading from './Common/TopHeading'
 
 function AboutTo() {
   return (
@@ -10,24 +12,12 @@ function AboutTo() {
           <Image src={'/about-img-full.png'} alt="about" fill />
         </div>
         <div className="about-right col-span-7 max-w-2xl">
-          <div className="text-primary text-md flex items-center gap-2">
-            <p className="w-5 h-5 relative">
-              <Image
-                src={'/sub-title-vec.svg'}
-                className="object-contain"
-                alt="vec"
-                fill
-              />
-            </p>
-            <p>About to Flavor Fusion</p>
-            <p className="w-5 h-5 relative">
-              <Image src={'/sub-title-vec.svg'} alt="vec" fill />
-            </p>
-          </div>
-          <h2 className="text-6xl font-semibold my-4">
-            Come to Our Restaurant,
-            <br /> Ready Your Food.
-          </h2>
+          <TopHeading text="About to Flavor Fusion" />
+          <H2heading
+            text={`Come to Our Restaurant,
+             Ready Your Food.`}
+            color="secondary"
+          />
           <p className="text-secondary/75 text-lg py-6">
             It has survived not only five centuries, but also the leap into
             electronic typesetting, remaining essentially unchanged. It was
