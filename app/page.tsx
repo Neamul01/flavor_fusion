@@ -1,4 +1,5 @@
 import AboutTo from '@/components/Home/AboutTo'
+import Experties from '@/components/Home/Experties/Experties'
 import FoodCarousel from '@/components/Home/FoodCarousel'
 import Gallery from '@/components/Home/Gallery/Gallery'
 import Hero from '@/components/Home/Hero/Hero'
@@ -14,6 +15,7 @@ export default function Home() {
       <NewItem />
       <MenuList />
       <Gallery />
+      <Experties />
     </main>
   )
 }

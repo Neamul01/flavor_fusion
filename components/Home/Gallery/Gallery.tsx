@@ -61,11 +61,6 @@ function Gallery() {
         </div>
         <Swiper
           loop={true}
-          //   autoplay={{
-          //     delay: 2500,
-          //     disableOnInteraction: false,
-          //   }}
-          //   speed={2000}
           watchSlidesProgress={true}
           slidesPerView={5}
           pagination={{

@@ -1,0 +1,52 @@
+.experties div {
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.experties div img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.experties div:hover img {
+  transform: scale(1.1);
+}
+
+.expoerties-profile ul {
+  display: flex;
+  justify-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.expoerties-profile ul li {
+  position: relative;
+}
+
+.expoerties-profile ul li:hover {
+  color: var(--primary-color);
+}
+
+.expoerties-profile ul li:hover::after {
+  background-color: var(--primary-color);
+}
+
+.expoerties-profile ul li::after {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(191, 148, 68, 0.3);
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+}
+
+.expoerties-profile ul li:first-child::after {
+  display: none;
+}
+
+.expoerties-profile ul li a {
+  font-size: 1.3rem;
+}
