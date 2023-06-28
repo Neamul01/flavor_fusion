@@ -61,11 +61,11 @@ function Gallery() {
         </div>
         <Swiper
           loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          speed={2000}
+          //   autoplay={{
+          //     delay: 2500,
+          //     disableOnInteraction: false,
+          //   }}
+          //   speed={2000}
           watchSlidesProgress={true}
           slidesPerView={5}
           pagination={{
@@ -81,9 +81,12 @@ function Gallery() {
                 <div
                   className={`h-[296px] w-[351px] ${
                     item.id % 2 === 0 ? '' : 'mt-3'
-                  } relative`}
+                  } relative overlay-gallery-parent`}
                 >
                   <Image src={item.img} fill alt="gallery" />
+                  <div className="overlay-gallery cursor-pointer h-[522px] w-[522px] relative ">
+                    <Image src={'/gallery/Zoom.svg'} fill alt="zoom" />
+                  </div>
                 </div>
               </SwiperSlide>
             )
