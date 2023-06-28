@@ -66,7 +66,7 @@ function Experties() {
                   <Image src={item.img} alt="experts" fill />
                 </div>
                 <div className="flex items-center flex-col my-8 expoerties-profile">
-                  <h3 className="text-2xl font-semibold capitalize hover:text-primary">
+                  <h3 className="text-2xl font-semibold capitalize hover:text-primary cursor-pointer">
                     {item.name}
                   </h3>
                   <p className="text-base text-secondary/75">{item.title}</p>
