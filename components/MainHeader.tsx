@@ -104,7 +104,7 @@ function MainHeader() {
   const { classes } = useStyles()
   const size = useWindowSize()
 
-  console.log(size)
+  // console.log(size)
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
