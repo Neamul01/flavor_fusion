@@ -1,5 +1,6 @@
 'use client'
 
+import { useWindowSize } from '@/hooks/useWindowSize'
 import {
   createStyles,
   Header,
@@ -13,6 +14,7 @@ import {
 import { useDisclosure } from '@mantine/hooks'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { BsChevronDown } from 'react-icons/bs'
 
 const useStyles = createStyles((theme) => ({
@@ -100,6 +102,9 @@ const links = [
 function MainHeader() {
   const [opened, { toggle }] = useDisclosure(false)
   const { classes } = useStyles()
+  const size = useWindowSize()
+
+  // console.log(size)
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
