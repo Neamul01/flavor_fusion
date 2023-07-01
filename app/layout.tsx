@@ -4,7 +4,7 @@ import { Cormorant, Inter, Jost } from 'next/font/google'
 import 'swiper/swiper.min.css'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import MainFooter from '@/components/MainFooter'
+import MainFooter from '@/components/Footer/MainFooter'
 
 const inter = Inter({ subsets: ['latin'] })
 
