@@ -4,6 +4,7 @@ import { Cormorant, Inter, Jost } from 'next/font/google'
 import 'swiper/swiper.min.css'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import MainFooter from '@/components/Footer/MainFooter'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -41,8 +42,8 @@ export default function RootLayout({
           <MainHeader />
         </header>
         <main>{children}</main>
-        <footer className={`text-center font-jost h-20 bg-white border-t-4`}>
-          foot
+        <footer>
+          <MainFooter />
         </footer>
       </body>
     </html>

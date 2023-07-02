@@ -16,6 +16,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { BsChevronDown } from 'react-icons/bs'
+import AppLogo from './Common/AppLogo'
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -153,16 +154,7 @@ function MainHeader() {
       <div
         className={`${classes.inner} h-full w-full max-w-layout mx-auto bg-white rounded-full md:px-8 px-4`}
       >
-        <Link href={'/'} className="w-44 cursor-pointer">
-          <Image
-            priority
-            width={250}
-            height={100}
-            src="/flavor-fusion-logo2.png"
-            alt="logo"
-            className=" overflow-hidden object-contain"
-          />
-        </Link>
+        <AppLogo />
         <Group spacing={5} className={`${classes.links}`}>
           {items}
         </Group>
