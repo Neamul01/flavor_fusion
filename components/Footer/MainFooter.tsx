@@ -209,7 +209,7 @@ function MainFooter() {
 
           <Group spacing={0} className={classes.social} position="right" noWrap>
             <ActionIcon size="lg">
-              {/* <IconBrandTwitter size="1.05rem" stroke={1.5} /> */}t
+              {/* <IconBrandTwitter size="1.05rem" stroke={1.5} /> */}twitter
             </ActionIcon>
             <ActionIcon size="lg">
               {/* <IconBrandYoutube size="1.05rem" stroke={1.5} /> */}y
