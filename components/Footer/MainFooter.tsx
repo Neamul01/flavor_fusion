@@ -212,7 +212,7 @@ function MainFooter() {
               {/* <IconBrandTwitter size="1.05rem" stroke={1.5} /> */}twitter
             </ActionIcon>
             <ActionIcon size="lg">
-              {/* <IconBrandYoutube size="1.05rem" stroke={1.5} /> */}y
+              {/* <IconBrandYoutube size="1.05rem" stroke={1.5} /><IconBrandYoutube/> */}
             </ActionIcon>
             <ActionIcon size="lg">
               {/* <IconBrandInstagram size="1.05rem" stroke={1.5} /> */}i
