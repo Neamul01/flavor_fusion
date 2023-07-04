@@ -105,7 +105,7 @@ const useStyles = createStyles((theme) => ({
     },
   },
 }))
-const data = {
+const AddressInfo = {
   title: 'About',
   links: [
     {
@@ -127,23 +127,47 @@ const data = {
   ],
 }
 
-const data2 = {
-  title: 'Project',
+const facilities = {
+  title: 'Our Facilities',
   links: [
     {
-      label: 'Contribute',
+      label: 'Bangladeshi Menu',
       link: '#',
     },
     {
-      label: 'Media assets',
+      label: 'Chainease Food',
       link: '#',
     },
     {
-      label: 'Changelog',
+      label: 'Italian Menu',
       link: '#',
     },
     {
-      label: 'Releases',
+      label: 'Private Event',
+      link: '#',
+    },
+    {
+      label: 'Indian Event',
+      link: '#',
+    },
+    {
+      label: 'Best Offer',
+      link: '#',
+    },
+    {
+      label: 'Popular Item',
+      link: '#',
+    },
+    {
+      label: 'Regular Food',
+      link: '#',
+    },
+    {
+      label: 'New Food',
+      link: '#',
+    },
+    {
+      label: 'Special Food',
       link: '#',
     },
   ],
@@ -153,7 +177,7 @@ function MainFooter() {
   const { classes } = useStyles()
 
   const groups = () => {
-    const links = data.links.map((link, index) => (
+    const links = AddressInfo.links.map((link, index) => (
       <Text<'a'>
         key={index}
         className={`${classes.link} text-lg font-jost`}
@@ -171,7 +195,7 @@ function MainFooter() {
           component="h2"
           className={`${classes.title} mb-4 text-4xl  text-white font-cormorant`}
         >
-          {data.title}
+          {AddressInfo.title}
         </Text>
         {links}
       </div>
@@ -179,7 +203,7 @@ function MainFooter() {
   }
 
   const facility = () => {
-    const links = data2.links.map((link, index) => (
+    const links = facilities.links.map((link, index) => (
       <Text<'a'>
         key={index}
         className={`${classes.link} text-lg font-jost`}
@@ -192,14 +216,14 @@ function MainFooter() {
     ))
 
     return (
-      <div className={`${classes.wrapper} text-white`}>
+      <div className={`${classes.wrapper} text-white flex-wrap`}>
         <Text<'h2'>
           component="h2"
           className={`${classes.title} mb-4 text-4xl  text-white font-cormorant`}
         >
-          {data.title}
+          {AddressInfo.title}
         </Text>
-        {links}
+        <div className="max-h-56 flex flex-wrap gap-x-6 flex-col">{links}</div>
       </div>
     )
   }
