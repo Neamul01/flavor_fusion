@@ -22,7 +22,7 @@ const expoerties = [
     },
   },
   {
-    id: 1,
+    id: 2,
     name: 'Mrs. Asha Haque',
     title: 'Chef of Head',
     img: '/experties/chef-kitchen2.png',
@@ -34,7 +34,7 @@ const expoerties = [
     },
   },
   {
-    id: 1,
+    id: 3,
     name: 'Mr. Najmul Haque',
     title: 'Chef of Head',
     img: '/experties/chef-kitchen3.png',

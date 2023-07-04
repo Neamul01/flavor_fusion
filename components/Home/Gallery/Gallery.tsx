@@ -46,7 +46,7 @@ const galleryItems = [
     img: '/gallery/2col-gallery-04.png',
   },
   {
-    id: 9,
+    id: 10,
     img: '/gallery/2col-gallery-05.png',
   },
 ]
