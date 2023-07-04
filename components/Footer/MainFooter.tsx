@@ -11,6 +11,12 @@ import {
   rem,
 } from '@mantine/core'
 import AppLogo from '../Common/AppLogo'
+import { BsTwitter } from 'react-icons/bs'
+import {
+  BiLogoFacebook,
+  BiLogoInstagramAlt,
+  BiLogoLinkedin,
+} from 'react-icons/bi'
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -208,14 +214,17 @@ function MainFooter() {
           </Text>
 
           <Group spacing={0} className={classes.social} position="right" noWrap>
-            <ActionIcon size="lg">
-              {/* <IconBrandTwitter size="1.05rem" stroke={1.5} /> */}twitter
+            <ActionIcon size="lg" className="border">
+              <BiLogoFacebook />
             </ActionIcon>
             <ActionIcon size="lg">
-              {/* <IconBrandYoutube size="1.05rem" stroke={1.5} /><IconBrandYoutube/> */}
+              <BiLogoInstagramAlt />
             </ActionIcon>
             <ActionIcon size="lg">
-              {/* <IconBrandInstagram size="1.05rem" stroke={1.5} /> */} i
+              <BiLogoLinkedin />
+            </ActionIcon>
+            <ActionIcon size="lg">
+              <BsTwitter />
             </ActionIcon>
           </Group>
         </div>
