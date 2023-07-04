@@ -106,7 +106,7 @@ const useStyles = createStyles((theme) => ({
   },
 }))
 const AddressInfo = {
-  title: 'About',
+  title: 'Address Info',
   links: [
     {
       label: 'Features',
@@ -193,7 +193,7 @@ function MainFooter() {
       <div className={classes.wrapper}>
         <Text<'h2'>
           component="h2"
-          className={`${classes.title} mb-4 text-4xl  text-white font-cormorant`}
+          className={`${classes.title} mb-6 text-4xl  text-white font-cormorant w-56`}
         >
           {AddressInfo.title}
         </Text>
@@ -219,9 +219,9 @@ function MainFooter() {
       <div className={`${classes.wrapper} text-white flex-wrap`}>
         <Text<'h2'>
           component="h2"
-          className={`${classes.title} mb-4 text-4xl  text-white font-cormorant`}
+          className={`${classes.title} mb-6 text-4xl  text-white font-cormorant w-56`}
         >
-          {AddressInfo.title}
+          {facilities.title}
         </Text>
         <div className="max-h-56 flex flex-wrap gap-x-6 flex-col">{links}</div>
       </div>
@@ -231,20 +231,24 @@ function MainFooter() {
   return (
     <HomeLayout bg="secondary" color="white">
       <footer className={classes.footer}>
-        <div className={`${classes.inner} py-16`}>
-          <div className={classes.groups}>{facility()}</div>
-          <div className={classes.logo}>
-            <AppLogo />
-            <Text size="" color="dimmed" className={classes.description}>
-              Build fully functional accessible web applications faster than
-              ever
-            </Text>
+        <div className={`${classes.inner} py-16 w-full`}>
+          <div className={`${classes.groups}`}>{facility()}</div>
+
+          <div className={`${classes.logo} flex items-center`}>
+            <div className="">
+              <AppLogo />
+              <Text size="" color="dimmed" className={classes.description}>
+                Build fully functional accessible web applications faster than
+                ever
+              </Text>
+            </div>
           </div>
+
           <div className={classes.groups}>{groups()}</div>
         </div>
         <div className={classes.afterFooter}>
           <Text color="dimmed" size="sm">
-            © 2020 mantine.dev. All rights reserved.
+            @{new Date().getFullYear()} Flavor Fusion All rights reserved.
           </Text>
 
           <Group
