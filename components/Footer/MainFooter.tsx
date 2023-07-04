@@ -213,17 +213,35 @@ function MainFooter() {
             © 2020 mantine.dev. All rights reserved.
           </Text>
 
-          <Group spacing={0} className={classes.social} position="right" noWrap>
-            <ActionIcon size="lg" className="border">
+          <Group
+            spacing={10}
+            className={classes.social}
+            position="right"
+            noWrap
+            classNames={'text-white'}
+          >
+            <ActionIcon
+              size="md"
+              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+            >
               <BiLogoFacebook />
             </ActionIcon>
-            <ActionIcon size="lg">
+            <ActionIcon
+              size="md"
+              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+            >
               <BiLogoInstagramAlt />
             </ActionIcon>
-            <ActionIcon size="lg">
+            <ActionIcon
+              size="md"
+              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+            >
               <BiLogoLinkedin />
             </ActionIcon>
-            <ActionIcon size="lg">
+            <ActionIcon
+              size="md"
+              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+            >
               <BsTwitter />
             </ActionIcon>
           </Group>

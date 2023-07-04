@@ -42,7 +42,7 @@ export default function RootLayout({
           <MainHeader />
         </header>
         <main>{children}</main>
-        <footer>
+        <footer className="bg-[linear-gradient(rgba(9,22,29,.9),rgba(9,22,29,.9)),url('/footer-bg.png')] relative bg-cover bg-no-repeat">
           <MainFooter />
         </footer>
       </body>
