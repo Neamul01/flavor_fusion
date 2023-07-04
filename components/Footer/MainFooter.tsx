@@ -156,7 +156,7 @@ function MainFooter() {
     const links = data.links.map((link, index) => (
       <Text<'a'>
         key={index}
-        className={classes.link}
+        className={`${classes.link} text-lg font-jost`}
         component="a"
         href={link.link}
         onClick={(event) => event.preventDefault()}
@@ -167,7 +167,12 @@ function MainFooter() {
 
     return (
       <div className={classes.wrapper}>
-        <Text className={classes.title}>{data.title}</Text>
+        <Text<'h2'>
+          component="h2"
+          className={`${classes.title} mb-4 text-4xl  text-white font-cormorant`}
+        >
+          {data.title}
+        </Text>
         {links}
       </div>
     )
@@ -177,7 +182,7 @@ function MainFooter() {
     const links = data2.links.map((link, index) => (
       <Text<'a'>
         key={index}
-        className={classes.link}
+        className={`${classes.link} text-lg font-jost`}
         component="a"
         href={link.link}
         onClick={(event) => event.preventDefault()}
@@ -187,8 +192,13 @@ function MainFooter() {
     ))
 
     return (
-      <div className={classes.wrapper}>
-        <Text className={classes.title}>{data.title}</Text>
+      <div className={`${classes.wrapper} text-white`}>
+        <Text<'h2'>
+          component="h2"
+          className={`${classes.title} mb-4 text-4xl  text-white font-cormorant`}
+        >
+          {data.title}
+        </Text>
         {links}
       </div>
     )
@@ -197,7 +207,7 @@ function MainFooter() {
   return (
     <HomeLayout bg="secondary" color="white">
       <footer className={classes.footer}>
-        <div className={classes.inner}>
+        <div className={`${classes.inner} py-16`}>
           <div className={classes.groups}>{facility()}</div>
           <div className={classes.logo}>
             <AppLogo />
