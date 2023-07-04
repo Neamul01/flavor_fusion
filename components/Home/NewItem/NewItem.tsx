@@ -20,7 +20,7 @@ function NewItem() {
       price: '37',
     },
     {
-      id: 1,
+      id: 2,
       name: 'Noodles',
       description:
         'It is a long established fact that a reader will be distracted.',
@@ -28,7 +28,7 @@ function NewItem() {
       price: '45',
     },
     {
-      id: 1,
+      id: 3,
       name: 'Noodles',
       description:
         'It is a long established fact that a reader will be distracted.',
@@ -36,7 +36,7 @@ function NewItem() {
       price: '33',
     },
     {
-      id: 1,
+      id: 4,
       name: 'Noodles',
       description:
         'It is a long established fact that a reader will be distracted.',
@@ -44,7 +44,7 @@ function NewItem() {
       price: '36',
     },
     {
-      id: 1,
+      id: 5,
       name: 'Noodles',
       description:
         'It is a long established fact that a reader will be distracted.',

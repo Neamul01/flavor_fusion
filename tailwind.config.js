@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        layout: '100rem',
+        layout: '85rem',
       },
       width: {
-        layout: '100rem',
+        layout: '85rem',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

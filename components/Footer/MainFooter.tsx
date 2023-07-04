@@ -11,6 +11,12 @@ import {
   rem,
 } from '@mantine/core'
 import AppLogo from '../Common/AppLogo'
+import { BsTwitter } from 'react-icons/bs'
+import {
+  BiLogoFacebook,
+  BiLogoInstagramAlt,
+  BiLogoLinkedin,
+} from 'react-icons/bi'
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -99,8 +105,8 @@ const useStyles = createStyles((theme) => ({
     },
   },
 }))
-const data = {
-  title: 'About',
+const AddressInfo = {
+  title: 'Address Info',
   links: [
     {
       label: 'Features',
@@ -121,23 +127,47 @@ const data = {
   ],
 }
 
-const data2 = {
-  title: 'Project',
+const facilities = {
+  title: 'Our Facilities',
   links: [
     {
-      label: 'Contribute',
+      label: 'Bangladeshi Menu',
       link: '#',
     },
     {
-      label: 'Media assets',
+      label: 'Chainease Food',
       link: '#',
     },
     {
-      label: 'Changelog',
+      label: 'Italian Menu',
       link: '#',
     },
     {
-      label: 'Releases',
+      label: 'Private Event',
+      link: '#',
+    },
+    {
+      label: 'Indian Event',
+      link: '#',
+    },
+    {
+      label: 'Best Offer',
+      link: '#',
+    },
+    {
+      label: 'Popular Item',
+      link: '#',
+    },
+    {
+      label: 'Regular Food',
+      link: '#',
+    },
+    {
+      label: 'New Food',
+      link: '#',
+    },
+    {
+      label: 'Special Food',
       link: '#',
     },
   ],
@@ -147,10 +177,10 @@ function MainFooter() {
   const { classes } = useStyles()
 
   const groups = () => {
-    const links = data.links.map((link, index) => (
+    const links = AddressInfo.links.map((link, index) => (
       <Text<'a'>
         key={index}
-        className={classes.link}
+        className={`${classes.link} text-lg font-jost`}
         component="a"
         href={link.link}
         onClick={(event) => event.preventDefault()}
@@ -161,17 +191,22 @@ function MainFooter() {
 
     return (
       <div className={classes.wrapper}>
-        <Text className={classes.title}>{data.title}</Text>
+        <Text<'h2'>
+          component="h2"
+          className={`${classes.title} mb-6 text-4xl  text-white font-cormorant w-56`}
+        >
+          {AddressInfo.title}
+        </Text>
         {links}
       </div>
     )
   }
 
   const facility = () => {
-    const links = data2.links.map((link, index) => (
+    const links = facilities.links.map((link, index) => (
       <Text<'a'>
         key={index}
-        className={classes.link}
+        className={`${classes.link} text-lg font-jost`}
         component="a"
         href={link.link}
         onClick={(event) => event.preventDefault()}
@@ -181,9 +216,14 @@ function MainFooter() {
     ))
 
     return (
-      <div className={classes.wrapper}>
-        <Text className={classes.title}>{data.title}</Text>
-        {links}
+      <div className={`${classes.wrapper} text-white flex-wrap`}>
+        <Text<'h2'>
+          component="h2"
+          className={`${classes.title} mb-6 text-4xl  text-white font-cormorant w-56`}
+        >
+          {facilities.title}
+        </Text>
+        <div className="max-h-56 flex flex-wrap gap-x-6 flex-col">{links}</div>
       </div>
     )
   }
@@ -191,31 +231,56 @@ function MainFooter() {
   return (
     <HomeLayout bg="secondary" color="white">
       <footer className={classes.footer}>
-        <div className={classes.inner}>
-          <div className={classes.groups}>{facility()}</div>
-          <div className={classes.logo}>
-            <AppLogo />
-            <Text size="" color="dimmed" className={classes.description}>
-              Build fully functional accessible web applications faster than
-              ever
-            </Text>
+        <div className={`${classes.inner} py-16 w-full`}>
+          <div className={`${classes.groups}`}>{facility()}</div>
+
+          <div className={`${classes.logo} flex items-center`}>
+            <div className="">
+              <AppLogo />
+              <Text size="" color="dimmed" className={classes.description}>
+                Build fully functional accessible web applications faster than
+                ever
+              </Text>
+            </div>
           </div>
+
           <div className={classes.groups}>{groups()}</div>
         </div>
+
         <div className={classes.afterFooter}>
           <Text color="dimmed" size="sm">
-            © 2020 mantine.dev. All rights reserved.
+            @{new Date().getFullYear()} Flavor Fusion All rights reserved.
           </Text>
 
-          <Group spacing={0} className={classes.social} position="right" noWrap>
-            <ActionIcon size="lg">
-              {/* <IconBrandTwitter size="1.05rem" stroke={1.5} /> */}twitter
+          <Group
+            spacing={10}
+            className={`${classes.social} text-white`}
+            position="right"
+            noWrap
+          >
+            <ActionIcon
+              size="md"
+              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+            >
+              <BiLogoFacebook />
             </ActionIcon>
-            <ActionIcon size="lg">
-              {/* <IconBrandYoutube size="1.05rem" stroke={1.5} /><IconBrandYoutube/> */}
+            <ActionIcon
+              size="md"
+              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+            >
+              <BiLogoInstagramAlt />
             </ActionIcon>
-            <ActionIcon size="lg">
-              {/* <IconBrandInstagram size="1.05rem" stroke={1.5} /> */} i
+            <ActionIcon
+              size="md"
+              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+            >
+              <BiLogoLinkedin />
+            </ActionIcon>
+            <ActionIcon
+              size="md"
+              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+            >
+              <BsTwitter />
             </ActionIcon>
           </Group>
         </div>
