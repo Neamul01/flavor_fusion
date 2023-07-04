@@ -246,6 +246,7 @@ function MainFooter() {
 
           <div className={classes.groups}>{groups()}</div>
         </div>
+
         <div className={classes.afterFooter}>
           <Text color="dimmed" size="sm">
             @{new Date().getFullYear()} Flavor Fusion All rights reserved.
@@ -253,10 +254,9 @@ function MainFooter() {
 
           <Group
             spacing={10}
-            className={classes.social}
+            className={`${classes.social} text-white`}
             position="right"
             noWrap
-            classNames={'text-white'}
           >
             <ActionIcon
               size="md"
