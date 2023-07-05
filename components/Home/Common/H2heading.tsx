@@ -9,7 +9,7 @@ function H2heading({
 }) {
   return (
     <h2
-      className={`text-6xl font-bold ${
+      className={`text-4xl md:text-6xl font-bold ${
         color === 'white' ? 'text-white' : 'text-secondary'
       }`}
     >

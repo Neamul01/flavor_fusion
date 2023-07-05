@@ -8,17 +8,17 @@ import HomeLayout from './Common/HomeLayout'
 function AboutTo() {
   return (
     <HomeLayout customClass="grid grid-cols-12 gap-10 mb-20">
-      <div className="about-left col-span-5 h-[35.5625rem] w-full relative">
+      <div className="about-left md:col-span-5 col-span-12 h-[35.5625rem] max-w-xs md:max-w-full relative">
         <Image src={'/about-img-full.png'} alt="about" fill />
       </div>
-      <div className="about-right col-span-7 max-w-2xl">
+      <div className="about-right md:col-span-7 col-span-12 max-w-2xl">
         <TopHeading text="About to Flavor Fusion" />
         <H2heading
           text={`Come to Our Restaurant,
              Ready Your Food.`}
           color="secondary"
         />
-        <p className="text-secondary/75 text-lg py-6">
+        <p className="text-secondary/75 text-base md:text-lg py-6">
           It has survived not only five centuries, but also the leap into
           electronic typesetting, remaining essentially unchanged. It was
           popularised in the 1960s with the release of Letraset sheets
