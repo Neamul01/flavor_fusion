@@ -15,7 +15,8 @@ function HomeLayout({
   customClass,
 }: Props) {
   return (
-    <div className={`text-${color} bg-${bg} w-full ${parentClass}`}>
+    <div className={`text-${color} bg-${bg} w-full ${parentClass}  px-3`}>
+      {/* overflow-hidden */}
       <div className={`max-w-layout mx-auto ${customClass}`}>{children}</div>
     </div>
   )

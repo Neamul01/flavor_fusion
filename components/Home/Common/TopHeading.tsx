@@ -12,7 +12,7 @@ function TopHeading({ text }: { text: string }) {
           fill
         />
       </p>
-      <p className="text-base">{text}</p>
+      <p className="text-sm md:text-base">{text}</p>
       <p className="w-5 h-5 relative">
         <Image src={'/sub-title-vec.svg'} alt="vec" fill />
       </p>

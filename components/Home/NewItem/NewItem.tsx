@@ -66,25 +66,28 @@ function NewItem() {
           Various versions have evolved over the years, sometimes on purpose.
         </p>
       </div>
-      <div className="flex gap-2 mt-10">
+      <div className="flex gap-2 mt-10 max-w-layout">
         <Swiper
-          slidesPerView={3}
+          loop={true}
+          navigation={true}
           pagination={{
             type: 'fraction',
           }}
-          navigation={true}
+          modules={[Pagination, Navigation, Autoplay]}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
           speed={1000}
-          loop={true}
-          modules={[Pagination, Navigation, Autoplay]}
-          className="mySwiper-newItem w-layout"
+          slidesPerView={3}
+          className="mySwiper-newItem max-w-screen"
         >
           {newItems.map((item) => {
             return (
-              <SwiperSlide key={item.id} className="swiper-slide-newItem">
+              <SwiperSlide
+                key={item.id}
+                className="swiper-slide-newItem max-w-screen-sm"
+              >
                 <div className="flex gap-3 flex-col items-center">
                   <div className="relative">
                     <Image

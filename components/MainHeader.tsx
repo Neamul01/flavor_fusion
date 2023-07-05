@@ -158,7 +158,7 @@ function MainHeader() {
         <Group spacing={5} className={`${classes.links}`}>
           {items}
         </Group>
-        <div className=" cursor-pointer">
+        <div className=" cursor-pointer hidden md:block">
           <Button className="text-white bg-primary hover:bg-secondary transition-all rounded-full font-jost text-lg h-12 w-52">
             Find Reservation
           </Button>
