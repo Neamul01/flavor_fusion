@@ -28,7 +28,7 @@ function Hero() {
           reverseDirection: true,
         }}
         speed={1500}
-        className="mySwiper-hero w-full h-[calc(100vh-4rem)]"
+        className="mySwiper-hero w-full h-[calc(100vh-4rem)] overflow-hidden"
       >
         {[1, 2, 3].map((a) => {
           return (

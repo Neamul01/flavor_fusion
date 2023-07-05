@@ -26,7 +26,7 @@ function AboutTo() {
           publishing software like Aldus PageMaker including versions of Lorem
           Ipsum.
         </p>
-        <div className="flex gap-12 mb-12 mt-4">
+        <div className="flex flex-wrap gap-12 mb-12 mt-4">
           <div className="w-full flex gap-6 pr-4">
             <div className="w-16 h-16 relative border border-primary p-4">
               <Image
