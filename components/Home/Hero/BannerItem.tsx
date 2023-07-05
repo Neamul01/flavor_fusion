@@ -10,13 +10,13 @@ import TopHeading from '../Common/TopHeading'
 
 function BannerItem() {
   return (
-    <div className="grid grid-cols-2">
-      <div className="flex flex-col items-start gap-4 ">
+    <div className="grid lg:grid-cols-2">
+      <div className="flex flex-col md:items-start items-center gap-4 justify-center">
         <TopHeading text="Welcome to Flavor Fusion" />
-        <h2 className="text-7xl capitalize text-white text-left font-bold">
+        <h2 className="md:text-7xl text-3xl capitalize text-white md:text-left font-bold text-center">
           Find your best healthy and testy food
         </h2>
-        <p className="mt-6 mb-8">
+        <p className="mt-6 mb-8 md:text-left text-center">
           It is a long established fact that a reader will be distracted by the
           readable content of a page.
         </p>
@@ -30,7 +30,7 @@ function BannerItem() {
           Discover More
         </Button> */}
       </div>
-      <div className="relative flex">
+      <div className="relative lg:flex hidden">
         <div className="w-80 h-80">
           <Image
             src={'/banner/flavor-fusion-logo2.png'}
