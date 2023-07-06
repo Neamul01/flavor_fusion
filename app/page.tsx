@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <FoodCarousel />
       <AboutTo />
-      <NewItem />
+      {/* <NewItem /> */}
       <MenuList />
       <Gallery />
       <Experties />

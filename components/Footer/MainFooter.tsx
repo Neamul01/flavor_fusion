@@ -180,7 +180,7 @@ function MainFooter() {
     const links = AddressInfo.links.map((link, index) => (
       <Text<'a'>
         key={index}
-        className={`${classes.link} text-lg font-jost`}
+        className={`${classes.link} text-base xl:text-lg font-jost`}
         component="a"
         href={link.link}
         onClick={(event) => event.preventDefault()}
@@ -193,7 +193,7 @@ function MainFooter() {
       <div className={classes.wrapper}>
         <Text<'h2'>
           component="h2"
-          className={`${classes.title} mb-6 text-4xl  text-white font-cormorant w-56`}
+          className={`${classes.title} mb-6 text-3xl xl:text-4xl  text-white font-cormorant xl:w-56`}
         >
           {AddressInfo.title}
         </Text>
@@ -206,7 +206,7 @@ function MainFooter() {
     const links = facilities.links.map((link, index) => (
       <Text<'a'>
         key={index}
-        className={`${classes.link} text-lg font-jost`}
+        className={`${classes.link} text-base xl:text-lg font-jost`}
         component="a"
         href={link.link}
         onClick={(event) => event.preventDefault()}
@@ -219,7 +219,7 @@ function MainFooter() {
       <div className={`${classes.wrapper} text-white flex-wrap`}>
         <Text<'h2'>
           component="h2"
-          className={`${classes.title} mb-6 text-4xl  text-white font-cormorant w-56`}
+          className={`${classes.title} mb-6 text-3xl lg:text-4xl  text-white font-cormorant w-56`}
         >
           {facilities.title}
         </Text>
