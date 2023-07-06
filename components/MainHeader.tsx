@@ -1,6 +1,7 @@
 'use client'
 
 import { useWindowSize } from '@/hooks/useWindowSize'
+import { motion } from 'framer-motion'
 import {
   createStyles,
   Header,
@@ -10,6 +11,8 @@ import {
   Burger,
   rem,
   Button,
+  Transition,
+  Paper,
 } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import Image from 'next/image'
@@ -53,6 +56,22 @@ const useStyles = createStyles((theme) => ({
 
   linkLabel: {
     marginRight: rem(5),
+  },
+  // dropdown
+  dropdown: {
+    position: 'absolute',
+    top: 65,
+    left: 0,
+    right: 0,
+    zIndex: 0,
+    borderTopRightRadius: 0,
+    borderTopLeftRadius: 0,
+    borderTopWidth: 0,
+    overflow: 'hidden',
+
+    [theme.fn.largerThan('sm')]: {
+      display: 'none',
+    },
   },
 }))
 
@@ -102,6 +121,7 @@ const links = [
 
 function MainHeader() {
   const [opened, { toggle }] = useDisclosure(false)
+  const [active, setActive] = useState(links[0].link)
   const { classes } = useStyles()
   const size = useWindowSize()
 
@@ -149,6 +169,11 @@ function MainHeader() {
     )
   })
 
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: '-100%' },
+  }
+
   return (
     <div className="bg-transparent h-16 md:h-20 text-secondary border-none px-2 mt-1">
       <div
@@ -169,6 +194,21 @@ function MainHeader() {
           className={classes.burger}
           size="sm"
         />
+        {/* <Transition transition="pop-top-right" duration={200} mounted={opened}>
+          {(styles) => ( */}
+        {/* {opened && ( */}
+        <motion.div
+          className={`${classes.dropdown} rounded-xl text-left bg-white h-screen`}
+          animate={opened ? 'open' : 'closed'}
+          variants={variants}
+          // withBorder
+          // style={styles}
+        >
+          {items}
+        </motion.div>
+        {/* )} */}
+        {/* )}
+        </Transition> */}
       </div>
     </div>
   )
