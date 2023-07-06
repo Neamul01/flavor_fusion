@@ -8,8 +8,11 @@ import './newItem.css'
 import H2heading from '../Common/H2heading'
 import TopHeading from '../Common/TopHeading'
 import HomeLayout from '../Common/HomeLayout'
+import { useWindowSize } from '@/hooks/useWindowSize'
 
 function NewItem() {
+  const screen = useWindowSize()
+
   const newItems = [
     {
       id: 1,
@@ -69,24 +72,37 @@ function NewItem() {
       <div className="flex gap-2 mt-10 max-w-layout">
         <Swiper
           loop={true}
-          navigation={true}
-          pagination={{
-            type: 'fraction',
-          }}
-          modules={[Pagination, Navigation, Autoplay]}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
           speed={1000}
-          slidesPerView={3}
+          watchSlidesProgress={true}
+          slidesPerView={0}
+          breakpoints={{
+            400: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+          }}
+          pagination={{
+            clickable: true,
+            type: 'fraction',
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
           className="mySwiper-newItem max-w-screen"
         >
           {newItems.map((item) => {
             return (
               <SwiperSlide
                 key={item.id}
-                className="swiper-slide-newItem max-w-screen-sm"
+                className="swiper-slide-newItem max-w-[400px] mx-6"
               >
                 <div className="flex gap-3 flex-col items-center">
                   <div className="relative">
