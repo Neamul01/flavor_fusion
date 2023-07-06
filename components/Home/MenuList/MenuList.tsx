@@ -103,7 +103,7 @@ function MenuList() {
               </div>
               <Badge
                 size="xl"
-                className="absolute left-[43%] top-[62%] z-40 bg-white text-primary border shadow capitalize font-jost font-semibold text-xl px-6 "
+                className="absolute left-[43%] top-[58%] md:top-[48%] lg:top-[62%] z-40 bg-white text-primary border shadow capitalize font-jost font-semibold text-xl px-6 "
               >
                 ${item.price}
               </Badge>
