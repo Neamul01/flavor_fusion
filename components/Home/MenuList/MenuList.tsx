@@ -73,9 +73,14 @@ function MenuList() {
           <TopHeading text="Menu List" />
           <H2heading text="Find Your Food Item" />
         </div>
-        <CustomButton name="view-more" text="View More" color="secondary" />
+        <CustomButton
+          name="view-more"
+          text="View More"
+          color="secondary"
+          customClass="hidden md:block"
+        />
       </div>
-      <div className=" grid grid-cols-12 gap-y-8 mt-12 ">
+      <div className=" grid grid-cols-1 md:grid-cols-12 gap-y-8 mt-12 ">
         {menuItems.map((item) => {
           return (
             <div
@@ -98,7 +103,7 @@ function MenuList() {
               </div>
               <Badge
                 size="xl"
-                className="absolute left-[43%] top-[62%] z-40 bg-white text-primary border shadow capitalize font-jost font-semibold text-xl px-6 "
+                className="absolute left-[43%] top-[58%] md:top-[48%] lg:top-[62%] z-40 bg-white text-primary border shadow capitalize font-jost font-semibold text-xl px-6 "
               >
                 ${item.price}
               </Badge>

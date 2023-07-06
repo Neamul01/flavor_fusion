@@ -7,11 +7,11 @@ import HomeLayout from './Common/HomeLayout'
 
 function AboutTo() {
   return (
-    <HomeLayout customClass="grid grid-cols-12 gap-10 mb-20">
-      <div className="about-left md:col-span-5 col-span-12 h-[35.5625rem] max-w-xs md:max-w-full relative">
+    <HomeLayout customClass="grid grid-cols-1 md:grid-cols-12 gap-10 md:mb-20">
+      <div className="about-left md:col-span-5 col-span-1 h-[35.5625rem] max-w-xs md:max-w-full relative">
         <Image src={'/about-img-full.png'} alt="about" fill />
       </div>
-      <div className="about-right md:col-span-7 col-span-12 max-w-2xl">
+      <div className="about-right md:col-span-7 col-span-1 max-w-2xl">
         <TopHeading text="About to Flavor Fusion" />
         <H2heading
           text={`Come to Our Restaurant,
@@ -26,7 +26,7 @@ function AboutTo() {
           publishing software like Aldus PageMaker including versions of Lorem
           Ipsum.
         </p>
-        <div className="flex flex-wrap gap-12 mb-12 mt-4">
+        <div className="flex flex-wrap gap-12 mb-10 mt-4">
           <div className="w-full flex gap-6 pr-4">
             <div className="w-16 h-16 relative border border-primary p-4">
               <Image

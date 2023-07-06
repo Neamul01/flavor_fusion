@@ -62,9 +62,29 @@ function Gallery() {
         <Swiper
           loop={true}
           watchSlidesProgress={true}
-          slidesPerView={5}
           pagination={{
             clickable: true,
+          }}
+          // slidesPerView={1}
+          breakpoints={{
+            400: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+            1440: {
+              slidesPerView: 4,
+            },
+            1920: {
+              slidesPerView: 5,
+            },
           }}
           navigation={true}
           modules={[Pagination, Navigation, Autoplay]}

@@ -55,14 +55,14 @@ function Experties() {
           <TopHeading text="Our Experties" />
           <H2heading text="Our Special Experties" />
         </div>
-        <div className="grid grid-cols-12 gap-6 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mt-10">
           {expoerties.map((item) => {
             return (
               <div
                 key={item.id}
                 className="col-span-4 border rounded-xl overflow-hidden experties"
               >
-                <div className="relative w-full h-[340px]">
+                <div className="relative w-full h-[300px] md:h-[340px]">
                   <Image src={item.img} alt="experts" fill />
                 </div>
                 <div className="flex items-center flex-col my-8 expoerties-profile">
