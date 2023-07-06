@@ -8,6 +8,7 @@ type Props = {
   text: string
   icon?: any
   color?: string
+  customClass?: string
 }
 function CustomButton(props: Props) {
   const {
@@ -15,6 +16,7 @@ function CustomButton(props: Props) {
     text = 'Discover more',
     icon,
     color = 'primary' || 'secondary',
+    customClass,
   } = props
   const Icon = icon ? icon : <BsArrowUpRightCircle size={'1.3rem'} />
   return (
@@ -23,7 +25,7 @@ function CustomButton(props: Props) {
       name={name}
       className={`text-${
         color === 'secondary' ? 'secondary' : 'primary'
-      } border-primary rounded-full hover:bg-primary hover:text-white capitalize font-jost`}
+      } border-primary rounded-full hover:bg-primary hover:text-white capitalize font-jost ${customClass}`}
       size="lg"
     >
       {text}
