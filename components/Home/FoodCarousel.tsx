@@ -64,10 +64,10 @@ function FoodCarousel() {
     <HomeLayout customClass="my-12 md:my-32">
       <Swiper
         loop={true}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         speed={2000}
         watchSlidesProgress={true}
         slidesPerView={1}
@@ -89,7 +89,7 @@ function FoodCarousel() {
           clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper-food"
       >
         {foodItems.map((food) => {
