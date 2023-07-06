@@ -150,7 +150,7 @@ function MainHeader() {
   })
 
   return (
-    <Header height={80} className="bg-transparent text-secondary border-none ">
+    <div className="bg-transparent h-16 md:h-20 text-secondary border-none px-2 mt-1">
       <div
         className={`${classes.inner} h-full w-full max-w-layout mx-auto bg-white rounded-full md:px-8 px-4`}
       >
@@ -170,7 +170,7 @@ function MainHeader() {
           size="sm"
         />
       </div>
-    </Header>
+    </div>
   )
 }
 
