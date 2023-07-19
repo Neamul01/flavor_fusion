@@ -1,0 +1,13 @@
+.authorContent::after {
+  content: '';
+  height: 35px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  transform: rotate(45deg);
+  border: 1px solid #eee;
+  border-top: none;
+  border-left: none;
+  top: 84%;
+  left: 10%;
+}
