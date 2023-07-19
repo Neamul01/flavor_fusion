@@ -7,7 +7,7 @@ import HomeLayout from '../Layouts/HomeLayout'
 
 function AboutTo() {
   return (
-    <HomeLayout customClass="grid grid-cols-1 md:grid-cols-12 gap-10 md:mb-20">
+    <HomeLayout className="grid grid-cols-1 md:grid-cols-12 gap-10 md:mb-20">
       <div className="about-left md:col-span-5 col-span-1 h-[35.5625rem] max-w-xs md:max-w-full relative">
         <Image src={'/about-img-full.png'} alt="about" fill />
       </div>

@@ -67,7 +67,7 @@ const menuItems = [
 
 function MenuList() {
   return (
-    <HomeLayout customClass="flex flex-col py-32">
+    <HomeLayout className="flex flex-col py-32">
       <div className="w-full flex justify-between md:pr-20 mb-8">
         <div className="flex flex-col gap-4">
           <TopHeading text="Menu List" />

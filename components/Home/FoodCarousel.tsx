@@ -61,7 +61,7 @@ function FoodCarousel() {
     },
   ]
   return (
-    <HomeLayout customClass="my-12 md:my-32">
+    <HomeLayout className="my-12 md:my-32">
       <Swiper
         loop={true}
         autoplay={{

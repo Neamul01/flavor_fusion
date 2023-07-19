@@ -58,7 +58,7 @@ function NewItem() {
   return (
     <HomeLayout
       parentClass="bg-cover bg-no-repeat h-auto"
-      customClass="flex flex-col justify-center items-center h-full gap-4 mb-20 pt-20"
+      className="flex flex-col justify-center items-center h-full gap-4 mb-20 pt-20"
       color="secondary"
       bg="[linear-gradient(rgba(9,22,29,.8),rgba(9,22,29,.8)),url('/regular-items-bg.png')]"
     >

@@ -1,0 +1,16 @@
+.syleheading::after {
+  content: '';
+  background: linear-gradient(
+      98.42deg,
+      rgba(111, 73, 2, 0.2) 0.45%,
+      transparent 101.78%
+    ),
+    #09161d;
+  opacity: 0.8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0.1;
+}
