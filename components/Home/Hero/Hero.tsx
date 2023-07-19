@@ -4,7 +4,7 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper'
 import BannerItem from './BannerItem'
-import HomeLayout from '../Common/HomeLayout'
+import HomeLayout from '../../Layouts/HomeLayout'
 
 function Hero() {
   const pagination = {

@@ -6,7 +6,7 @@ import H2heading from '../Common/H2heading'
 import CustomButton from '@/components/Common/CustomButton'
 import Image from 'next/image'
 import { Badge } from '@mantine/core'
-import HomeLayout from '../Common/HomeLayout'
+import HomeLayout from '../../Layouts/HomeLayout'
 
 const menuItems = [
   {
