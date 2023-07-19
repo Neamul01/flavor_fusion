@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import HomeLayout from '../Layouts/HomeLayout'
+import HomeLayout from '../Layouts/Layout'
 import {
   createStyles,
   Text,

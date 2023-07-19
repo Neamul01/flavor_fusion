@@ -3,7 +3,7 @@ import React from 'react'
 import CustomButton from '../Common/CustomButton'
 import H2heading from './Common/H2heading'
 import TopHeading from './Common/TopHeading'
-import HomeLayout from '../Layouts/HomeLayout'
+import HomeLayout from '../Layouts/Layout'
 
 function AboutTo() {
   return (

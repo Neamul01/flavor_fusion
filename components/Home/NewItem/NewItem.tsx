@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import './newItem.css'
 import H2heading from '../Common/H2heading'
 import TopHeading from '../Common/TopHeading'
-import HomeLayout from '../../Layouts/HomeLayout'
+import HomeLayout from '../../Layouts/Layout'
 import { useWindowSize } from '@/hooks/useWindowSize'
 
 function NewItem() {

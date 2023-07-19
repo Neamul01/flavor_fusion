@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper'
 import './foodCarousel.css'
 import Image from 'next/image'
-import HomeLayout from '../Layouts/HomeLayout'
+import HomeLayout from '../Layouts/Layout'
 import { useWindowSize } from '@/hooks/useWindowSize'
 
 function FoodCarousel() {
