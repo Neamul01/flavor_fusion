@@ -15,11 +15,10 @@ import {
   Paper,
 } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { BsChevronDown } from 'react-icons/bs'
 import AppLogo from './Common/AppLogo'
+import Link from 'next/link'
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -88,7 +87,7 @@ const links = [
     label: 'Home',
   },
   {
-    link: '#about',
+    link: '/about',
     label: 'About',
   },
   {
@@ -141,7 +140,7 @@ function MainHeader() {
           withinPortal
         >
           <Menu.Target>
-            <a
+            <Link
               href={link.link}
               className={classes.link}
               onClick={(event) => event.preventDefault()}
@@ -150,7 +149,7 @@ function MainHeader() {
                 <span className={classes.linkLabel}>{link.label}</span>
                 <BsChevronDown size="0.9rem" />
               </Center>
-            </a>
+            </Link>
           </Menu.Target>
           <Menu.Dropdown>{menuItems}</Menu.Dropdown>
         </Menu>
@@ -158,14 +157,14 @@ function MainHeader() {
     }
 
     return (
-      <a
+      <Link
         key={link.label}
         href={link.link}
         className={`${classes.link} text-lg `}
         onClick={(event) => event.preventDefault()}
       >
         {link.label}
-      </a>
+      </Link>
     )
   })
 
@@ -191,7 +190,7 @@ function MainHeader() {
         <Burger
           opened={opened}
           onClick={toggle}
-          className={classes.burger}
+          className={`${classes.burger} md:hidden`}
           size="sm"
         />
         <motion.div
