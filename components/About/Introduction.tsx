@@ -42,9 +42,11 @@ function Introduction() {
         <H2heading text="We Are Experienced Restaurant." color="secondary" />
       </HomeLayout>
       <div className="max-w-[95rem] mx-auto mt-9 flex gap-6">
+        {/* left image  */}
         <div className="relative h-[34.1875rem] w-[33.125rem] rounded-tl-xl rounded-br-xl overflow-hidden">
           <Image src={'/about/intro-left-img.png'} alt="chef" fill />
         </div>
+        {/* right content  */}
         <div className="flex flex-col gap-8">
           <div className="flex items-center gap-4 max-w-4xl">
             <div className="px-8 py-4 border border-secondary/10 rounded-tl-lg rounded-br-lg">
@@ -96,6 +98,7 @@ function Introduction() {
                 </div>
               </div>
             </div>
+            {/* right image  */}
             <div className="">
               <Image
                 src={'/about/intro-right-img.png'}
