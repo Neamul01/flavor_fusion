@@ -2,10 +2,10 @@ import React from 'react'
 
 function H2heading({
   text,
-  color = 'secondary' || 'white',
+  color = 'secondary',
 }: {
   text: string
-  color?: string
+  color?: 'secondary' | 'white'
 }) {
   return (
     <h2

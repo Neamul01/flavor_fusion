@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import './newItem.css'
 import H2heading from '../Common/H2heading'
 import TopHeading from '../Common/TopHeading'
-import HomeLayout from '../Common/HomeLayout'
+import HomeLayout from '../../Layouts/Layout'
 import { useWindowSize } from '@/hooks/useWindowSize'
 
 function NewItem() {
@@ -58,7 +58,7 @@ function NewItem() {
   return (
     <HomeLayout
       parentClass="bg-cover bg-no-repeat h-auto"
-      customClass="flex flex-col justify-center items-center h-full gap-4 mb-20 pt-20"
+      className="flex flex-col justify-center items-center h-full gap-4 mb-20 pt-20"
       color="secondary"
       bg="[linear-gradient(rgba(9,22,29,.8),rgba(9,22,29,.8)),url('/regular-items-bg.png')]"
     >

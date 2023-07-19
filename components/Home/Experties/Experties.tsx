@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeLayout from '../Common/HomeLayout'
+import HomeLayout from '../../Layouts/Layout'
 import TopHeading from '../Common/TopHeading'
 import H2heading from '../Common/H2heading'
 import Image from 'next/image'
