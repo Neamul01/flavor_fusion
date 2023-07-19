@@ -58,3 +58,9 @@ body {
   left: -3px;
   top: -3px;
 }
+
+@media screen and (max-width: 500px) {
+  .mySwiper-hero > .swiper-pagination {
+    display: none;
+  }
+}

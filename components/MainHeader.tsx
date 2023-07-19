@@ -194,21 +194,14 @@ function MainHeader() {
           className={classes.burger}
           size="sm"
         />
-        {/* <Transition transition="pop-top-right" duration={200} mounted={opened}>
-          {(styles) => ( */}
-        {/* {opened && ( */}
         <motion.div
           className={`${classes.dropdown} rounded-xl text-left bg-white h-screen`}
           animate={opened ? 'open' : 'closed'}
+          initial={{ opacity: 0 }}
           variants={variants}
-          // withBorder
-          // style={styles}
         >
           {items}
         </motion.div>
-        {/* )} */}
-        {/* )}
-        </Transition> */}
       </div>
     </div>
   )
