@@ -11,15 +11,11 @@ function Introduction() {
         <TopHeading text="Introduction of Flavor Fusion" />
         <H2heading text="We Are Experienced Restaurant." color="secondary" />
       </HomeLayout>
-      <div className="max-w-[95rem] mx-auto">
-        <div className="relative h-[34.1875rem] w-[33.125rem]">
-          <Image
-            className="rounded-md overflow-hidden object-contain"
-            src={'/about/intro-left-img.png'}
-            alt="chef"
-            fill
-          />
+      <div className="max-w-[95rem] mx-auto mt-9 flex gap-6">
+        <div className="relative h-[34.1875rem] w-[33.125rem] rounded-tl-xl rounded-br-xl overflow-hidden">
+          <Image src={'/about/intro-left-img.png'} alt="chef" fill />
         </div>
+        <div className="flex">hello</div>
       </div>
     </div>
   )
