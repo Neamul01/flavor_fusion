@@ -2,12 +2,17 @@
 import StyleHeading from '@/components/Common/StyleHeading'
 import React from 'react'
 import { useRouter } from 'next/router'
+import Introduction from '@/components/About/Introduction'
+import HomeLayout from '@/components/Layouts/HomeLayout'
 
 function about() {
   return (
-    <div>
+    <>
       <StyleHeading text="about us" />
-    </div>
+      <HomeLayout bg="secondary">
+        <Introduction />
+      </HomeLayout>
+    </>
   )
 }
 
