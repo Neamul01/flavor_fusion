@@ -3,7 +3,7 @@ import React from 'react'
 type Props = {
   children: any
   color?: string
-  bg?: 'white' | 'secondary'
+  bg?: 'white' | 'secondary' | string
   parentClass?: string
   className?: string
 }
