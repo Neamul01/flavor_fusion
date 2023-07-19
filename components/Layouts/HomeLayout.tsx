@@ -3,14 +3,14 @@ import React from 'react'
 type Props = {
   children: any
   color?: string
-  bg?: string
+  bg?: 'white' | 'secondary'
   parentClass?: string
   customClass?: string
 }
 function HomeLayout({
   children,
   color = 'secondary',
-  bg = 'white' || 'secondary',
+  bg = 'white',
   parentClass,
   customClass,
 }: Props) {

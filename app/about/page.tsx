@@ -5,7 +5,7 @@ import React from 'react'
 function about() {
   return (
     <div className="">
-      <HomeLayout bg="secondary">
+      <HomeLayout bg="secondary" parentClass="h-40">
         <StyleHeading text="about us" />
       </HomeLayout>
     </div>
