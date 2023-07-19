@@ -91,11 +91,11 @@ const links = [
     label: 'About',
   },
   {
-    link: '#menu',
+    link: '/menu',
     label: 'Menu',
   },
   {
-    link: '#blog',
+    link: '/blog',
     label: 'Blog',
     links: [
       {
@@ -140,11 +140,7 @@ function MainHeader() {
           withinPortal
         >
           <Menu.Target>
-            <Link
-              href={link.link}
-              className={classes.link}
-              onClick={(event) => event.preventDefault()}
-            >
+            <Link href={link.link} className={classes.link}>
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
                 <BsChevronDown size="0.9rem" />
@@ -161,7 +157,6 @@ function MainHeader() {
         key={link.label}
         href={link.link}
         className={`${classes.link} text-lg `}
-        onClick={(event) => event.preventDefault()}
       >
         {link.label}
       </Link>
