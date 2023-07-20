@@ -11,3 +11,20 @@
   top: 84%;
   left: 10%;
 }
+
+/* summery section */
+
+.about_counter .counter_single {
+  transition: all 0.3s ease-in-out;
+}
+.about_counter .counter_single div {
+  transition: all 0.3s ease-in-out;
+}
+
+.about_counter .counter_single:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.about_counter .counter_single:hover div p {
+  color: white;
+}
