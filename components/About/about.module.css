@@ -28,3 +28,11 @@
 .about_counter .counter_single:hover div p {
   color: white;
 }
+
+/***********************
+experties styles
+************************/
+
+.mySwiper_about_experties .swiper-pagination {
+  display: none;
+}

@@ -4,12 +4,53 @@ import H2heading from '../Home/Common/H2heading'
 import TopHeading from '../Home/Common/TopHeading'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper'
+import Image from 'next/image'
+import './experties.css'
+
+const experties = [
+  {
+    id: 1,
+    name: 'James wich',
+    title: 'Chef of Head',
+    img: '/about/experties/exparts1.png',
+  },
+  {
+    id: 2,
+    name: 'James wich',
+    title: 'Chef of Head',
+    img: '/about/experties/exparts2.png',
+  },
+  {
+    id: 3,
+    name: 'James wich',
+    title: 'Chef of Head',
+    img: '/about/experties/exparts3.png',
+  },
+  {
+    id: 4,
+    name: 'James wich',
+    title: 'Chef of Head',
+    img: '/about/experties/exparts1.png',
+  },
+  {
+    id: 5,
+    name: 'James wich',
+    title: 'Chef of Head',
+    img: '/about/experties/exparts2.png',
+  },
+  {
+    id: 6,
+    name: 'James wich',
+    title: 'Chef of Head',
+    img: '/about/experties/exparts3.png',
+  },
+]
 
 export default function Experties() {
   return (
     <div>
       <Layout className="py-20">
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mb-10">
           <TopHeading text="Experties" />
           <H2heading text="Cooking Experties" />
         </div>
@@ -17,7 +58,7 @@ export default function Experties() {
           <Swiper
             loop={true}
             autoplay={{
-              delay: 2500,
+              delay: 3500,
               disableOnInteraction: false,
             }}
             speed={2000}
@@ -34,17 +75,18 @@ export default function Experties() {
             pagination={{
               clickable: true,
             }}
+            spaceBetween={2}
             navigation={true}
             modules={[Pagination, Navigation, Autoplay]}
-            className="mySwiper-food"
+            className={`mySwiper_about_experties`}
           >
-            <SwiperSlide>hello1</SwiperSlide>
-            <SwiperSlide>hello2</SwiperSlide>
-            <SwiperSlide>hello3</SwiperSlide>
-            <SwiperSlide>hello4</SwiperSlide>
-            <SwiperSlide>hello5</SwiperSlide>
-            <SwiperSlide>hello6</SwiperSlide>
-            <SwiperSlide>hello7</SwiperSlide>
+            {experties.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div className="w-[415px] h-[350px] relative rounded-lg overflow-hidden ">
+                  <Image src={item.img} alt="expert" fill />
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </Layout>
