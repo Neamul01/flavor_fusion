@@ -73,15 +73,12 @@ function FoodCarousel() {
         slidesPerView={1}
         breakpoints={{
           640: {
-            width: 640,
             slidesPerView: 2,
           },
           768: {
-            width: 768,
             slidesPerView: 3,
           },
           1024: {
-            width: 1024,
             slidesPerView: 4,
           },
         }}

@@ -68,23 +68,15 @@ function Gallery() {
           slidesPerView={1}
           breakpoints={{
             640: {
-              width: 640,
-              slidesPerView: 2,
-            },
-            768: {
-              width: 768,
               slidesPerView: 2,
             },
             1024: {
-              width: 1024,
               slidesPerView: 3,
             },
             1440: {
-              width: 1440,
               slidesPerView: 4,
             },
             1920: {
-              width: 1920,
               slidesPerView: 5,
             },
           }}
