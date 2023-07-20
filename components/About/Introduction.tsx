@@ -7,7 +7,12 @@ import { GiSupersonicArrow } from 'react-icons/gi'
 import { BsCheck2Circle } from 'react-icons/bs'
 import styles from './about.module.css'
 
-const points = [
+type Point = {
+  id: number
+  text: string
+}
+
+const points: Point[] = [
   {
     id: 1,
     text: 'Delicious Food.',
