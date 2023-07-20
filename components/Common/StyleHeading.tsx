@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeLayout from '../Layouts/Layout'
-import styles from './about.module.css'
+import styles from './styles.module.css'
 import { usePathname } from 'next/navigation'
 
 function Heading({ text }: { text: string }) {
