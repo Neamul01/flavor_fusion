@@ -7,7 +7,7 @@ type Props = {
   parentClass?: string
   className?: string
 }
-function HomeLayout({
+function Layout({
   children,
   color = 'secondary',
   bg = 'white',
@@ -22,4 +22,4 @@ function HomeLayout({
   )
 }
 
-export default HomeLayout
+export default Layout
