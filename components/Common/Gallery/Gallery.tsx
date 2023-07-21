@@ -18,7 +18,7 @@ const galleryItems = [
   {
     id: 2,
     img: '/gallery/2col-gallery-02.png',
-    category: 'CookingCooking',
+    category: 'Cooking',
     title: 'Chef Cooking Food',
   },
   {
@@ -136,7 +136,7 @@ function Gallery({
                     {pageVariant === 'about' && (
                       <div className="flex flex-col items-center justify-center">
                         <TopHeading color="text-white" text={item.category} />
-                        <H2heading text={item.title} />
+                        <H2heading color="white" size="sm" text={item.title} />
                       </div>
                     )}
                   </div>
