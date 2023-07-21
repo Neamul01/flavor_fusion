@@ -72,9 +72,6 @@ function FoodCarousel() {
         watchSlidesProgress={true}
         slidesPerView={1}
         breakpoints={{
-          400: {
-            slidesPerView: 1,
-          },
           640: {
             slidesPerView: 2,
           },

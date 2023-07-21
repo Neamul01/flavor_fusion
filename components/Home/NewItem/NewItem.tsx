@@ -78,15 +78,14 @@ function NewItem() {
           }}
           speed={1000}
           watchSlidesProgress={true}
-          slidesPerView={0}
+          slidesPerView={1}
           breakpoints={{
-            400: {
-              slidesPerView: 1,
-            },
             640: {
+              width: 640,
               slidesPerView: 2,
             },
             768: {
+              width: 768,
               slidesPerView: 3,
             },
           }}

@@ -7,6 +7,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '1rem',
+          lg: '2rem',
+          xl: '2rem',
+        },
+        screens: {
+          sm: '100%',
+          lg: '1124px',
+          xl: '1124px',
+          '2xl': '1124px',
+        },
+      },
       maxWidth: {
         layout: '85rem',
       },

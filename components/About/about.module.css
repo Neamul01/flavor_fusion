@@ -1,0 +1,38 @@
+.authorContent::after {
+  content: '';
+  height: 35px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  transform: rotate(45deg);
+  border: 1px solid #eee;
+  border-top: none;
+  border-left: none;
+  top: 84%;
+  left: 10%;
+}
+
+/* summery section */
+
+.about_counter .counter_single {
+  transition: all 0.3s ease-in-out;
+}
+.about_counter .counter_single div {
+  transition: all 0.3s ease-in-out;
+}
+
+.about_counter .counter_single:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.about_counter .counter_single:hover div p {
+  color: white;
+}
+
+/***********************
+experties styles
+************************/
+
+.mySwiper_about_experties .swiper-pagination {
+  display: none;
+}
