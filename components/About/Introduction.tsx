@@ -46,21 +46,21 @@ function Introduction() {
         <TopHeading text="Introduction of Flavor Fusion" />
         <H2heading text="We Are Experienced Restaurant." color="secondary" />
       </HomeLayout>
-      <div className="max-w-[95rem] mx-auto mt-9 flex gap-6">
+      <div className="max-w-[95rem] mx-auto mt-9 flex flex-col md:flex-row items-center gap-6">
         {/* left image  */}
-        <div className="relative h-[34.1875rem] w-[33.125rem] rounded-tl-xl rounded-br-xl overflow-hidden">
+        <div className=" relative h-[19rem] md:h-[34.1875rem] w-[18rem] md:w-[33.125rem] rounded-tl-xl rounded-br-xl overflow-hidden">
           <Image src={'/about/intro-left-img.png'} alt="chef" fill />
         </div>
         {/* right content  */}
-        <div className="flex flex-col gap-8">
-          <div className="flex items-center gap-4 max-w-4xl">
-            <div className="px-8 py-4 border border-secondary/10 rounded-tl-lg rounded-br-lg">
+        <div className="flex flex-col gap-8 mx-4 md:mx-0">
+          <div className="flex flex-col md:flex-row items-center gap-4 max-w-4xl">
+            <div className="px-8 py-4 border border-secondary/10 rounded-tl-lg rounded-br-lg mr-auto md:mr-0">
               <GiSupersonicArrow className="text-primary text-2xl mb-2" />
               <h2 className="text-2xl font-semibold whitespace-nowrap">
                 Our Mission
               </h2>
             </div>
-            <p className="text-secondary/70 text-lg">
+            <p className="text-secondary/70 text-lg leading-6 md:leading-none">
               It was popularised in the 1960s with the release of Letraset
               sheets containing Lorem Ipsum passages, and more recently with
               desktop publishing software like Aldus PageMaker including
@@ -69,7 +69,7 @@ function Introduction() {
           </div>
           <div className="flex h-full w-full justify-between">
             <div className="flex flex-col gap-8">
-              <ul className="flex flex-col flex-wrap max-h-32 gap-4 font-jost">
+              <ul className="flex flex-col flex-wrap md:max-h-32 gap-2 md:gap-4 font-jost">
                 {points.map((point, i) => (
                   <li key={i} className="flex items-center gap-3 ">
                     <BsCheck2Circle className="text-primary text-xl" />
@@ -81,7 +81,7 @@ function Introduction() {
               </ul>
               <div className="author-area relative">
                 <div
-                  className={`${styles.authorContent} max-w-xl mr-8 border border-secondary/10 p-6 rounded-xl`}
+                  className={`${styles.authorContent} md:after:top-[84%] after:top-[91%] md:after:left-[10%] after:left-[22%] max-w-xl md:mr-8 border border-secondary/10 p-6 rounded-xl`}
                 >
                   <p className="text-xl text-secondary/60 font-normal text-center font-jost">
                     &quot;Welcome our restaurant! Our Restaurant is the best as
@@ -104,7 +104,7 @@ function Introduction() {
               </div>
             </div>
             {/* right image  */}
-            <div className="">
+            <div className="hidden md:block">
               <Image
                 src={'/about/intro-right-img.png'}
                 alt="intro right"
