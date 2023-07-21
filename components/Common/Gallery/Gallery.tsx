@@ -12,53 +12,75 @@ const galleryItems = [
   {
     id: 1,
     img: '/gallery/2col-gallery-01.png',
+    category: 'Cooking',
+    title: 'Chef Cooking Food',
   },
   {
     id: 2,
     img: '/gallery/2col-gallery-02.png',
+    category: 'CookingCooking',
+    title: 'Chef Cooking Food',
   },
   {
     id: 3,
     img: '/gallery/2col-gallery-03.png',
+    category: 'Cooking',
+    title: 'Chef Cooking Food',
   },
   {
     id: 4,
     img: '/gallery/2col-gallery-04.png',
+    category: 'Cooking',
+    title: 'Chef Cooking Food',
   },
   {
     id: 5,
     img: '/gallery/2col-gallery-05.png',
+    category: 'Cooking',
+    title: 'Chef Cooking Food',
   },
   {
     id: 6,
     img: '/gallery/2col-gallery-01.png',
+    category: 'Cooking',
+    title: 'Chef Cooking Food',
   },
   {
     id: 7,
     img: '/gallery/2col-gallery-02.png',
+    category: 'Cooking',
+    title: 'Chef Cooking Food',
   },
   {
     id: 8,
     img: '/gallery/2col-gallery-03.png',
+    category: 'Cooking',
+    title: 'Chef Cooking Food',
   },
   {
     id: 9,
     img: '/gallery/2col-gallery-04.png',
+    category: 'Cooking',
+    title: 'Chef Cooking Food',
   },
   {
     id: 10,
     img: '/gallery/2col-gallery-05.png',
+    category: 'Cooking',
+    title: 'Chef Cooking Food',
   },
 ]
 
 type Props = {
   topHedingText?: string
   h2HeadingText?: string
+  pageVariant?: 'about' | 'home'
 }
 
 function Gallery({
   topHedingText = 'Gallery Store',
   h2HeadingText = 'Our Special Gallery',
+  pageVariant = 'home',
 }: Props) {
   return (
     <div className="w-full bg-white">
@@ -102,7 +124,15 @@ function Gallery({
                 >
                   <Image src={item.img} fill alt="gallery" />
                   <div className="overlay-gallery cursor-pointer h-[522px] w-[522px] relative ">
-                    <Image src={'/gallery/Zoom.svg'} fill alt="zoom" />
+                    {pageVariant === 'home' && (
+                      <Image src={'/gallery/Zoom.svg'} fill alt="zoom" />
+                    )}
+                    {pageVariant === 'about' && (
+                      <div className="flex flex-col items-center justify-center">
+                        <TopHeading color="text-white" text={item.category} />
+                        <H2heading text={item.title} />
+                      </div>
+                    )}
                   </div>
                 </div>
               </SwiperSlide>

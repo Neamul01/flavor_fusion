@@ -7,6 +7,7 @@ export default function AboutGallery() {
       <Gallery
         h2HeadingText="Flavor Fusion's Gallery"
         topHedingText="Gallery"
+        pageVariant="about"
       />
     </div>
   )
