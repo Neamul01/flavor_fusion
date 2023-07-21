@@ -6,10 +6,15 @@ import Summary from '@/components/About/Summary'
 import Experties from '@/components/About/Experties'
 import AboutGallery from '@/components/About/AboutGallery'
 
+const breadcrumbsItems = [
+  { title: 'Home', href: '/' },
+  { title: 'About', href: '/about' },
+]
+
 function about() {
   return (
     <>
-      <StyleHeading text="about us" />
+      <StyleHeading breadcrumbsItems={breadcrumbsItems} text="about us" />
       <Introduction />
       <Summary />
       <Experties />
