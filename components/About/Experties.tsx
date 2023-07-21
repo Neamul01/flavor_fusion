@@ -16,7 +16,7 @@ const experties = [
   },
   {
     id: 2,
-    name: 'James wich',
+    name: 'Mrkoney smith',
     title: 'Chef of Head',
     img: '/about/experties/exparts2.png',
   },
@@ -84,6 +84,14 @@ export default function Experties() {
               <SwiperSlide key={item.id}>
                 <div className="w-[415px] h-[350px] relative rounded-lg overflow-hidden ">
                   <Image src={item.img} alt="expert" fill />
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <h2 className="text-3xl capitalize font-semibold text-center mt-4">
+                    {item.name}
+                  </h2>
+                  <p className="text-base text-center text-secondary/60">
+                    {item.title}
+                  </p>
                 </div>
               </SwiperSlide>
             ))}
