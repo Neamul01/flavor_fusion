@@ -4,7 +4,7 @@ import React from 'react'
 import Introduction from '@/components/About/Introduction'
 import Summary from '@/components/About/Summary'
 import Experties from '@/components/About/Experties'
-import Gallery from '@/components/Home/Gallery/Gallery'
+import AboutGallery from '@/components/About/AboutGallery'
 
 function about() {
   return (
@@ -14,7 +14,7 @@ function about() {
       <Summary />
       <Experties />
       {/* need some modification in gallery */}
-      <Gallery />
+      <AboutGallery />
     </>
   )
 }

@@ -51,13 +51,21 @@ const galleryItems = [
   },
 ]
 
-function Gallery() {
+type Props = {
+  topHedingText?: string
+  h2HeadingText?: string
+}
+
+function Gallery({
+  topHedingText = 'Gallery Store',
+  h2HeadingText = 'Our Special Gallery',
+}: Props) {
   return (
     <div className="w-full bg-white">
       <div className="mb-32">
         <div className="flex flex-col items-center gap-4">
-          <TopHeading text="Gallery Store" />
-          <H2heading text="Our Special Gallery" />
+          <TopHeading text={topHedingText} />
+          <H2heading text={h2HeadingText} />
         </div>
         <Swiper
           loop={true}
