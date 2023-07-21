@@ -16,14 +16,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 1;
+  transform: translateX(0%);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.overlay-gallery-parent:hover .overlay-gallery-home {
   background: linear-gradient(
     359.58deg,
     #002133 0.39%,
     rgba(0, 33, 51, 0) 51.47%
   );
-  opacity: 1;
-  transform: translateX(0%);
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.overlay-gallery-parent:hover .overlay-gallery-about {
+  background: rgba(0, 33, 51, 0.61) 51.47%;
 }
 
 .overlay-gallery-parent:not(:hover) .overlay-gallery {
@@ -41,13 +46,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 1;
+  transform: translateX(-100%);
+}
+
+.overlay-gallery-home {
   background: linear-gradient(
     359.58deg,
     #002133 0.39%,
     rgba(0, 33, 51, 0) 51.47%
   );
-  opacity: 1;
-  transform: translateX(-100%);
+}
+
+.overlay-gallery-about {
+  background: rgba(0, 33, 51, 0.61) 51.47%;
 }
 
 .overlay-gallery img {

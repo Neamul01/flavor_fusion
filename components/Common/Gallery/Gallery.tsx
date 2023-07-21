@@ -123,7 +123,13 @@ function Gallery({
                   } relative overlay-gallery-parent`}
                 >
                   <Image src={item.img} fill alt="gallery" />
-                  <div className="overlay-gallery cursor-pointer h-[522px] w-[522px] relative ">
+                  <div
+                    className={`${
+                      pageVariant === 'home'
+                        ? 'overlay-gallery-home'
+                        : 'overlay-gallery-about'
+                    } overlay-gallery cursor-pointer h-[522px] w-[522px] relative`}
+                  >
                     {pageVariant === 'home' && (
                       <Image src={'/gallery/Zoom.svg'} fill alt="zoom" />
                     )}
