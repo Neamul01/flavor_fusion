@@ -1,10 +1,10 @@
 import AboutTo from '@/components/Home/AboutTo'
 import Experties from '@/components/Home/Experties/Experties'
 import FoodCarousel from '@/components/Home/FoodCarousel'
-import Gallery from '@/components/Home/Gallery/Gallery'
 import Hero from '@/components/Home/Hero/Hero'
 import MenuList from '@/components/Home/MenuList/MenuList'
 import NewItem from '@/components/Home/NewItem/NewItem'
+import HomeGallery from '@/components/Home/HomeGallery'
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <AboutTo />
       {/* <NewItem /> */}
       <MenuList />
-      <Gallery />
+      <HomeGallery />
       <Experties />
     </main>
   )

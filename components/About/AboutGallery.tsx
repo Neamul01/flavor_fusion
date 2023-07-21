@@ -1,5 +1,5 @@
 import React from 'react'
-import Gallery from '../Home/Gallery/Gallery'
+import Gallery from '../Common/Gallery/Gallery'
 
 export default function AboutGallery() {
   return (

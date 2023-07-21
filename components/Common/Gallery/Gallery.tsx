@@ -1,8 +1,8 @@
 'use client'
 
 import React from 'react'
-import TopHeading from '../Common/TopHeading'
-import H2heading from '../Common/H2heading'
+import TopHeading from '../../Home/Common/TopHeading'
+import H2heading from '../../Home/Common/H2heading'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from 'next/image'
 import { Autoplay, Navigation, Pagination } from 'swiper'
