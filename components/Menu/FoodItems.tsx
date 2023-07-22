@@ -23,6 +23,7 @@ export default function FoodItems() {
           name="view_more"
           text="View More"
           color="secondary"
+          className="rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none "
         />
       </div>
     </Layout>

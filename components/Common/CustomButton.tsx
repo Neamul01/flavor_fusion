@@ -2,13 +2,14 @@
 import { Button } from '@mantine/core'
 import React from 'react'
 import { BsArrowUpRightCircle } from 'react-icons/bs'
+import { twMerge } from 'tailwind-merge'
 
 type Props = {
   name: string
   text: string
   icon?: any
   color?: 'primary' | 'secondary'
-  customClass?: string
+  className?: string
   withIcon?: boolean
 }
 function CustomButton(props: Props) {
@@ -17,7 +18,7 @@ function CustomButton(props: Props) {
     text = 'Discover more',
     icon,
     color = 'primary',
-    customClass,
+    className,
     withIcon = true,
   } = props
   const Icon = icon ? icon : <BsArrowUpRightCircle size={'1.3rem'} />
@@ -25,9 +26,12 @@ function CustomButton(props: Props) {
     <Button
       leftIcon={withIcon ? Icon : null}
       name={name}
-      className={`text-${
-        color === 'secondary' ? 'secondary' : 'primary'
-      } border-primary rounded-full hover:bg-primary hover:text-white capitalize font-jost ${customClass}`}
+      className={`${
+        color === 'secondary' ? 'text-secondary' : 'text-primary'
+      } ${twMerge(
+        'border-primary rounded-full hover:bg-primary hover:text-white capitalize font-jost',
+        className
+      )}`}
       size="lg"
     >
       {text}

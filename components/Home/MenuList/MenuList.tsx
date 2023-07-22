@@ -76,7 +76,7 @@ function MenuList() {
           name="view-more"
           text="View More"
           color="secondary"
-          customClass="hidden md:block"
+          className="hidden md:block"
         />
       </div>
       <div className=" grid grid-cols-1 md:grid-cols-12 gap-y-8 mt-12 ">
