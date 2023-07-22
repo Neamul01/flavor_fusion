@@ -5,17 +5,18 @@ import { BiPhoneCall } from 'react-icons/bi'
 import { Divider } from '@mantine/core'
 import { AiOutlineMail } from 'react-icons/ai'
 
-const address = [
-  {
-    id: 1,
-    title: 'Washington Branch',
-    address: 'Mirpur DOHS, House-167/170, Road No-02, Avenue -01',
-    phone: '+844847393',
-    email: '',
-  },
-]
+type ShopLocationCardProps = {
+  title: string
+  address: string
+  phone: string
+  email: string
+}
 
-export default function ShopLocationCard() {
+export default function ShopLocationCard({
+  location,
+}: {
+  location: ShopLocationCardProps
+}) {
   return (
     <div className="flex">
       <Image
@@ -75,7 +76,7 @@ export default function ShopLocationCard() {
               href="mailto:info@example.com"
               className="text-secondary/80 hover:text-primary text-lg"
             >
-              info@example.com
+              {location.email}
             </a>
           </div>
         </div>
