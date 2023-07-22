@@ -4,9 +4,10 @@ import FoodCard from '../Common/FoodCard'
 import CustomButton from '../Common/CustomButton'
 
 export default function FoodItems() {
-  const [number, setNumber] = useState(7)
+  const [number, setNumber] = useState(6)
 
   const selectedItems = menuItems.slice(0, number)
+  const shouldDisableButton = number >= menuItems.length && true
 
   return (
     <Layout bg="white" className="py-20 ">
@@ -17,13 +18,17 @@ export default function FoodItems() {
           </div>
         ))}
       </div>
-      <div className="w-full flex items-center justify-center">
+      <div className="w-full flex items-center justify-center mt-8">
         <CustomButton
           withIcon={false}
           name="view_more"
-          text="View More"
+          text={shouldDisableButton ? 'Completed' : 'View More'}
           color="secondary"
-          className="rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none "
+          className={`rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none ${
+            shouldDisableButton === true && 'text-secondary/50'
+          }`}
+          onClick={() => setNumber(number + 6)}
+          disabled={shouldDisableButton}
         />
       </div>
     </Layout>
