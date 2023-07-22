@@ -1,0 +1,16 @@
+.contact_form::after {
+  content: '';
+  background: linear-gradient(
+      98.3deg,
+      rgba(111, 73, 2, 0.2) 0.45%,
+      transparent 162.03%
+    ),
+    linear-gradient(269.66deg, rgba(0, 2, 3, 0.51) 0.28%, #09161d 99.7%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0.1;
+  border-radius: 10px;
+}
