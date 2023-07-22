@@ -7,21 +7,23 @@ type Props = {
   name: string
   text: string
   icon?: any
-  color?: string
+  color?: 'primary' | 'secondary'
   customClass?: string
+  withIcon?: boolean
 }
 function CustomButton(props: Props) {
   const {
     name,
     text = 'Discover more',
     icon,
-    color = 'primary' || 'secondary',
+    color = 'primary',
     customClass,
+    withIcon = true,
   } = props
   const Icon = icon ? icon : <BsArrowUpRightCircle size={'1.3rem'} />
   return (
     <Button
-      leftIcon={Icon}
+      leftIcon={withIcon ? Icon : null}
       name={name}
       className={`text-${
         color === 'secondary' ? 'secondary' : 'primary'

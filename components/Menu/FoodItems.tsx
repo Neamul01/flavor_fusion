@@ -1,19 +1,30 @@
 import React, { useState } from 'react'
 import Layout from '../Layouts/Layout'
 import FoodCard from '../Common/FoodCard'
+import CustomButton from '../Common/CustomButton'
 
 export default function FoodItems() {
-  const [number, setNumber] = useState(6)
+  const [number, setNumber] = useState(7)
 
-  const selectedItems = menuItems.slice(0, 6)
+  const selectedItems = menuItems.slice(0, number)
 
   return (
-    <Layout bg="white" className="py-20 grid grid-cols-12">
-      {menuItems.map((item) => (
-        <div className="col-span-4" key={item.id}>
-          <FoodCard item={item} />
-        </div>
-      ))}
+    <Layout bg="white" className="py-20 ">
+      <div className="w-full grid grid-cols-12">
+        {selectedItems.map((item) => (
+          <div className="col-span-4" key={item.id}>
+            <FoodCard item={item} />
+          </div>
+        ))}
+      </div>
+      <div className="w-full flex items-center justify-center">
+        <CustomButton
+          withIcon={false}
+          name="view_more"
+          text="View More"
+          color="secondary"
+        />
+      </div>
     </Layout>
   )
 }
