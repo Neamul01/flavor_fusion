@@ -18,6 +18,7 @@ export default function ShopLocations() {
 const locations = [
   {
     id: 1,
+    img: '/contact/contact-img-01.png',
     title: 'Washington Branch',
     address: 'Mirpur DOHS, House-167/170, Road No-02, Avenue -01',
     phone: '+880 123 456 789',
@@ -25,6 +26,7 @@ const locations = [
   },
   {
     id: 2,
+    img: '/contact/contact-img-02.png',
     title: 'Italy Branch',
     address: ' House-167/170, Road No-02, Avenue -01',
     phone: '+06 123 456 789',

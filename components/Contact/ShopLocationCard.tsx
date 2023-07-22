@@ -10,6 +10,8 @@ type ShopLocationCardProps = {
   address: string
   phone: string
   email: string
+  img: string
+  id: number
 }
 
 export default function ShopLocationCard({
@@ -20,7 +22,7 @@ export default function ShopLocationCard({
   return (
     <div className="flex">
       <Image
-        src="/contact/contact-img-01.png"
+        src={location.img}
         width={368}
         height={375}
         alt="shop"
@@ -28,7 +30,7 @@ export default function ShopLocationCard({
       />
       <div className="border m-6 ml-0 px-5 py-8 rounded-tr-xl rounded-br-xl w-[20rem]">
         <div className=" inline-block">
-          <h2 className=" text-3xl font-semibold">Washington Branch</h2>
+          <h2 className=" text-3xl font-semibold">{location.title}</h2>
           <Divider
             my="xs"
             labelPosition="center"
@@ -53,7 +55,7 @@ export default function ShopLocationCard({
               <TfiLocationPin className="text-xl text-primary" />
             </p>
             <p className="text-secondary/80 hover:text-primary text-lg">
-              Mirpur DOHS, House-167/170, Road No-02, Avenue -01
+              {location.address}
             </p>
           </div>
           {/* phone  */}
@@ -62,10 +64,10 @@ export default function ShopLocationCard({
               <BiPhoneCall className="text-xl text-primary" />
             </p>
             <a
-              href="tel:+844847393"
+              href={`tel:${location.phone}`}
               className="text-secondary/80 hover:text-primary text-lg"
             >
-              +844847393
+              {location.phone}
             </a>
           </div>
           <div className="flex items-center gap-2">
@@ -73,7 +75,7 @@ export default function ShopLocationCard({
               <AiOutlineMail className="text-xl text-primary" />
             </p>
             <a
-              href="mailto:info@example.com"
+              href={`mailto:${location.email}`}
               className="text-secondary/80 hover:text-primary text-lg"
             >
               {location.email}
