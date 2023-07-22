@@ -18,7 +18,7 @@ function Heading({
   breadcrumbsItems: BreadcrumbsItem[]
 }) {
   const routes = usePathname()
-  // console.log(routes)
+  console.log(routes)
 
   const items = breadcrumbsItems.map((item, index) => (
     <Anchor
