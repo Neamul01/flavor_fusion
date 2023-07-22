@@ -24,9 +24,11 @@ module.exports = {
       },
       maxWidth: {
         layout: '85rem',
+        layour_large: '95rem',
       },
       width: {
         layout: '85rem',
+        layour_large: '95rem',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
