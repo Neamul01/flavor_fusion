@@ -81,7 +81,11 @@ function MenuList() {
       </div>
       <div className=" grid grid-cols-1 md:grid-cols-12 gap-y-8 mt-12 ">
         {menuItems.map((item) => {
-          return <FoodCard item={item} key={item.id} />
+          return (
+            <div className="col-span-4" key={item.id}>
+              <FoodCard item={item} />
+            </div>
+          )
         })}
       </div>
     </HomeLayout>

@@ -12,10 +12,7 @@ type Item = {
 }
 export default function FoodCard({ item }: { item: Item }) {
   return (
-    <div
-      className="col-span-4 border rounded-xl max-w-[26rem] relative"
-      key={item.id}
-    >
+    <div className=" border rounded-xl max-w-[26rem] relative" key={item.id}>
       <div className="border rounded-t-xl overflow-hidden relative">
         <Image src={item.img} alt={item.name} width={416} height={320} />
         <Badge
