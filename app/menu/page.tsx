@@ -2,6 +2,7 @@
 
 import React from 'react'
 import StyleHeading from '@/components/Common/StyleHeading'
+import FoodItems from '@/components/Menu/FoodItems'
 
 const breadcrumbsItems = [
   { title: 'Home', href: '/' },
@@ -10,8 +11,9 @@ const breadcrumbsItems = [
 
 export default function page() {
   return (
-    <div>
+    <>
       <StyleHeading breadcrumbsItems={breadcrumbsItems} text="Menu List" />
-    </div>
+      <FoodItems />
+    </>
   )
 }

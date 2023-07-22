@@ -46,7 +46,7 @@ function Introduction() {
         <TopHeading text="Introduction of Flavor Fusion" />
         <H2heading text="We Are Experienced Restaurant." color="secondary" />
       </HomeLayout>
-      <div className="max-w-[95rem] mx-auto mt-9 flex flex-col md:flex-row items-center gap-6">
+      <div className="max-w-layour_large mx-auto mt-9 flex flex-col md:flex-row items-center gap-6">
         {/* left image  */}
         <div className=" relative h-[19rem] md:h-[34.1875rem] w-[18rem] md:w-[33.125rem] rounded-tl-xl rounded-br-xl overflow-hidden">
           <Image src={'/about/intro-left-img.png'} alt="chef" fill />
