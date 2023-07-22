@@ -46,13 +46,15 @@ export default function Summary() {
         {summeryItems.map((item) => (
           <div
             key={item.id}
-            className={`${styles.counter_single} col-span-3 px-6 py-4 flex items-center gap-2 border border-secondary/10 rounded-xl`}
+            className={`${styles.counter_single} col-span-6 md:col-span-3 px-6 py-4 flex flex-col md:flex-row items-center gap-2 border border-secondary/10 rounded-xl`}
           >
             {/* <LuChefHat className="text-primary" size={'3rem'} /> */}
             {item.icon}
             <div className="flex flex-col">
-              <p className="text-3xl font-semibold">{item.count}</p>
-              <p className="text-secondary/50 text-xl font-cormorant">
+              <p className="text-3xl font-semibold text-center md:text-left">
+                {item.count}
+              </p>
+              <p className="text-secondary/50 text-xl font-cormorant text-center md:text-left">
                 {item.text}
               </p>
             </div>

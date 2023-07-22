@@ -69,7 +69,7 @@ function NewItem() {
           Various versions have evolved over the years, sometimes on purpose.
         </p>
       </div>
-      <div className="flex gap-2 mt-10 max-w-layout">
+      <div className="mt-10 max-w-layout">
         <Swiper
           loop={true}
           autoplay={{
@@ -81,11 +81,9 @@ function NewItem() {
           slidesPerView={1}
           breakpoints={{
             640: {
-              width: 640,
               slidesPerView: 2,
             },
-            768: {
-              width: 768,
+            1024: {
               slidesPerView: 3,
             },
           }}
@@ -95,14 +93,11 @@ function NewItem() {
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
-          className="mySwiper-newItem max-w-screen"
+          className="mySwiper-newItem"
         >
           {newItems.map((item) => {
             return (
-              <SwiperSlide
-                key={item.id}
-                className="swiper-slide-newItem max-w-[400px] mx-6"
-              >
+              <SwiperSlide key={item.id} className="swiper-slide-newItem">
                 <div className="flex gap-3 flex-col items-center">
                   <div className="relative">
                     <Image
