@@ -26,14 +26,23 @@ export default function ShopLocationCard() {
         className="rounded-tl-xl rounded-br-xl overflow-hidden"
       />
       <div className="border m-6 ml-0 px-5 py-8 rounded-tr-xl rounded-br-xl w-[20rem]">
-        <div className="">
-          <h2 className="text-3xl font-semibold">Washington Branch</h2>
+        <div className=" inline-block">
+          <h2 className=" text-3xl font-semibold">Washington Branch</h2>
           <Divider
             my="xs"
-            label="Label in the center"
             labelPosition="center"
             className="mt-0"
             color={'var(--primary-color)'}
+            label={
+              <p className="w-5 h-5 relative">
+                <Image
+                  src={'/sub-title-vec.svg'}
+                  className="object-contain"
+                  alt="vec"
+                  fill
+                />
+              </p>
+            }
           />
         </div>
         <div className="flex flex-col gap-4 mt-3">
