@@ -10,7 +10,7 @@ type Item = {
   price: string
   category: string
 }
-export default function FoodCart({ item }: { item: Item }) {
+export default function FoodCard({ item }: { item: Item }) {
   return (
     <div
       className="col-span-4 border rounded-xl max-w-[26rem] relative"

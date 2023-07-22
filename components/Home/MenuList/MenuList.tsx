@@ -5,7 +5,7 @@ import TopHeading from '../Common/TopHeading'
 import H2heading from '../Common/H2heading'
 import CustomButton from '@/components/Common/CustomButton'
 import HomeLayout from '../../Layouts/Layout'
-import FoodCart from '@/components/Common/FoodCart'
+import FoodCard from '@/components/Common/FoodCard'
 
 const menuItems = [
   {
@@ -81,7 +81,7 @@ function MenuList() {
       </div>
       <div className=" grid grid-cols-1 md:grid-cols-12 gap-y-8 mt-12 ">
         {menuItems.map((item) => {
-          return <FoodCart item={item} key={item.id} />
+          return <FoodCard item={item} key={item.id} />
         })}
       </div>
     </HomeLayout>
