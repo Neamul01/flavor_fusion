@@ -12,7 +12,6 @@ export default function GetInTouch() {
           <TopHeading text="Contact Us" />
           <H2heading color="white" text="Get In Touch" />
         </div>
-        <div className=""></div>
       </div>
     </Layout>
   )
