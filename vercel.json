@@ -1,5 +1,5 @@
 {
   "files": {
-    "exclude": ["about.rsc"]
+    "exclude": ["**/*.stories.js", "stories", "**/*.mdx"]
   }
 }
