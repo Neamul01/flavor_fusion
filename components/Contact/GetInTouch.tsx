@@ -2,9 +2,17 @@ import React from 'react'
 import Layout from '../Layouts/Layout'
 import TopHeading from '../Home/Common/TopHeading'
 import H2heading from '../Home/Common/H2heading'
+import { useForm } from '@mantine/form'
 import './contact.css'
 
 export default function GetInTouch() {
+  const form = useForm({
+    initialValues: {
+      email: '',
+      termsOfService: false,
+    },
+  })
+
   return (
     <Layout className="py-20">
       <div className="contact_form relative bg-[url('/contact/reservation-1-bg.png')] w-full bg-no-repeat bg-cover rounded-lg p-20">
