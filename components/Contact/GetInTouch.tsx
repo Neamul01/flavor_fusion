@@ -4,6 +4,7 @@ import TopHeading from '../Home/Common/TopHeading'
 import H2heading from '../Home/Common/H2heading'
 import { useForm } from '@mantine/form'
 import './contact.css'
+import { TextInput } from '@mantine/core'
 
 export default function GetInTouch() {
   const form = useForm({
@@ -19,6 +20,16 @@ export default function GetInTouch() {
         <div className="flex flex-col items-center justify-center z-20">
           <TopHeading text="Contact Us" />
           <H2heading color="white" text="Get In Touch" />
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <form onSubmit={form.onSubmit((values) => console.log(values))}>
+            <TextInput
+              withAsterisk
+              label="Email"
+              placeholder="your@email.com"
+              {...form.getInputProps('email')}
+            />
+          </form>
         </div>
       </div>
     </Layout>
