@@ -5,6 +5,7 @@ import H2heading from '../Home/Common/H2heading'
 import { useForm } from '@mantine/form'
 import './contact.css'
 import { TextInput } from '@mantine/core'
+import MantineTextInput from '../Common/FormInputs/MantineTextInput'
 
 export default function GetInTouch() {
   const form = useForm({
@@ -23,12 +24,7 @@ export default function GetInTouch() {
         </div>
         <div className="flex flex-col items-center justify-center">
           <form onSubmit={form.onSubmit((values) => console.log(values))}>
-            <TextInput
-              withAsterisk
-              label="Email"
-              placeholder="your@email.com"
-              {...form.getInputProps('email')}
-            />
+            <MantineTextInput formProps={{ ...form.getInputProps('email') }} />
           </form>
         </div>
       </div>
