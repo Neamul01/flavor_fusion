@@ -1,0 +1,8 @@
+.custom-text-input input,
+.custom-text-area textarea {
+  @apply bg-secondary/5 border-white/20 border-2 focus:border-primary/60;
+}
+
+.custom-checkbox label {
+  @apply text-white;
+}

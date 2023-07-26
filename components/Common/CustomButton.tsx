@@ -13,6 +13,7 @@ type Props = {
   withIcon?: boolean
   onClick?: () => void
   disabled?: boolean
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 }
 function CustomButton(props: Props) {
   const {
@@ -24,6 +25,7 @@ function CustomButton(props: Props) {
     withIcon = true,
     onClick,
     disabled = false,
+    size,
   } = props
   const Icon = icon ? icon : <BsArrowUpRightCircle size={'1.3rem'} />
   return (
@@ -36,7 +38,7 @@ function CustomButton(props: Props) {
         'border-primary rounded-full hover:bg-primary hover:text-white capitalize font-jost',
         className
       )}`}
-      size="lg"
+      size={size && size}
       onClick={onClick}
       disabled={disabled}
     >
