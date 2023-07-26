@@ -4,8 +4,9 @@ import TopHeading from '../Home/Common/TopHeading'
 import H2heading from '../Home/Common/H2heading'
 import { useForm } from '@mantine/form'
 import './contact.css'
-import { TextInput } from '@mantine/core'
-import MantineTextInput from '../Common/FormInputs/MantineTextInput'
+import { TextInput, Textarea } from '@mantine/core'
+import MantineTextInput from '../Common/FormInputs/CustomTextInput'
+import CustomTextArea from '../Common/FormInputs/CustomTextArea'
 
 export default function GetInTouch() {
   const form = useForm({
@@ -23,8 +24,23 @@ export default function GetInTouch() {
           <H2heading color="white" text="Get In Touch" />
         </div>
         <div className="flex flex-col items-center justify-center">
-          <form onSubmit={form.onSubmit((values) => console.log(values))}>
-            <MantineTextInput formProps={{ ...form.getInputProps('email') }} />
+          <form
+            onSubmit={form.onSubmit((values) => console.log(values))}
+            className="w-full px-16 mt-10 flex flex-col gap-4"
+          >
+            <div className="flex gap-4 relative">
+              <MantineTextInput
+                formProps={{ ...form.getInputProps('email') }}
+                placeholder="Email"
+                className="w-full"
+              />
+              <MantineTextInput
+                formProps={{ ...form.getInputProps('email') }}
+                placeholder="Name"
+                className="w-full"
+              />
+            </div>
+            <CustomTextArea />
           </form>
         </div>
       </div>
