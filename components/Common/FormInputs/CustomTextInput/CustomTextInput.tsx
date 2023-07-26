@@ -1,7 +1,7 @@
 import { TextInput } from '@mantine/core'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
-import './customTextInput.css'
+import '../customText.css'
 
 export default function MantineTextInput({
   label,
@@ -9,7 +9,9 @@ export default function MantineTextInput({
   formProps,
   className,
   props,
+  size,
 }: {
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   label?: string
   placeholder?: string
   formProps: any
@@ -20,7 +22,7 @@ export default function MantineTextInput({
     <TextInput
       label={label && label}
       placeholder={placeholder && placeholder}
-      size="lg"
+      size={''}
       {...formProps}
       {...props}
       className={twMerge(

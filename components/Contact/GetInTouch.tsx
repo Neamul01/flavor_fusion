@@ -5,8 +5,8 @@ import H2heading from '../Home/Common/H2heading'
 import { useForm } from '@mantine/form'
 import './contact.css'
 import { TextInput, Textarea } from '@mantine/core'
-import MantineTextInput from '../Common/FormInputs/CustomTextInput'
-import CustomTextArea from '../Common/FormInputs/CustomTextArea'
+import MantineTextInput from '../Common/FormInputs/CustomTextInput/CustomTextInput'
+import CustomTextArea from '../Common/FormInputs/CustomTextArea/CustomTextArea'
 
 export default function GetInTouch() {
   const form = useForm({
@@ -40,7 +40,11 @@ export default function GetInTouch() {
                 className="w-full"
               />
             </div>
-            <CustomTextArea />
+            <CustomTextArea
+              placeholder="Message ..."
+              maxRows={10}
+              minRows={8}
+            />
           </form>
         </div>
       </div>
