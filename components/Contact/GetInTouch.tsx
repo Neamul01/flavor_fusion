@@ -4,9 +4,10 @@ import TopHeading from '../Home/Common/TopHeading'
 import H2heading from '../Home/Common/H2heading'
 import { useForm } from '@mantine/form'
 import './contact.css'
-import { TextInput, Textarea } from '@mantine/core'
+import { Checkbox, TextInput, Textarea } from '@mantine/core'
 import MantineTextInput from '../Common/FormInputs/CustomTextInput/CustomTextInput'
 import CustomTextArea from '../Common/FormInputs/CustomTextArea/CustomTextArea'
+import CustomCheckbox from '../Common/FormInputs/CustomCheckbox'
 
 export default function GetInTouch() {
   const form = useForm({
@@ -45,6 +46,9 @@ export default function GetInTouch() {
               maxRows={10}
               minRows={8}
             />
+            <div className="flex">
+              <CustomCheckbox label="Please save my name, email for the next time when I comment." />
+            </div>
           </form>
         </div>
       </div>
