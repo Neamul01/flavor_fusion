@@ -8,6 +8,7 @@ import { Checkbox, TextInput, Textarea } from '@mantine/core'
 import MantineTextInput from '../Common/FormInputs/CustomTextInput/CustomTextInput'
 import CustomTextArea from '../Common/FormInputs/CustomTextArea/CustomTextArea'
 import CustomCheckbox from '../Common/FormInputs/CustomCheckbox'
+import CustomButton from '../Common/CustomButton'
 
 export default function GetInTouch() {
   const form = useForm({
@@ -27,7 +28,7 @@ export default function GetInTouch() {
         <div className="flex flex-col items-center justify-center">
           <form
             onSubmit={form.onSubmit((values) => console.log(values))}
-            className="w-full px-16 mt-10 flex flex-col gap-4"
+            className="w-full px-16 mt-16 flex flex-col gap-8"
           >
             <div className="flex gap-4 relative">
               <MantineTextInput
@@ -46,8 +47,15 @@ export default function GetInTouch() {
               maxRows={10}
               minRows={8}
             />
-            <div className="flex">
-              <CustomCheckbox label="Please save my name, email for the next time when I comment." />
+            <CustomCheckbox label="Please save my name, email for the next time when I comment." />
+            <div className="flex items-center justify-center mt-10">
+              <CustomButton
+                name="send message"
+                text="Send Message"
+                withIcon={false}
+                size="lg"
+                className="w-full bg-primary text-white max-w-sm z-20 rounded-tr-none rounded-tl-2xl rounded-br-2xl rounded-bl-none hover:bg-white hover:text-primary hover:border-none transition-all"
+              />
             </div>
           </form>
         </div>
