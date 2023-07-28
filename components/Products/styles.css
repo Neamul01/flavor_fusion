@@ -5,3 +5,8 @@
 .product_image_thumb .swiper-slide-thumb-active {
   @apply bg-primary/10;
 }
+
+/* rating styles  */
+.product_rating .mantine-Rating-symbolGroup label {
+  @apply text-primary;
+}

@@ -24,11 +24,11 @@ export default function page({ params }: { params: { id: string } }) {
     <div>
       <Heading text="Single page" breadcrumbsItems={breadcrumbsItems} />
       <Layout bg="white" color="secondary">
-        <div className="grid grid-cols-12 py-10">
+        <div className="grid grid-cols-12 py-20">
           <div className="col-span-6 mr-4">
             <ProductImage items={swiperItems} />
           </div>
-          <div className="col-span-6">
+          <div className="col-span-6 px-4">
             <Product params={params.id} />
           </div>
         </div>
