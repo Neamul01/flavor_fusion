@@ -10,13 +10,13 @@ import { FreeMode, Navigation, Thumbs } from 'swiper'
 export default function ProductImage() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
   return (
-    <div>
+    <>
       <Swiper
         spaceBetween={10}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
+        className="mySwiper2 pb-2"
       >
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -90,6 +90,6 @@ export default function ProductImage() {
           <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
         </SwiperSlide>
       </Swiper>
-    </div>
+    </>
   )
 }
