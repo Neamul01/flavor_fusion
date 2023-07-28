@@ -25,14 +25,11 @@ export default function ProductImage({ items }: { items: Items[] }) {
         className="product_image mb-2"
       >
         {items.map((item) => (
-          <SwiperSlide key={item.id}>
-            <Image
-              alt="product"
-              height={348}
-              width={348}
-              src="https://swiperjs.com/demos/images/nature-1.jpg"
-            />
-          </SwiperSlide>
+          <div className="" key={item.id}>
+            <SwiperSlide>
+              <Image alt="product" height={348} width={348} src={item.img} />
+            </SwiperSlide>
+          </div>
         ))}
       </Swiper>
       <Swiper
@@ -45,36 +42,13 @@ export default function ProductImage({ items }: { items: Items[] }) {
         modules={[FreeMode, Navigation, Thumbs]}
         className="product_image_thumb"
       >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
+        {items.map((item) => (
+          <div className="" key={item.id}>
+            <SwiperSlide>
+              <Image alt="product" height={348} width={348} src={item.img} />
+            </SwiperSlide>
+          </div>
+        ))}
       </Swiper>
     </>
   )
