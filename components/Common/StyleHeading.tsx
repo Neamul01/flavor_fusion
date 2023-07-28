@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation'
 type BreadcrumbsItem = {
   title: string
   href: string
+  id?: number
 }
 
 function Heading({
@@ -36,7 +37,7 @@ function Heading({
     <div
       className={`${styles.syleheading} h-[33rem] md:h-[38rem] bg-[url('/about/bredcumb-bg.png')] relative -mt-20 bg-cover bg-no-repeat] flex items-end`}
     >
-      <HomeLayout bg="secondary" className="flex flex-col pb-32">
+      <HomeLayout bg="transparent" className="flex flex-col pb-32">
         <h2 className={`z-20 text-6xl font-semibold capitalize text-white`}>
           {text}
         </h2>
