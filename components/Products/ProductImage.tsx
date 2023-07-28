@@ -7,6 +7,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
 import { FreeMode, Navigation, Thumbs } from 'swiper'
 import Image from 'next/image'
+import './styles.css'
 
 type Items = {
   id: number
@@ -46,7 +47,7 @@ export default function ProductImage({ items }: { items: Items[] }) {
           <div className="" key={item.id}>
             <SwiperSlide>
               <div className="border-2 border-secondary/10 p-2 rounded-lg">
-                <div className="flex items-center justify-center bg-secondary/5 py-4 px-0 rounded-lg">
+                <div className="flex items-center justify-center py-4 px-0 rounded-lg">
                   <Image
                     alt="product"
                     height={104}

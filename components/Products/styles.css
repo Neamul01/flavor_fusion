@@ -1,0 +1,7 @@
+.product_image_thumb .swiper-slide {
+  @apply bg-secondary/5;
+}
+
+.product_image_thumb .swiper-slide-thumb-active {
+  @apply bg-primary/10;
+}
