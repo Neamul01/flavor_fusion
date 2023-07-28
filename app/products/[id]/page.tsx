@@ -22,6 +22,17 @@ const breadcrumbsItems = [
   },
 ]
 
+const tabs = [
+  {
+    id: 1,
+    name: 'Details',
+  },
+  {
+    id: 2,
+    name: 'Review',
+  },
+]
+
 export default function Page({ params }: { params: { id: string } }) {
   const [activeTab, setActiveTab] = useState<string | null>('first')
 
@@ -29,6 +40,7 @@ export default function Page({ params }: { params: { id: string } }) {
     <div>
       <Heading text="Single page" breadcrumbsItems={breadcrumbsItems} />
       <Layout bg="white" color="secondary">
+        {/* image and short details section  */}
         <div className="grid grid-cols-12 py-20">
           <div className="col-span-6 mr-4">
             <ProductImage items={swiperItems} />
@@ -37,6 +49,8 @@ export default function Page({ params }: { params: { id: string } }) {
             <Product params={params.id} />
           </div>
         </div>
+
+        {/* details sectioon */}
         <div className="py-10">
           <h2 className="text-3xl md:text-5xl font-semibold">Item Details</h2>
           <Tabs
@@ -45,41 +59,30 @@ export default function Page({ params }: { params: { id: string } }) {
             onTabChange={setActiveTab}
             className="flex gap-4 my-10"
           >
+            {/* tabs for details */}
             <Tabs.List className="flex flex-col gap-5 min-w-[14rem]">
-              <Tabs.Tab
-                value="details"
-                className={` py-4 rounded-none ${
-                  activeTab === 'details'
-                    ? 'bg-secondary hover:bg-secondary border-none'
-                    : 'bg-white bg-secondary/5'
-                }`}
-              >
-                <span
-                  className={`font-jost text-lg font-semibold ${
-                    activeTab === 'details' ? 'text-white' : 'text-secondary'
+              {tabs.map((tab) => (
+                <Tabs.Tab
+                  key={tab.id}
+                  value="details"
+                  className={` py-4 rounded-none ${
+                    activeTab === 'details'
+                      ? 'bg-secondary hover:bg-secondary border-none'
+                      : 'bg-white bg-secondary/5'
                   }`}
                 >
-                  Details
-                </span>
-              </Tabs.Tab>
-              <Tabs.Tab
-                value="review"
-                className={` py-4 rounded-none ${
-                  activeTab === 'review'
-                    ? 'bg-secondary hover:bg-secondary border-none'
-                    : 'bg-white bg-secondary/5'
-                }`}
-              >
-                <span
-                  className={`text-lg font-jost ${
-                    activeTab === 'review' ? 'text-white' : 'text-secondary'
-                  }`}
-                >
-                  Review
-                </span>
-              </Tabs.Tab>
+                  <span
+                    className={`font-jost text-lg font-semibold ${
+                      activeTab === 'details' ? 'text-white' : 'text-secondary'
+                    }`}
+                  >
+                    {tab.name}
+                  </span>
+                </Tabs.Tab>
+              ))}
             </Tabs.List>
 
+            {/* tab items for above tabs */}
             <div className="ml-10">
               <Tabs.Panel value="details">
                 <ProductDetails />
