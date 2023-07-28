@@ -3,7 +3,7 @@ import { twMerge } from 'tailwind-merge'
 
 type Props = {
   children: any
-  color?: 'primary' | 'secondary'
+  color?: 'primary' | 'secondary' | 'white'
   bg?: 'white' | 'secondary' | string
   parentClass?: string
   className?: string
