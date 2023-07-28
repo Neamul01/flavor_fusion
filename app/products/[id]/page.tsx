@@ -3,7 +3,9 @@
 import Heading from '@/components/Common/StyleHeading'
 import Layout from '@/components/Layouts/Layout'
 import Product from '@/components/Products/Product'
+import ProductDetails from '@/components/Products/ProductDetails'
 import ProductImage from '@/components/Products/ProductImage'
+import ProductReview from '@/components/Products/ProductReview'
 import { Tabs } from '@mantine/core'
 import React, { useState } from 'react'
 
@@ -43,64 +45,49 @@ export default function Page({ params }: { params: { id: string } }) {
             onTabChange={setActiveTab}
             className="flex gap-4 my-10"
           >
-            <Tabs.List className="flex flex-col gap-5">
+            <Tabs.List className="flex flex-col gap-5 min-w-[14rem]">
               <Tabs.Tab
                 value="details"
-                className={`min-w-[10rem] py-4 rounded-none ${
+                className={` py-4 rounded-none ${
                   activeTab === 'details'
                     ? 'bg-secondary hover:bg-secondary border-none'
                     : 'bg-white bg-secondary/5'
                 }`}
               >
-                <div
-                  className={
+                <span
+                  className={`font-jost text-lg font-semibold ${
                     activeTab === 'details' ? 'text-white' : 'text-secondary'
-                  }
+                  }`}
                 >
-                  details
-                </div>
+                  Details
+                </span>
               </Tabs.Tab>
               <Tabs.Tab
                 value="review"
-                className={`min-w-[10rem] py-4 rounded-none ${
+                className={` py-4 rounded-none ${
                   activeTab === 'review'
                     ? 'bg-secondary hover:bg-secondary border-none'
                     : 'bg-white bg-secondary/5'
                 }`}
               >
-                <div
-                  className={
+                <span
+                  className={`text-lg font-jost ${
                     activeTab === 'review' ? 'text-white' : 'text-secondary'
-                  }
+                  }`}
                 >
-                  review
-                </div>
+                  Review
+                </span>
               </Tabs.Tab>
             </Tabs.List>
 
             <div className="ml-10">
               <Tabs.Panel value="details">
-                <p className="text-lg text-secondary/80">
-                  Aenean dolor massa, rhoncus ut tortor in, pretium tempus
-                  neque. Vestibulum venenatis leo et dictum finibus. Nulla
-                  vulputate dolor sit amet tristique dapibus. Maecenas posuere
-                  luctus leo, non consequat felis ullamc orper non. Aliquam erat
-                  volutpat. Donec vitae porta enim. Cras eu volutpat dolor,
-                  vitae accumsan tellus. Donec pulvinar auctor nunc, et gravida
-                  elit porta non. Aliquam erat volutpat. Proin facilisis
-                  interdum felis, sit amet pretium purus feugiat ac. Donec in
-                  leo metus. Sed quis dui nec justo ullamcorper molestie. Mauris
-                  consequat lacinia est, eget tincidunt leo ornare sed
-                </p>
-                <p className="text-lg text-secondary/80">
-                  Aenean dolor massa, rhoncus ut tortor in, pretium tempus
-                  neque. Vestibulum venenatis leo et dictum finibus dapi bus
-                  Maecenas posuere luctus leo, non consequat felis ullamcorper
-                  non.
-                </p>
+                <ProductDetails />
               </Tabs.Panel>
 
-              <Tabs.Panel value="review">review tab content</Tabs.Panel>
+              <Tabs.Panel value="review">
+                <ProductReview />
+              </Tabs.Panel>
             </div>
           </Tabs>
         </div>
