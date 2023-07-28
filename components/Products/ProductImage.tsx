@@ -50,6 +50,7 @@ export default function ProductImage() {
         </SwiperSlide>
       </Swiper>
       <Swiper
+        // @ts-ignore
         onSwiper={setThumbsSwiper}
         spaceBetween={10}
         slidesPerView={4}
