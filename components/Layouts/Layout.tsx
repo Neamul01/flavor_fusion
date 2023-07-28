@@ -1,8 +1,9 @@
 import React from 'react'
+import { twMerge } from 'tailwind-merge'
 
 type Props = {
   children: any
-  color?: string
+  color?: 'primary' | 'secondary' | 'white'
   bg?: 'white' | 'secondary' | string
   parentClass?: string
   className?: string
@@ -15,7 +16,7 @@ function Layout({
   className,
 }: Props) {
   return (
-    <div className={`text-${color} bg-${bg} w-full ${parentClass}  px-3`}>
+    <div className={twMerge(`text-${color} bg-${bg} w-full px-3`, parentClass)}>
       {/* overflow-hidden */}
       <div className={`max-w-layout mx-auto ${className}`}>{children}</div>
     </div>
