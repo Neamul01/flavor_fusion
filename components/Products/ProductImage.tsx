@@ -7,6 +7,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
 import { FreeMode, Navigation, Thumbs } from 'swiper'
 import Image from 'next/image'
+import './styles.css'
 
 type Items = {
   id: number
@@ -25,17 +26,14 @@ export default function ProductImage({ items }: { items: Items[] }) {
         className="product_image mb-2"
       >
         {items.map((item) => (
-          <SwiperSlide key={item.id}>
-            <Image
-              alt="product"
-              height={348}
-              width={348}
-              src="https://swiperjs.com/demos/images/nature-1.jpg"
-            />
+          <SwiperSlide key={item.id + item.img}>
+            <div className="flex items-center justify-center bg-primary/10 py-20">
+              <Image alt="product" height={348} width={348} src={item.img} />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <Swiper
+      {/* <Swiper
         // @ts-ignore
         onSwiper={setThumbsSwiper}
         spaceBetween={10}
@@ -45,37 +43,23 @@ export default function ProductImage({ items }: { items: Items[] }) {
         modules={[FreeMode, Navigation, Thumbs]}
         className="product_image_thumb"
       >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
-      </Swiper>
+        {items.map((item) => (
+          <div className="" key={item.id + item.img}>
+            <SwiperSlide>
+              <div className="border-2 border-secondary/10 p-2 rounded-lg">
+                <div className="flex items-center justify-center py-4 px-0 rounded-lg">
+                  <Image
+                    alt="product"
+                    height={104}
+                    width={104}
+                    src={item.img}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+          </div>
+        ))}
+      </Swiper> */}
     </>
   )
 }

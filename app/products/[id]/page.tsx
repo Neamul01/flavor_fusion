@@ -3,8 +3,11 @@
 import Heading from '@/components/Common/StyleHeading'
 import Layout from '@/components/Layouts/Layout'
 import Product from '@/components/Products/Product'
+import ProductDetails from '@/components/Products/ProductDetails'
 import ProductImage from '@/components/Products/ProductImage'
-import React from 'react'
+import ProductReview from '@/components/Products/ProductReview'
+import { Tabs } from '@mantine/core'
+import React, { useState } from 'react'
 
 const breadcrumbsItems = [
   {
@@ -19,18 +22,77 @@ const breadcrumbsItems = [
   },
 ]
 
-export default function page({ params }: { params: { id: string } }) {
+const tabs = [
+  {
+    id: 1,
+    name: 'Details',
+  },
+  {
+    id: 2,
+    name: 'Review',
+  },
+]
+
+export default function Page({ params }: { params: { id: string } }) {
+  const [activeTab, setActiveTab] = useState<string | null>('first')
+
   return (
     <div>
       <Heading text="Single page" breadcrumbsItems={breadcrumbsItems} />
       <Layout bg="white" color="secondary">
-        <div className="grid grid-cols-12 py-2">
-          <div className="col-span-6">
+        {/* image and short details section  */}
+        <div className="grid grid-cols-12 py-20">
+          <div className="col-span-6 mr-4">
             <ProductImage items={swiperItems} />
           </div>
-          <div className="col-span-6">
+          <div className="col-span-6 px-4">
             <Product params={params.id} />
           </div>
+        </div>
+
+        {/* details sectioon */}
+        <div className="py-10">
+          <h2 className="text-3xl md:text-5xl font-semibold">Item Details</h2>
+          <Tabs
+            defaultValue="details"
+            value={activeTab}
+            onTabChange={setActiveTab}
+            className="flex gap-4 my-10"
+          >
+            {/* tabs for details */}
+            <Tabs.List className="flex flex-col gap-5 min-w-[14rem]">
+              {tabs.map((tab) => (
+                <Tabs.Tab
+                  key={tab.id}
+                  value="details"
+                  className={` py-4 rounded-none ${
+                    activeTab === 'details'
+                      ? 'bg-secondary hover:bg-secondary border-none'
+                      : 'bg-white bg-secondary/5'
+                  }`}
+                >
+                  <span
+                    className={`font-jost text-lg font-semibold ${
+                      activeTab === 'details' ? 'text-white' : 'text-secondary'
+                    }`}
+                  >
+                    {tab.name}
+                  </span>
+                </Tabs.Tab>
+              ))}
+            </Tabs.List>
+
+            {/* tab items for above tabs */}
+            <div className="ml-10">
+              <Tabs.Panel value="details">
+                <ProductDetails />
+              </Tabs.Panel>
+
+              <Tabs.Panel value="review">
+                <ProductReview />
+              </Tabs.Panel>
+            </div>
+          </Tabs>
         </div>
       </Layout>
     </div>
