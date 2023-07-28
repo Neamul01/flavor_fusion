@@ -25,11 +25,11 @@ export default function ProductImage({ items }: { items: Items[] }) {
         className="product_image mb-2"
       >
         {items.map((item) => (
-          <div className="" key={item.id}>
-            <SwiperSlide>
+          <SwiperSlide key={item.id}>
+            <div className="flex items-center justify-center bg-primary/10 py-20">
               <Image alt="product" height={348} width={348} src={item.img} />
-            </SwiperSlide>
-          </div>
+            </div>
+          </SwiperSlide>
         ))}
       </Swiper>
       <Swiper
@@ -45,7 +45,16 @@ export default function ProductImage({ items }: { items: Items[] }) {
         {items.map((item) => (
           <div className="" key={item.id}>
             <SwiperSlide>
-              <Image alt="product" height={348} width={348} src={item.img} />
+              <div className="border-2 border-secondary/10 p-2 rounded-lg">
+                <div className="flex items-center justify-center bg-secondary/5 py-4 px-0 rounded-lg">
+                  <Image
+                    alt="product"
+                    height={104}
+                    width={104}
+                    src={item.img}
+                  />
+                </div>
+              </div>
             </SwiperSlide>
           </div>
         ))}
