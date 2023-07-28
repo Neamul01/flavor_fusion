@@ -26,7 +26,7 @@ export default function page({ params }: { params: { id: string } }) {
       <Layout bg="white" color="secondary">
         <div className="grid grid-cols-12 py-2">
           <div className="col-span-6">
-            <ProductImage />
+            <ProductImage items={swiperItems} />
           </div>
           <div className="col-span-6">
             <Product params={params.id} />
@@ -36,3 +36,26 @@ export default function page({ params }: { params: { id: string } }) {
     </div>
   )
 }
+
+const swiperItems = [
+  {
+    id: 1,
+    img: '/single-item/card-big-01.png',
+  },
+  {
+    id: 2,
+    img: '/single-item/card-big-02.png',
+  },
+  {
+    id: 3,
+    img: '/single-item/card-big-03.png',
+  },
+  {
+    id: 4,
+    img: '/single-item/card-big-04.png',
+  },
+  {
+    id: 5,
+    img: '/single-item/card-big-01.png',
+  },
+]
