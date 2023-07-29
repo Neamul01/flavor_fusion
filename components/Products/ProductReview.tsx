@@ -1,5 +1,6 @@
 import React from 'react'
 import ReviewCard from './ReviewCard/ReviewCard'
+import MakeReplay from './MakeReplay/MakeReplay'
 
 export default function ProductReview() {
   return (
@@ -10,6 +11,7 @@ export default function ProductReview() {
           <ReviewCard key={item.id} item={item} />
         ))}
       </div>
+      <MakeReplay />
     </div>
   )
 }
