@@ -31,6 +31,6 @@ const reviewCard = [
     comment:
       'I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account.',
     rating: 5,
-    img: '/single-item/comment-img-2.png',
+    img: '/single-item/comment-img-3.png',
   },
 ]
