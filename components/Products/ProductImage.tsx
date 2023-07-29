@@ -33,7 +33,7 @@ export default function ProductImage({ items }: { items: Items[] }) {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* <Swiper
+      <Swiper
         // @ts-ignore
         onSwiper={setThumbsSwiper}
         spaceBetween={10}
@@ -44,7 +44,7 @@ export default function ProductImage({ items }: { items: Items[] }) {
         className="product_image_thumb"
       >
         {items.map((item) => (
-          <div className="" key={item.id + item.img}>
+          <div key={item.id + item.img}>
             <SwiperSlide>
               <div className="border-2 border-secondary/10 p-2 rounded-lg">
                 <div className="flex items-center justify-center py-4 px-0 rounded-lg">
@@ -59,7 +59,7 @@ export default function ProductImage({ items }: { items: Items[] }) {
             </SwiperSlide>
           </div>
         ))}
-      </Swiper> */}
+      </Swiper>
     </>
   )
 }
