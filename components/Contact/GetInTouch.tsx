@@ -37,7 +37,7 @@ export default function GetInTouch() {
                 className="w-full"
               />
               <MantineTextInput
-                formProps={{ ...form.getInputProps('email') }}
+                formProps={{ ...form.getInputProps('name') }}
                 placeholder="Name"
                 className="w-full"
               />

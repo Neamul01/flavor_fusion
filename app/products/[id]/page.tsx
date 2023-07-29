@@ -43,7 +43,7 @@ export default function Page({ params }: { params: { id: string } }) {
         {/* image and short details section  */}
         <div className="grid grid-cols-12 py-20">
           <div className="col-span-6 mr-4">
-            <ProductImage items={swiperItems} />
+            {/* <ProductImage items={swiperItems} /> */}
           </div>
           <div className="col-span-6 px-4">
             <Product params={params.id} />
