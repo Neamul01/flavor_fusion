@@ -25,16 +25,16 @@ const breadcrumbsItems = [
 const tabs = [
   {
     id: 1,
-    name: 'Details',
+    name: 'details',
   },
   {
     id: 2,
-    name: 'Review',
+    name: 'review',
   },
 ]
 
 export default function Page({ params }: { params: { id: string } }) {
-  const [activeTab, setActiveTab] = useState<string | null>('first')
+  const [activeTab, setActiveTab] = useState<string | null>('details')
 
   return (
     <div>
@@ -53,27 +53,29 @@ export default function Page({ params }: { params: { id: string } }) {
         {/* details sectioon */}
         <div className="py-10">
           <h2 className="text-3xl md:text-5xl font-semibold">Item Details</h2>
+
+          {/******** tabs */}
           <Tabs
-            defaultValue="details"
+            // defaultValue="details"
             value={activeTab}
             onTabChange={setActiveTab}
             className="flex gap-4 my-10"
           >
             {/* tabs for details */}
-            <Tabs.List className="flex flex-col gap-5 min-w-[14rem]">
+            <Tabs.List className="flex flex-col gap-5 min-w-[14rem] border-none">
               {tabs.map((tab) => (
                 <Tabs.Tab
                   key={tab.id}
-                  value="details"
+                  value={tab.name}
                   className={` py-4 rounded-none ${
-                    activeTab === 'details'
+                    activeTab === tab.name
                       ? 'bg-secondary hover:bg-secondary border-none'
                       : 'bg-white bg-secondary/5'
                   }`}
                 >
                   <span
-                    className={`font-jost text-lg font-semibold ${
-                      activeTab === 'details' ? 'text-white' : 'text-secondary'
+                    className={`font-jost text-lg font-semibold capitalize ${
+                      activeTab === tab.name ? 'text-white' : 'text-secondary'
                     }`}
                   >
                     {tab.name}
@@ -83,7 +85,7 @@ export default function Page({ params }: { params: { id: string } }) {
             </Tabs.List>
 
             {/* tab items for above tabs */}
-            <div className="ml-10">
+            <div className="ml-10 w-full">
               <Tabs.Panel value="details">
                 <ProductDetails />
               </Tabs.Panel>
