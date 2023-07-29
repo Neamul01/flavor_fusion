@@ -85,7 +85,7 @@ export default function Page({ params }: { params: { id: string } }) {
             </Tabs.List>
 
             {/* tab items for above tabs */}
-            <div className="ml-10">
+            <div className="ml-10 w-full">
               <Tabs.Panel value="details">
                 <ProductDetails />
               </Tabs.Panel>
