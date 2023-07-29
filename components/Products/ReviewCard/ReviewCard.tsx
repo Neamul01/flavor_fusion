@@ -2,7 +2,16 @@ import { Rating } from '@mantine/core'
 import Image from 'next/image'
 import React from 'react'
 
-export default function ReviewCard() {
+type Item = {
+  id: number
+  img: string
+  name: string
+  date: string
+  comment: string
+  rating: number
+}
+
+export default function ReviewCard({ item }: { item: Item }) {
   return (
     <div className="bg-primary/5 px-5 py-7">
       <div className="flex gap-6 items-center">
