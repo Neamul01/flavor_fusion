@@ -19,6 +19,7 @@ import { useEffect, useState } from 'react'
 import { BsChevronDown } from 'react-icons/bs'
 import AppLogo from './Common/AppLogo'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -123,6 +124,7 @@ function MainHeader() {
   const [active, setActive] = useState(links[0].link)
   const { classes } = useStyles()
   const size = useWindowSize()
+  const router = useRouter()
 
   // console.log(size)
 
@@ -178,8 +180,11 @@ function MainHeader() {
           {items}
         </Group>
         <div className=" cursor-pointer hidden md:block">
-          <Button className="text-white bg-primary hover:bg-secondary transition-all rounded-full font-jost text-lg h-12 w-52">
-            Find Reservation
+          <Button
+            onClick={() => router.push('/contact')}
+            className="text-white bg-primary hover:bg-secondary transition-all rounded-full font-jost text-lg h-12 w-52"
+          >
+            Contact Now
           </Button>
         </div>
         <Burger
