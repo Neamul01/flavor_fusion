@@ -22,7 +22,7 @@ export default function MantineTextInput({
     <TextInput
       label={label && label}
       placeholder={placeholder && placeholder}
-      size={''}
+      size={size && size}
       {...formProps}
       {...props}
       className={twMerge(

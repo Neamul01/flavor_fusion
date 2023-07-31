@@ -10,3 +10,9 @@
 .product_rating .mantine-Rating-symbolGroup label {
   @apply text-primary;
 }
+
+/* swiper arrow hiding */
+.product_image .swiper-button-next,
+.product_image .swiper-button-prev {
+  @apply hidden;
+}

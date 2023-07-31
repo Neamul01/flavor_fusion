@@ -59,6 +59,12 @@ body {
   top: -3px;
 }
 
+/* hiding swipper arrow */
+.mySwiper-hero .swiper-button-next,
+.mySwiper-hero .swiper-button-prev {
+  display: none;
+}
+
 @media screen and (max-width: 500px) {
   .mySwiper-hero > .swiper-pagination {
     display: none;

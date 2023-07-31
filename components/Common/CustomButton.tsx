@@ -14,6 +14,8 @@ type Props = {
   onClick?: () => void
   disabled?: boolean
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  type?: 'button' | 'submit' | 'reset'
+  formProps?: any
 }
 function CustomButton(props: Props) {
   const {
@@ -26,11 +28,14 @@ function CustomButton(props: Props) {
     onClick,
     disabled = false,
     size,
+    type,
+    formProps,
   } = props
   const Icon = icon ? icon : <BsArrowUpRightCircle size={'1.3rem'} />
   return (
     <Button
       leftIcon={withIcon ? Icon : null}
+      type={type && type}
       name={name}
       className={`${
         color === 'secondary' ? 'text-secondary' : 'text-primary'
@@ -41,6 +46,7 @@ function CustomButton(props: Props) {
       size={size && size}
       onClick={onClick}
       disabled={disabled}
+      {...formProps}
     >
       {text}
     </Button>

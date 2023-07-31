@@ -45,7 +45,7 @@ export default function ProductImage({ items }: { items: Items[] }) {
       >
         {items.map((item) => (
           <div key={item.id + item.img}>
-            <SwiperSlide>
+            <SwiperSlide key={item.id + item.img}>
               <div className="border-2 border-secondary/10 p-2 rounded-lg">
                 <div className="flex items-center justify-center py-4 px-0 rounded-lg">
                   <Image
