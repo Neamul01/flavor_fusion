@@ -1,3 +1,4 @@
+'use client'
 import React, { use } from 'react'
 import HomeLayout from '../Layouts/Layout'
 import styles from './styles.module.css'
