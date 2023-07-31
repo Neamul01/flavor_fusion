@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 type Item = {
@@ -10,13 +11,19 @@ type Item = {
 }
 
 export default function CategoryItemCard({ item }: { item: Item }) {
+  const route = useRouter()
   return (
     <div className="p-2 flex gap-3">
       <div className="rounded-lg overflow-hidden h-[116px] w-[116px] relative ">
         <Image src={item.img} alt="food item" fill />
       </div>
       <div className="flex flex-col gap-1">
-        <h2 className="text-2xl font-bold">{item.title}</h2>
+        <h2
+          onClick={() => route.push(`/products/${item.title}`)}
+          className="text-2xl font-bold cursor-pointer hover:text-primary transition-transform"
+        >
+          {item.title}
+        </h2>
         <p className="text-secondary/70">{item.description}</p>
         <div className="">
           <p className="inline-block px-2 py-1 border rounded-lg text-secondary/70">
