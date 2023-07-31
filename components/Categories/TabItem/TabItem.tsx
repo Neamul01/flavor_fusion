@@ -1,6 +1,7 @@
 import { Divider } from '@mantine/core'
 import React from 'react'
 import CategoryItemCard from '../CategoryItemCard/CategoryItemCard'
+import Image from 'next/image'
 
 export default function TabItem({ tabName }: { tabName: string }) {
   return (
@@ -11,15 +12,22 @@ export default function TabItem({ tabName }: { tabName: string }) {
         </div>
       ))}
 
-      <div className="absolute left-[45%] top-0 h-full">
-        <Divider
+      <div className="absolute left-[45%] top-0 h-full text-center">
+        <p className="w-5 h-5 relative">
+          <Image src={'/sub-title-vec.svg'} alt="vec" fill />
+        </p>
+        {/* <Divider
           my="xs"
-          color="gray"
-          labelPosition="left"
+          color="var(--primary-color)"
+          variant="dotted"
           orientation="vertical"
-          size={'xl'}
+          size={'sm'}
           className="h-full"
-        />
+        /> */}
+        <div className="h-[90%] w-[1px] mx-auto my-1 border border-dashed border-primary/60"></div>
+        <p className="w-5 h-5 relative">
+          <Image src={'/sub-title-vec.svg'} alt="vec" fill />
+        </p>
       </div>
     </div>
   )

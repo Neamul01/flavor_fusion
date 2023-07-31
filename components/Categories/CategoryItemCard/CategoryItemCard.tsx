@@ -21,7 +21,7 @@ export default function CategoryItemCard({ item }: { item: Item }) {
         <div className="">
           <p className="inline-block px-2 py-1 border rounded-lg text-secondary/70">
             <span className="text-primary text-xl font-semibold mr-1">
-              {item.price}
+              ${item.price}
             </span>
             Only
           </p>
