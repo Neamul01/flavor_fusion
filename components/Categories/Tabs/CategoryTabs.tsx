@@ -24,6 +24,30 @@ export default function CategoryTabs() {
   const activeTabStyle = (name: string) => {
     if (tabNames[name] === activeTab) return 'text-primary'
   }
+
+  const tabs = [
+    {
+      id: 1,
+      name: tabNames.see,
+      title: 'see food',
+    },
+    {
+      id: 2,
+      name: tabNames.vageterian,
+      title: 'vageterian food',
+    },
+    {
+      id: 2,
+      name: tabNames.chinease,
+      title: 'chinease food',
+    },
+    {
+      id: 2,
+      name: tabNames.meat,
+      title: 'meat',
+    },
+  ]
+
   console.log('active tab', activeTabStyle('see'))
   return (
     <Tabs
@@ -38,68 +62,24 @@ export default function CategoryTabs() {
             Categoriy:
           </p>
         </div>
-        {/* see food tab */}
-        <Tabs.Tab
-          value={tabNames.see}
-          icon={
-            <AiOutlineArrowRight className={activeTabStyle(tabNames.see)} />
-          }
-          className={`border-none flex flex-row-reverse justify-between ${activeTabStyle(
-            tabNames.see
-          )}`}
-        >
-          <span className={`uppercase ${activeTabStyle(tabNames.see)}`}>
-            see food
-          </span>
-        </Tabs.Tab>
-        {/* vageterian tab */}
-        <Tabs.Tab
-          value={tabNames.vageterian}
-          icon={
-            <AiOutlineArrowRight
-              className={activeTabStyle(tabNames.vageterian)}
-            />
-          }
-          className={`border-none flex flex-row-reverse justify-between ${activeTabStyle(
-            tabNames.vageterian
-          )}`}
-        >
-          <span className={`uppercase ${activeTabStyle(tabNames.vageterian)}`}>
-            vageterian food
-          </span>
-        </Tabs.Tab>
-        {/* chinease food tab */}
-        <Tabs.Tab
-          value={tabNames.chinease}
-          icon={
-            <AiOutlineArrowRight
-              className={activeTabStyle(tabNames.chinease)}
-            />
-          }
-          className={`border-none flex flex-row-reverse justify-between ${activeTabStyle(
-            tabNames.chinease
-          )}`}
-        >
-          <span className={`uppercase ${activeTabStyle(tabNames.chinease)}`}>
-            chinease food
-          </span>
-        </Tabs.Tab>
-        {/* meat tab */}
-        <Tabs.Tab
-          value={tabNames.meat}
-          icon={
-            <AiOutlineArrowRight className={activeTabStyle(tabNames.meat)} />
-          }
-          className={`border-none flex flex-row-reverse justify-between ${activeTabStyle(
-            tabNames.meat
-          )}`}
-        >
-          <span className={`uppercase ${activeTabStyle(tabNames.meat)}`}>
-            meat
-          </span>
-        </Tabs.Tab>
+
+        {tabs.map((tab) => (
+          <Tabs.Tab
+            key={tab.id}
+            value={tab.name}
+            icon={<AiOutlineArrowRight className={activeTabStyle(tab.name)} />}
+            className={`border-none flex flex-row-reverse justify-between ${activeTabStyle(
+              tab.name
+            )}`}
+          >
+            <span className={`uppercase ${activeTabStyle(tab.name)}`}>
+              {tab.title}
+            </span>
+          </Tabs.Tab>
+        ))}
       </Tabs.List>
 
+      {/* tab contents */}
       <div className="col-span-9">
         <Tabs.Panel value="see">Gallery tab content</Tabs.Panel>
         <Tabs.Panel value="vageterian">Messages tab content</Tabs.Panel>
