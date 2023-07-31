@@ -3,8 +3,10 @@
 import React, { useState } from 'react'
 import { Tabs } from '@mantine/core'
 import { AiOutlineArrowRight } from 'react-icons/ai'
+import TabItem from '../TabItem/TabItem'
 
 type TabNames = {
+  [key: string]: string
   see: string
   vageterian: string
   chinease: string
@@ -37,18 +39,17 @@ export default function CategoryTabs() {
       title: 'vageterian food',
     },
     {
-      id: 2,
+      id: 3,
       name: tabNames.chinease,
       title: 'chinease food',
     },
     {
-      id: 2,
+      id: 4,
       name: tabNames.meat,
       title: 'meat',
     },
   ]
 
-  console.log('active tab', activeTabStyle('see'))
   return (
     <Tabs
       value={activeTab}
@@ -63,6 +64,7 @@ export default function CategoryTabs() {
           </p>
         </div>
 
+        {/* all tabs */}
         {tabs.map((tab) => (
           <Tabs.Tab
             key={tab.id}
@@ -80,11 +82,12 @@ export default function CategoryTabs() {
       </Tabs.List>
 
       {/* tab contents */}
-      <div className="col-span-9">
-        <Tabs.Panel value="see">Gallery tab content</Tabs.Panel>
-        <Tabs.Panel value="vageterian">Messages tab content</Tabs.Panel>
-        <Tabs.Panel value="chinease">Settings tab content</Tabs.Panel>
-        <Tabs.Panel value="meat">Settings tab content</Tabs.Panel>
+      <div className="col-span-9 border rounded-xl p-6">
+        {Object.keys(tabNames).map((tab) => (
+          <Tabs.Panel key={tab} value={tabNames[tab]}>
+            <TabItem tabName={tabNames[tab]} />
+          </Tabs.Panel>
+        ))}
       </div>
     </Tabs>
   )
