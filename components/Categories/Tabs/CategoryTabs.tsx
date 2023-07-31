@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import { Tabs } from '@mantine/core'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 
 type TabNames = {
   see: string
@@ -31,35 +32,71 @@ export default function CategoryTabs() {
       orientation="vertical"
       className="grid grid-cols-12 gap-4"
     >
-      <Tabs.List className="border rounded-t-xl col-span-3">
+      <Tabs.List className="border rounded-t-xl col-span-3 gap-3">
         <div className="px-6 py-4 flex items-center bg-primary rounded-tl-xl rounded-tr-xl">
           <p className="text-2xl font-bold text-white font-cormorant">
             Categoriy:
           </p>
         </div>
+        {/* see food tab */}
         <Tabs.Tab
           value={tabNames.see}
-          color={activeTabStyle(tabNames.see)}
-          className={`border-none ${activeTabStyle(tabNames.see)}`}
+          icon={
+            <AiOutlineArrowRight className={activeTabStyle(tabNames.see)} />
+          }
+          className={`border-none flex flex-row-reverse justify-between ${activeTabStyle(
+            tabNames.see
+          )}`}
         >
-          <span className={` ${activeTabStyle(tabNames.see)}`}>Gallery</span>
+          <span className={`uppercase ${activeTabStyle(tabNames.see)}`}>
+            see food
+          </span>
         </Tabs.Tab>
+        {/* vageterian tab */}
         <Tabs.Tab
-          color={'var(--primary-color)'}
           value={tabNames.vageterian}
-          className="border-none"
+          icon={
+            <AiOutlineArrowRight
+              className={activeTabStyle(tabNames.vageterian)}
+            />
+          }
+          className={`border-none flex flex-row-reverse justify-between ${activeTabStyle(
+            tabNames.vageterian
+          )}`}
         >
-          Messages
+          <span className={`uppercase ${activeTabStyle(tabNames.vageterian)}`}>
+            vageterian food
+          </span>
         </Tabs.Tab>
+        {/* chinease food tab */}
         <Tabs.Tab
-          color="white"
           value={tabNames.chinease}
-          className="border-none"
+          icon={
+            <AiOutlineArrowRight
+              className={activeTabStyle(tabNames.chinease)}
+            />
+          }
+          className={`border-none flex flex-row-reverse justify-between ${activeTabStyle(
+            tabNames.chinease
+          )}`}
         >
-          Settings
+          <span className={`uppercase ${activeTabStyle(tabNames.chinease)}`}>
+            chinease food
+          </span>
         </Tabs.Tab>
-        <Tabs.Tab value={tabNames.meat} className="border-none">
-          Settings
+        {/* meat tab */}
+        <Tabs.Tab
+          value={tabNames.meat}
+          icon={
+            <AiOutlineArrowRight className={activeTabStyle(tabNames.meat)} />
+          }
+          className={`border-none flex flex-row-reverse justify-between ${activeTabStyle(
+            tabNames.meat
+          )}`}
+        >
+          <span className={`uppercase ${activeTabStyle(tabNames.meat)}`}>
+            meat
+          </span>
         </Tabs.Tab>
       </Tabs.List>
 
