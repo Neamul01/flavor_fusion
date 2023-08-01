@@ -20,7 +20,7 @@ export default function GetInTouch() {
 
   return (
     <Layout className="py-20">
-      <div className="contact_form relative bg-[url('/contact/reservation-1-bg.png')] w-full bg-no-repeat bg-cover rounded-lg px-6 py-12 md:px-0 md:py-0 md:p-20">
+      <div className="contact_form relative bg-[url('/contact/reservation-1-bg.png')] w-full bg-no-repeat bg-cover rounded-lg px-6 py-12 md:p-20">
         <div className="flex flex-col items-center justify-center z-20">
           <TopHeading text="Contact Us" />
           <H2heading color="white" text="Get In Touch" />
