@@ -31,7 +31,7 @@ export default function CategoryTabs() {
     {
       id: 1,
       name: tabNames.see,
-      title: 'see food',
+      title: 'sea food',
     },
     {
       id: 2,
