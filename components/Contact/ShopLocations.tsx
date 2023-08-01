@@ -4,7 +4,7 @@ import ShopLocationCard from './ShopLocationCard'
 export default function ShopLocations() {
   return (
     <div className="bg-white py-20">
-      <div className="max-w-layour_large mx-auto flex justify-between items-center">
+      <div className="max-w-layour_large mx-auto flex flex-col md:flex-row justify-between items-center">
         {locations.map((location) => (
           <div className="" key={location.id}>
             <ShopLocationCard location={location} />
