@@ -11,7 +11,7 @@ export default function FoodItems() {
 
   return (
     <Layout bg="white" className="py-20 ">
-      <div className="w-full grid grid-cols-12">
+      <div className="w-full grid md:grid-cols-12">
         {selectedItems.map((item) => (
           <div className="col-span-4" key={item.id}>
             <FoodCard item={item} />
