@@ -55,9 +55,9 @@ export default function CategoryTabs() {
       value={activeTab}
       onTabChange={setActiveTab}
       orientation="vertical"
-      className="grid grid-cols-12 gap-4"
+      className="grid grid-cols-12 gap-y-8 md:gap-4"
     >
-      <Tabs.List className="border rounded-t-xl col-span-3 gap-3">
+      <Tabs.List className="border rounded-t-xl w-full col-span-12 md:col-span-3 gap-3">
         <div className="px-6 py-4 flex items-center bg-primary rounded-tl-xl rounded-tr-xl">
           <p className="text-2xl font-bold text-white font-cormorant">
             Categoriy:
@@ -82,7 +82,7 @@ export default function CategoryTabs() {
       </Tabs.List>
 
       {/* tab contents */}
-      <div className="col-span-9 border rounded-xl p-6">
+      <div className="col-span-12 md:col-span-9 border rounded-xl p-6">
         {Object.keys(tabNames).map((tab) => (
           <Tabs.Panel key={tab} value={tabNames[tab]}>
             <TabItem tabName={tabNames[tab]} />

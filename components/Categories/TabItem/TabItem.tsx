@@ -11,14 +11,14 @@ export default function TabItem({ tabName }: { tabName: string }) {
     }
   }
   return (
-    <div className="grid md:grid-cols-12 relative gap-3">
+    <div className="grid md:grid-cols-12 relative gap-10">
       {mapTab(tabName).map((item) => (
         <div key={item.id} className="md:col-span-6">
           <CategoryItemCard item={item} />
         </div>
       ))}
 
-      <div className="absolute left-[45%] top-0 h-full text-center">
+      <div className="absolute left-[45%] top-0 h-full text-center hidden md:block">
         <p className="w-5 h-5 relative">
           <Image src={'/sub-title-vec.svg'} alt="vec" fill />
         </p>
