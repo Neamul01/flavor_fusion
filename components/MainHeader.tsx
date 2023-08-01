@@ -171,12 +171,13 @@ function MainHeader() {
   })
 
   const itemsToggle = links.map((link) => {
+    // console.log(path.split('/').length)
     return (
       <Link
         key={link.label}
         href={link.link}
         className={`${classes.link} ${
-          path.includes(link.link) && 'bg-secondary/20 text-primary'
+          path === link.link && 'bg-secondary/20 text-primary'
         } text-lg`}
       >
         {link.label}
