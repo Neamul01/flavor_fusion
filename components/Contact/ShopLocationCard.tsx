@@ -20,15 +20,11 @@ export default function ShopLocationCard({
   location: ShopLocationCardProps
 }) {
   return (
-    <div className="flex">
-      <Image
-        src={location.img}
-        width={368}
-        height={375}
-        alt="shop"
-        className="rounded-tl-xl rounded-br-xl overflow-hidden"
-      />
-      <div className="border m-6 ml-0 px-5 py-8 rounded-tr-xl rounded-br-xl w-[20rem]">
+    <div className="flex flex-col md:flex-row">
+      <div className="mx-auto w-[272px] h-[266px] md:w-[368px] md:h-[375px] relative md:rounded-tl-xl md:rounded-br-xl overflow-hidden">
+        <Image src={location.img} fill alt="shop" />
+      </div>
+      <div className="flex flex-col items-center border md:m-6 mb-6 mx-6 md:ml-0 md:px-5 py-8 px-2 md:rounded-tr-xl rounded-br-xl md:rounded-br-none rounded-bl-xl md:w-[20rem] ">
         <div className=" inline-block">
           <h2 className=" text-3xl font-semibold">{location.title}</h2>
           <Divider
@@ -54,7 +50,7 @@ export default function ShopLocationCard({
             <p className="border rounded-full border-primary p-1">
               <TfiLocationPin className="text-xl text-primary" />
             </p>
-            <p className="text-secondary/80 hover:text-primary text-lg">
+            <p className="text-secondary/80 hover:text-primary md:text-lg">
               {location.address}
             </p>
           </div>
@@ -65,7 +61,7 @@ export default function ShopLocationCard({
             </p>
             <a
               href={`tel:${location.phone}`}
-              className="text-secondary/80 hover:text-primary text-lg"
+              className="text-secondary/80 hover:text-primary md:text-lg"
             >
               {location.phone}
             </a>
@@ -76,7 +72,7 @@ export default function ShopLocationCard({
             </p>
             <a
               href={`mailto:${location.email}`}
-              className="text-secondary/80 hover:text-primary text-lg"
+              className="text-secondary/80 hover:text-primary md:text-lg"
             >
               {location.email}
             </a>

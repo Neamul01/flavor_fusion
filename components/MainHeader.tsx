@@ -19,7 +19,7 @@ import { useEffect, useState } from 'react'
 import { BsChevronDown } from 'react-icons/bs'
 import AppLogo from './Common/AppLogo'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -129,6 +129,7 @@ function MainHeader() {
   const { classes } = useStyles()
   const size = useWindowSize()
   const router = useRouter()
+  const path = usePathname()
 
   // console.log(size)
 
@@ -169,15 +170,29 @@ function MainHeader() {
     )
   })
 
+  const itemsToggle = links.map((link) => {
+    return (
+      <Link
+        key={link.label}
+        href={link.link}
+        className={`${classes.link} ${
+          path.includes(link.link) && 'bg-secondary/20 text-primary'
+        } text-lg`}
+      >
+        {link.label}
+      </Link>
+    )
+  })
+
   const variants = {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: '-100%' },
   }
 
   return (
-    <div className="bg-transparent h-16 md:h-20 text-secondary border-none px-2 mt-1">
+    <div className="bg-transparent h-16 md:h-20 text-secondary border-none md:px-2 mt-1">
       <div
-        className={`${classes.inner} h-full w-full max-w-layout mx-auto bg-white rounded-full md:px-8 px-4`}
+        className={`${classes.inner} h-full w-full max-w-layout mx-auto bg-white md:rounded-full md:px-8 px-4`}
       >
         <AppLogo />
         <Group spacing={5} className={`${classes.links}`}>
@@ -198,12 +213,13 @@ function MainHeader() {
           size="sm"
         />
         <motion.div
-          className={`${classes.dropdown} rounded-xl text-left bg-white h-screen`}
+          className={`${classes.dropdown} text-left bg-white flex flex-col gap-2 p-2`}
           animate={opened ? 'open' : 'closed'}
           initial={{ opacity: 0 }}
           variants={variants}
+          onClick={() => toggle()}
         >
-          {items}
+          {itemsToggle}
         </motion.div>
       </div>
     </div>
