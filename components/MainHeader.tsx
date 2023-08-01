@@ -177,7 +177,7 @@ function MainHeader() {
         href={link.link}
         className={`${classes.link} ${
           path.includes(link.link) && 'bg-secondary/20 text-primary'
-        } text-lg border border-secondary/70`}
+        } text-lg`}
       >
         {link.label}
       </Link>
@@ -190,9 +190,9 @@ function MainHeader() {
   }
 
   return (
-    <div className="bg-transparent h-16 md:h-20 text-secondary border-none px-2 mt-1">
+    <div className="bg-transparent h-16 md:h-20 text-secondary border-none md:px-2 mt-1">
       <div
-        className={`${classes.inner} h-full w-full max-w-layout mx-auto bg-white rounded-full md:px-8 px-4`}
+        className={`${classes.inner} h-full w-full max-w-layout mx-auto bg-white md:rounded-full md:px-8 px-4`}
       >
         <AppLogo />
         <Group spacing={5} className={`${classes.links}`}>
