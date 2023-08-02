@@ -180,14 +180,11 @@ function MainHeader() {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: '-100%' },
   }
-  // className={`text-center top-0 left-0 z-50 ${
-  //   scroolPositon > 120 && 'fixed'
-  // }`}
+
   return (
     <div
-      className={`flex items-center w-full bg-transparent h-16 md:h-20 text-secondary border-none md:px-2 mt-1 z-50 ${
-        scrollPostition > 119 &&
-        'fixed top-0  transition-transform duration-500'
+      className={`flex items-center w-full bg-transparent h-16 md:h-20 text-secondary border-none md:px-2 mt-1 z-50 top-0 ${
+        scrollPostition > 119 && 'fixed transition-transform duration-500'
       }`}
     >
       <div

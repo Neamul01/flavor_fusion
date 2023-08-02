@@ -38,7 +38,7 @@ export default function RootLayout({
         className={`min-h-screen ${cormorantGaramond.variable} ${jost.variable}`}
         suppressHydrationWarning={true}
       >
-        <header>
+        <header className={`text-center sticky top-0 left-0 z-50`}>
           <MainHeader />
         </header>
         <main>{children}</main>
