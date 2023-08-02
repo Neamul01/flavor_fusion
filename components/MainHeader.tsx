@@ -180,11 +180,23 @@ function MainHeader() {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: '-100%' },
   }
-
+  // className={`text-center top-0 left-0 z-50 ${
+  //   scroolPositon > 120 && 'fixed'
+  // }`}
   return (
-    <div className="bg-transparent h-16 md:h-20 text-secondary border-none md:px-2 mt-1">
+    <div
+      className={`flex items-center w-full bg-transparent h-16 md:h-20 text-secondary border-none md:px-2 mt-1 z-50 ${
+        scrollPostition > 119 &&
+        'fixed top-0  transition-transform duration-500'
+      }`}
+    >
       <div
-        className={`${classes.inner} h-full w-full max-w-layout mx-auto bg-white md:rounded-full md:px-8 px-4`}
+        className={`${
+          classes.inner
+        } h-full w-full max-w-layout mx-auto bg-white md:rounded-full md:px-8 px-4 ${
+          scrollPostition > 119 &&
+          'border-b shadow-xl transition-transform duration-500'
+        }`}
       >
         <AppLogo />
         <Group spacing={5} className={`${classes.links}`}>
