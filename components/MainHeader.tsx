@@ -2,24 +2,13 @@
 
 import { useWindowSize } from '@/hooks/useWindowSize'
 import { motion } from 'framer-motion'
-import {
-  createStyles,
-  Header,
-  Menu,
-  Group,
-  Center,
-  Burger,
-  rem,
-  Button,
-  Transition,
-  Paper,
-} from '@mantine/core'
+import { createStyles, Group, Burger, rem, Button } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { useEffect, useState } from 'react'
-import { BsChevronDown } from 'react-icons/bs'
 import AppLogo from './Common/AppLogo'
 import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
+import { useScrollPosition } from '@/hooks/useScrollPosition'
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -130,7 +119,9 @@ function MainHeader() {
   const size = useWindowSize()
   const router = useRouter()
   const path = usePathname()
+  const scrollPostition = useScrollPosition()
 
+  console.log('scrool position', scrollPostition)
   // console.log(size)
 
   const items = links.map((link) => {
