@@ -61,14 +61,14 @@ export default function Product({ params }: { params: string }) {
           />
         </div>
         <div className="flex items-center gap-2">
-          <h2 className="text-2xl font-semibold">Category:</h2>
-          <p className="text-secondary/70">
+          <h2 className="text-xl md:text-2xl font-semibold">Category:</h2>
+          <p className="text-secondary/70 text-sm md:text-base">
             Food(05), Modern Life(10), Healthy(02), Desset(04)
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <h2 className="text-2xl font-semibold">Tag:</h2>
-          <p className="text-secondary/70">
+          <h2 className="text-xl md:text-2xl font-semibold">Tag:</h2>
+          <p className="text-secondary/70 text-sm md:text-base">
             Dinner, Breakfast, Berverage, Sea Food, Menu
           </p>
         </div>
