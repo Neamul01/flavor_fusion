@@ -17,6 +17,7 @@ import {
   BiLogoInstagramAlt,
   BiLogoLinkedin,
 } from 'react-icons/bi'
+import { usePathname } from 'next/navigation'
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -175,6 +176,7 @@ const facilities = {
 
 function MainFooter() {
   const { classes } = useStyles()
+  const route = usePathname()
 
   const groups = () => {
     const links = AddressInfo.links.map((link, index) => (
@@ -229,63 +231,67 @@ function MainFooter() {
   }
 
   return (
-    <HomeLayout bg="secondary" color="white">
-      <footer className={classes.footer}>
-        <div className={`${classes.inner} py-16 w-full`}>
-          <div className={`${classes.groups}`}>{facility()}</div>
+    <>
+      {route.split('/').includes('admin') ? null : (
+        <HomeLayout bg="secondary" color="white">
+          <footer className={classes.footer}>
+            <div className={`${classes.inner} py-16 w-full`}>
+              <div className={`${classes.groups}`}>{facility()}</div>
 
-          <div className={`${classes.logo} flex items-center`}>
-            <div className="">
-              <AppLogo />
-              <Text size="" color="dimmed" className={classes.description}>
-                Build fully functional accessible web applications faster than
-                ever
-              </Text>
+              <div className={`${classes.logo} flex items-center`}>
+                <div className="">
+                  <AppLogo />
+                  <Text size="" color="dimmed" className={classes.description}>
+                    Build fully functional accessible web applications faster
+                    than ever
+                  </Text>
+                </div>
+              </div>
+
+              <div className={classes.groups}>{groups()}</div>
             </div>
-          </div>
 
-          <div className={classes.groups}>{groups()}</div>
-        </div>
+            <div className={classes.afterFooter}>
+              <Text color="dimmed" size="sm">
+                @{new Date().getFullYear()} Flavor Fusion All rights reserved.
+              </Text>
 
-        <div className={classes.afterFooter}>
-          <Text color="dimmed" size="sm">
-            @{new Date().getFullYear()} Flavor Fusion All rights reserved.
-          </Text>
-
-          <Group
-            spacing={10}
-            className={`${classes.social} text-white`}
-            position="right"
-            noWrap
-          >
-            <ActionIcon
-              size="md"
-              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
-            >
-              <BiLogoFacebook />
-            </ActionIcon>
-            <ActionIcon
-              size="md"
-              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
-            >
-              <BiLogoInstagramAlt />
-            </ActionIcon>
-            <ActionIcon
-              size="md"
-              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
-            >
-              <BiLogoLinkedin />
-            </ActionIcon>
-            <ActionIcon
-              size="md"
-              className="border p-0 rounded-full border-primary hover:bg-primary text-white"
-            >
-              <BsTwitter />
-            </ActionIcon>
-          </Group>
-        </div>
-      </footer>
-    </HomeLayout>
+              <Group
+                spacing={10}
+                className={`${classes.social} text-white`}
+                position="right"
+                noWrap
+              >
+                <ActionIcon
+                  size="md"
+                  className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+                >
+                  <BiLogoFacebook />
+                </ActionIcon>
+                <ActionIcon
+                  size="md"
+                  className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+                >
+                  <BiLogoInstagramAlt />
+                </ActionIcon>
+                <ActionIcon
+                  size="md"
+                  className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+                >
+                  <BiLogoLinkedin />
+                </ActionIcon>
+                <ActionIcon
+                  size="md"
+                  className="border p-0 rounded-full border-primary hover:bg-primary text-white"
+                >
+                  <BsTwitter />
+                </ActionIcon>
+              </Group>
+            </div>
+          </footer>
+        </HomeLayout>
+      )}
+    </>
   )
 }
 

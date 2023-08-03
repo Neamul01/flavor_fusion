@@ -11,7 +11,7 @@ export default function Admin({ children }: { children: React.ReactNode }) {
   return (
     <div className="bg-white">
       <Sidebar />
-      <div className="relative md:ml-64 bg-blueGray-100">
+      <div className="relative ml-64 bg-secondary/80">
         <AdminNavbar />
         {/* Header */}
         <HeaderStats />
