@@ -42,10 +42,10 @@ export default function Page({ params }: { params: { id: string } }) {
       <Layout bg="white" color="secondary">
         {/* image and short details section  */}
         <div className="grid grid-cols-12 py-20">
-          <div className="col-span-6 mr-4">
+          <div className="col-span-12 md:col-span-6 md:mr-4 mb-10">
             <ProductImage items={swiperItems} />
           </div>
-          <div className="col-span-6 px-4">
+          <div className="col-span-12 md:col-span-6 md:px-4">
             <Product params={params.id} />
           </div>
         </div>
@@ -59,15 +59,15 @@ export default function Page({ params }: { params: { id: string } }) {
             // defaultValue="details"
             value={activeTab}
             onTabChange={setActiveTab}
-            className="flex gap-4 my-10"
+            className="flex flex-col md:flex-row gap-4 my-10"
           >
             {/* tabs for details */}
-            <Tabs.List className="flex flex-col gap-5 min-w-[14rem] border-none">
+            <Tabs.List className="flex flex-col gap-5 min-w-[14rem] border-none mb-10 md:mb-0">
               {tabs.map((tab) => (
                 <Tabs.Tab
                   key={tab.id}
                   value={tab.name}
-                  className={` py-4 rounded-none ${
+                  className={` py-4 rounded-none bg-secondary/10 ${
                     activeTab === tab.name
                       ? 'bg-secondary hover:bg-secondary border-none'
                       : 'bg-white bg-secondary/5'
@@ -85,7 +85,7 @@ export default function Page({ params }: { params: { id: string } }) {
             </Tabs.List>
 
             {/* tab items for above tabs */}
-            <div className="ml-10 w-full">
+            <div className="md:ml-10 w-full">
               <Tabs.Panel value="details">
                 <ProductDetails />
               </Tabs.Panel>

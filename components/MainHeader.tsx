@@ -2,24 +2,13 @@
 
 import { useWindowSize } from '@/hooks/useWindowSize'
 import { motion } from 'framer-motion'
-import {
-  createStyles,
-  Header,
-  Menu,
-  Group,
-  Center,
-  Burger,
-  rem,
-  Button,
-  Transition,
-  Paper,
-} from '@mantine/core'
+import { createStyles, Group, Burger, rem, Button } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { useEffect, useState } from 'react'
-import { BsChevronDown } from 'react-icons/bs'
 import AppLogo from './Common/AppLogo'
 import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
+import { useScrollPosition } from '@/hooks/useScrollPosition'
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -130,7 +119,9 @@ function MainHeader() {
   const size = useWindowSize()
   const router = useRouter()
   const path = usePathname()
+  const scrollPostition = useScrollPosition()
 
+  console.log('scrool position', scrollPostition)
   // console.log(size)
 
   const items = links.map((link) => {
@@ -171,12 +162,13 @@ function MainHeader() {
   })
 
   const itemsToggle = links.map((link) => {
+    // console.log(path.split('/').length)
     return (
       <Link
         key={link.label}
         href={link.link}
         className={`${classes.link} ${
-          path.includes(link.link) && 'bg-secondary/20 text-primary'
+          path === link.link && 'bg-secondary/20 text-primary'
         } text-lg`}
       >
         {link.label}
@@ -190,9 +182,18 @@ function MainHeader() {
   }
 
   return (
-    <div className="bg-transparent h-16 md:h-20 text-secondary border-none md:px-2 mt-1">
+    <div
+      className={`flex items-center w-full bg-transparent h-16 md:h-20 text-secondary border-none md:px-2 mt-1 z-50 top-0 ${
+        scrollPostition > 119 && 'fixed transition-transform duration-500'
+      }`}
+    >
       <div
-        className={`${classes.inner} h-full w-full max-w-layout mx-auto bg-white md:rounded-full md:px-8 px-4`}
+        className={`${
+          classes.inner
+        } h-full w-full max-w-layout mx-auto bg-white md:rounded-full md:px-8 px-4 ${
+          scrollPostition > 119 &&
+          'border-b shadow-xl transition-transform duration-500'
+        }`}
       >
         <AppLogo />
         <Group spacing={5} className={`${classes.links}`}>
