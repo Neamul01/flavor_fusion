@@ -1,10 +1,11 @@
 import CardProfile from '@/components/Admin/CardProfile'
 import CardSettings from '@/components/Admin/CardSettings'
+import Admin from '@/layouts/Admin'
 import React from 'react'
 
 export default function page() {
   return (
-    <>
+    <Admin>
       <div className="flex flex-wrap bg-white">
         <div className="w-full lg:w-8/12 px-4">
           <CardSettings />
@@ -13,6 +14,6 @@ export default function page() {
           <CardProfile />
         </div>
       </div>
-    </>
+    </Admin>
   )
 }
