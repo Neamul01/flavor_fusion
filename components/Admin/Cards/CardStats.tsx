@@ -20,7 +20,7 @@ export default function CardStats({
               <h5 className="text-blueGray-400 uppercase font-bold text-xs">
                 {statSubtitle}
               </h5>
-              <span className="font-semibold text-xl text-blueGray-700">
+              <span className="font-semibold text-xl text-secondary/80">
                 {statTitle}
               </span>
             </div>

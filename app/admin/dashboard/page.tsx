@@ -6,7 +6,7 @@ import CardLineChart from '@/components/Admin/Cards/CardLineChart'
 import CardBarChart from '@/components/Admin/Cards/CardBarChart'
 import CardPageVisits from '@/components/Admin/Cards/CardPageVisits'
 import CardSocialTraffic from '@/components/Admin/Cards/CardSocialTraffic'
-import Admin from '@/layouts/Admin'
+import Admin from '@/components/Layouts/Admin'
 
 // layout for page
 

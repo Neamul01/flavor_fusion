@@ -39,6 +39,7 @@ export default function CardBarChart() {
       options: {
         maintainAspectRatio: false,
         responsive: true,
+        indexAxis: 'x',
         title: {
           display: false,
           text: 'Orders Chart',
@@ -59,41 +60,42 @@ export default function CardBarChart() {
           position: 'bottom',
         },
         scales: {
-          xAxes: [
-            {
-              display: false,
-              scaleLabel: {
-                display: true,
-                labelString: 'Month',
-              },
-              gridLines: {
-                borderDash: [2],
-                borderDashOffset: [2],
-                color: 'rgba(33, 37, 41, 0.3)',
-                zeroLineColor: 'rgba(33, 37, 41, 0.3)',
-                zeroLineBorderDash: [2],
-                zeroLineBorderDashOffset: [2],
-              },
-            },
-          ],
-          yAxes: [
-            {
+          x: {
+            display: false,
+            title: {
               display: true,
-              scaleLabel: {
-                display: false,
-                labelString: 'Value',
-              },
-              gridLines: {
-                borderDash: [2],
-                drawBorder: false,
-                borderDashOffset: [2],
-                color: 'rgba(33, 37, 41, 0.2)',
-                zeroLineColor: 'rgba(33, 37, 41, 0.15)',
-                zeroLineBorderDash: [2],
-                zeroLineBorderDashOffset: [2],
-              },
+              labelString: 'Month',
             },
-          ],
+            grid: {
+              // borderDash: [2],
+              // borderDashOffset: [2],
+              // color: 'rgba(33, 37, 41, 0.3)',
+              // zeroLineColor: 'rgba(33, 37, 41, 0.3)',
+              // zeroLineBorderDash: [2],
+              // zeroLineBorderDashOffset: [2],
+              color: 'rgba(33, 37, 41, 0.3)',
+              borderColor: 'rgba(33, 37, 41, 0.3)',
+              borderDash: [2],
+              drawBorder: false,
+            },
+          },
+
+          y: {
+            display: true,
+            scaleLabel: {
+              display: false,
+              labelString: 'Value',
+            },
+            grid: {
+              borderDash: [2],
+              drawBorder: false,
+              borderDashOffset: [2],
+              color: 'rgba(33, 37, 41, 0.2)',
+              zeroLineColor: 'rgba(33, 37, 41, 0.15)',
+              zeroLineBorderDash: [2],
+              zeroLineBorderDashOffset: [2],
+            },
+          },
         },
       },
     }
@@ -109,7 +111,7 @@ export default function CardBarChart() {
               <h6 className="uppercase text-blueGray-400 mb-1 text-xs font-semibold">
                 Performance
               </h6>
-              <h2 className="text-blueGray-700 text-xl font-semibold">
+              <h2 className="text-secondary/80 text-xl font-semibold">
                 Total orders
               </h2>
             </div>

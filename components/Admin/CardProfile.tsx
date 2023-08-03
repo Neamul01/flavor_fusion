@@ -41,7 +41,7 @@ export default function CardProfile() {
             </div>
           </div>
           <div className="text-center mt-12">
-            <h3 className="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+            <h3 className="text-xl font-semibold leading-normal mb-2 text-secondary/80 mb-2">
               Jenna Stones
             </h3>
             <div className="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
@@ -60,7 +60,7 @@ export default function CardProfile() {
           <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
             <div className="flex flex-wrap justify-center">
               <div className="w-full lg:w-9/12 px-4">
-                <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
+                <p className="mb-4 text-lg leading-relaxed text-secondary/80">
                   An artist of considerable range, Jenna the name taken by
                   Melbourne-raised, Brooklyn-based Nick Murphy writes, performs
                   and records all of his own music, giving it a warm, intimate
