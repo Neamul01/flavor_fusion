@@ -28,7 +28,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/Admin/Dropdowns/NotificationDropdown.jsx"
+    "components/Admin/Dropdowns/NotificationDropdown.jsx",
+    "components/Admin/Cards/CardLineChart.jsx",
+    "components/Admin/Cards/CardLineChart.jsx",
+    "components/Admin/Cards/CardBarChart.jsx"
   ],
   "exclude": ["node_modules"]
 }
