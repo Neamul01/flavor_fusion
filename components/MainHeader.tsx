@@ -121,7 +121,7 @@ function MainHeader() {
   const path = usePathname()
   const scrollPostition = useScrollPosition()
 
-  console.log('scrool position', scrollPostition)
+  // console.log('scrool position', scrollPostition)
   // console.log(size)
 
   const items = links.map((link) => {

@@ -34,7 +34,7 @@ const tabs = [
 ]
 
 export default function Page({ params }: { params: { id: string } }) {
-  const [activeTab, setActiveTab] = useState<string | null>('details')
+  const [activeTab, setActiveTab] = useState<string | null>('review')
 
   return (
     <div>
@@ -67,10 +67,10 @@ export default function Page({ params }: { params: { id: string } }) {
                 <Tabs.Tab
                   key={tab.id}
                   value={tab.name}
-                  className={` py-4 rounded-none bg-secondary/10 ${
+                  className={` py-4 rounded-none ${
                     activeTab === tab.name
                       ? 'bg-secondary hover:bg-secondary border-none'
-                      : 'bg-white bg-secondary/5'
+                      : 'bg-secondary/10'
                   }`}
                 >
                   <span

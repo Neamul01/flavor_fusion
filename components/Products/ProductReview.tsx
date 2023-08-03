@@ -6,7 +6,7 @@ export default function ProductReview() {
   return (
     <div className="w-full">
       <h2 className="text-3xl font-semibold mb-2">Comments(02) :</h2>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 pt-6 pb-12 md:pt-0 md:pb-0">
         {reviewCard.map((item) => (
           <ReviewCard key={item.id} item={item} />
         ))}

@@ -14,7 +14,7 @@ type Item = {
 export default function ReviewCard({ item }: { item: Item }) {
   return (
     <div className="bg-primary/5 px-5 py-7">
-      <div className="flex gap-6 items-center">
+      <div className="flex flex-col md:flex-row gap-6 md:items-center">
         <div className="relative w-[78px] h-[77px] flex-shrink-0 rounded-lg overflow-hidden">
           <Image alt="comment" src={item.img} fill />
         </div>
@@ -31,7 +31,7 @@ export default function ReviewCard({ item }: { item: Item }) {
               Replay
             </p>
           </div>
-          <p className="text-secondary/70 text-lg">{item.comment}</p>
+          <p className="text-secondary/70 md:text-lg">{item.comment}</p>
         </div>
       </div>
     </div>
