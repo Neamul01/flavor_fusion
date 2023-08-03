@@ -25,4 +25,3 @@ Used tech and packages in this project
 ## Challenges I have faced
 
 1. **Implementing swiper.js**: I have faced challenge to implementing swiper responsively. After some reserch and read their documentation finally I have implementd this feature responsively.
-2. **Implementing Framer motion**: As I am implementing this package first time in my project so it nees some time to understand.
