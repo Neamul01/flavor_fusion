@@ -30,14 +30,33 @@ export const options = {
     },
     title: {
       display: true,
-      text: 'Chart.js Line Chart',
+      text: 'Sales value',
+      font: { size: 30 },
+      color: '#333',
+    },
+  },
+  scales: {
+    x: {
+      grid: {
+        display: true,
+        color: '#333',
+      },
+      title: {
+        display: true,
+        text: 'Data in month',
+        font: { size: 15, weight: 'bold`' },
+      },
+    },
+    y: {
+      grid: {
+        display: true,
+        color: '#333',
+      },
     },
   },
 }
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
-const rawData = ['65, 78, 66, 44, 56, 67, 75']
-const chartData = rawData.map((data, index) => ({ x: labels[index], y: data }))
-console.log('chartData', chartData)
+const rawData = [65, 78, 66, 44, 56, 67, 75]
 
 export const data = {
   labels,
@@ -45,9 +64,9 @@ export const data = {
     {
       label: 'Dataset 2',
       data: rawData.map((data, index) => ({ x: labels[index], y: data })),
-      //   data: "65, 78, 66, 44, 56, 67, 75",
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      borderColor: '#333',
+      backgroundColor: 'var(--primary-color)',
+      tension: 0.4,
     },
     {
       label: 'Dataset 2',
@@ -62,5 +81,7 @@ export const data = {
 }
 
 export default function CardLineChart2() {
-  return <Line options={options} data={data} />
+  return (
+    <Line options={options} data={data} color="#333" className="text-white" />
+  )
 }
