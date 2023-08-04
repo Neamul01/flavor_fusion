@@ -118,6 +118,7 @@ function MainHeader() {
   const { classes } = useStyles()
   const size = useWindowSize()
   const router = useRouter()
+  const route = usePathname()
   const path = usePathname()
   const scrollPostition = useScrollPosition()
 
@@ -182,48 +183,52 @@ function MainHeader() {
   }
 
   return (
-    <div
-      className={`flex items-center w-full bg-transparent h-16 md:h-20 text-secondary border-none md:px-2 mt-1 z-50 top-0 ${
-        scrollPostition > 119 && 'fixed transition-transform duration-500'
-      }`}
-    >
-      <div
-        className={`${
-          classes.inner
-        } h-full w-full max-w-layout mx-auto bg-white md:rounded-full md:px-8 px-4 ${
-          scrollPostition > 119 &&
-          'border-b shadow-xl transition-transform duration-500'
-        }`}
-      >
-        <AppLogo />
-        <Group spacing={5} className={`${classes.links}`}>
-          {items}
-        </Group>
-        <div className=" cursor-pointer hidden md:block">
-          <Button
-            onClick={() => router.push('/contact')}
-            className="text-white bg-primary hover:bg-secondary transition-all rounded-full font-jost text-lg h-12 w-52"
-          >
-            Contact Now
-          </Button>
-        </div>
-        <Burger
-          opened={opened}
-          onClick={toggle}
-          className={`${classes.burger} md:hidden`}
-          size="sm"
-        />
-        <motion.div
-          className={`${classes.dropdown} text-left bg-white flex flex-col gap-2 p-2`}
-          animate={opened ? 'open' : 'closed'}
-          initial={{ opacity: 0 }}
-          variants={variants}
-          onClick={() => toggle()}
+    <>
+      {route.split('/').includes('admin') ? null : (
+        <div
+          className={`flex items-center w-full bg-transparent h-16 md:h-20 text-secondary border-none md:px-2 mt-1 z-50 top-0 ${
+            scrollPostition > 119 && 'fixed transition-transform duration-500'
+          }`}
         >
-          {itemsToggle}
-        </motion.div>
-      </div>
-    </div>
+          <div
+            className={`${
+              classes.inner
+            } h-full w-full max-w-layout mx-auto bg-white md:rounded-full md:px-8 px-4 ${
+              scrollPostition > 119 &&
+              'border-b shadow-xl transition-transform duration-500'
+            }`}
+          >
+            <AppLogo />
+            <Group spacing={5} className={`${classes.links}`}>
+              {items}
+            </Group>
+            <div className=" cursor-pointer hidden md:block">
+              <Button
+                onClick={() => router.push('/contact')}
+                className="text-white bg-primary hover:bg-secondary transition-all rounded-full font-jost text-lg h-12 w-52"
+              >
+                Contact Now
+              </Button>
+            </div>
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              className={`${classes.burger} md:hidden`}
+              size="sm"
+            />
+            <motion.div
+              className={`${classes.dropdown} text-left bg-white flex flex-col gap-2 p-2`}
+              animate={opened ? 'open' : 'closed'}
+              initial={{ opacity: 0 }}
+              variants={variants}
+              onClick={() => toggle()}
+            >
+              {itemsToggle}
+            </motion.div>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 
