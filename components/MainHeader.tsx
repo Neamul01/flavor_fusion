@@ -122,8 +122,22 @@ function MainHeader() {
   const path = usePathname()
   const scrollPostition = useScrollPosition()
 
-  // console.log('scrool position', scrollPostition)
-  // console.log(size)
+  // const activePaths = path
+  //   .split('/')
+  //   .filter((item) => item !== '')
+  //   .map((item) => `/${item}`)
+  // const activePaths = path
+
+  const activePaths = () => {
+    const newPath = path
+      .split('/')
+      .filter((item) => item !== '')
+      .map((item) => `/${item}`)
+    if (newPath.length === 0) return ['/']
+    return newPath
+  }
+
+  // console.log('path', activePaths())
 
   const items = links.map((link) => {
     // const menuItems = link.links?.map((item) => (
@@ -155,7 +169,9 @@ function MainHeader() {
       <Link
         key={link.label}
         href={link.link}
-        className={`${classes.link} text-lg `}
+        className={`${classes.link} ${
+          activePaths().includes(link.link) ? ' text-primary' : ''
+        } text-lg `}
       >
         {link.label}
       </Link>
@@ -163,13 +179,14 @@ function MainHeader() {
   })
 
   const itemsToggle = links.map((link) => {
-    // console.log(path.split('/').length)
     return (
       <Link
         key={link.label}
         href={link.link}
         className={`${classes.link} ${
-          path === link.link && 'bg-secondary/20 text-primary'
+          activePaths().includes(link.link)
+            ? 'bg-secondary/20 text-primary'
+            : ''
         } text-lg`}
       >
         {link.label}

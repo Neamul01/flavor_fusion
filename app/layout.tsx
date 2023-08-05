@@ -33,9 +33,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const route = typeof window !== 'undefined' ? window.location.pathname : ''
-  console.log('route', route)
-  console.log('route')
   return (
     <html lang="en">
       <body
@@ -43,7 +40,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <header className={`text-center sticky top-0 left-0 z-50`}>
-          {route.includes('/admin') ? null : <MainHeader />}
+          <MainHeader />
         </header>
         <main>{children}</main>
         <footer className="bg-[linear-gradient(rgba(9,22,29,.9),rgba(9,22,29,.9)),url('/footer-bg.png')] relative bg-cover bg-no-repeat">
