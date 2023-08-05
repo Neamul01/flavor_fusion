@@ -82,6 +82,11 @@ export const data = {
 
 export default function CardLineChart2() {
   return (
-    <Line options={options} data={data} color="#333" className="text-white" />
+    <Line
+      options={options}
+      data={data}
+      color="#333"
+      className="text-white shadow-lg"
+    />
   )
 }
