@@ -1,11 +1,16 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
 import CustomButton from '../Common/CustomButton'
 import H2heading from './Common/H2heading'
 import TopHeading from './Common/TopHeading'
 import HomeLayout from '../Layouts/Layout'
+import { useRouter } from 'next/navigation'
 
 function AboutTo() {
+  const router = useRouter()
+
   return (
     <HomeLayout className="grid grid-cols-1 md:grid-cols-12 gap-10 md:mb-20">
       <div className="about-left md:col-span-5 col-span-1 h-[35.5625rem] max-w-xs md:max-w-full relative">
@@ -61,7 +66,11 @@ function AboutTo() {
           </div>
         </div>
 
-        <CustomButton name="Discover more" text="Discoder more" />
+        <CustomButton
+          name="Discover more"
+          text="Discoder more"
+          onClick={() => router.push('/about')}
+        />
       </div>
     </HomeLayout>
   )

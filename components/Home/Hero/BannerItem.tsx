@@ -7,8 +7,10 @@ import Image from 'next/image'
 import './hero.css'
 import CustomButton from '../../Common/CustomButton'
 import TopHeading from '../Common/TopHeading'
+import { useRouter } from 'next/navigation'
 
 function BannerItem() {
+  const router = useRouter()
   return (
     <div className="grid lg:grid-cols-2">
       <div className="flex flex-col md:items-start items-center gap-4 justify-center">
@@ -20,7 +22,11 @@ function BannerItem() {
           It is a long established fact that a reader will be distracted by the
           readable content of a page.
         </p>
-        <CustomButton name="discover-more" text="Discover More" />
+        <CustomButton
+          name="discover-more"
+          text="Discover More"
+          onClick={() => router.push('/about')}
+        />
         {/* <Button
           leftIcon={<BsArrowUpRightCircle size={'1.3rem'} />}
           name="discover-more"
