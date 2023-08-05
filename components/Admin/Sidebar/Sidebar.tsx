@@ -84,7 +84,7 @@ export default function Sidebar() {
             <hr className="my-4 md:min-w-full" />
             {/* Heading */}
             <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-              Admin Layout Pages
+              Admin Pages
             </h6>
             {/* Navigation */}
 
@@ -163,7 +163,7 @@ export default function Sidebar() {
             <hr className="my-4 md:min-w-full" />
             {/* Heading */}
             <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-              Auth Layout Pages
+              Auth Pages
             </h6>
             {/* Navigation */}
 
@@ -188,28 +188,6 @@ export default function Sidebar() {
                   >
                     <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{' '}
                     Register
-                  </a>
-                </Link>
-              </li>
-            </ul>
-
-            {/* Divider */}
-            <hr className="my-4 md:min-w-full" />
-            {/* Heading */}
-            <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-              No Layout Pages
-            </h6>
-            {/* Navigation */}
-
-            <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
-              <li className="items-center">
-                <Link legacyBehavior href="/profile">
-                  <a
-                    href="#pablo"
-                    className="text-secondary/80 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  >
-                    <i className="fas fa-user-circle text-blueGray-400 mr-2 text-sm"></i>{' '}
-                    Profile Page
                   </a>
                 </Link>
               </li>
