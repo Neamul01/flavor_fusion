@@ -96,8 +96,9 @@ function FoodCarousel() {
               <motion.div
                 className="relative swiper-slide-food px-6 md:px-16"
                 initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
+                viewport={{ once: false }}
               >
                 <div className="left-3 absolute ">
                   <div className="food-img relative h-28 md:h-36 w-28 md:w-36">

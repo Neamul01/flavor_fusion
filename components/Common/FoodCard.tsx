@@ -2,6 +2,7 @@ import { Badge } from '@mantine/core'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 type Item = {
   id: number
@@ -14,7 +15,14 @@ type Item = {
 export default function FoodCard({ item }: { item: Item }) {
   const router = useRouter()
   return (
-    <div className=" border rounded-xl max-w-[26rem] relative" key={item.id}>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: false }}
+      className=" border rounded-xl max-w-[26rem] relative"
+      key={item.id}
+    >
       <div className="border rounded-t-xl overflow-hidden relative">
         <Image
           onClick={() => router.push(`/products/${item.id}`)}
@@ -48,6 +56,6 @@ export default function FoodCard({ item }: { item: Item }) {
           {item.description}
         </p>
       </div>
-    </div>
+    </motion.div>
   )
 }
