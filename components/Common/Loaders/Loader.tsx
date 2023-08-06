@@ -35,6 +35,7 @@ export default function Loader({ count = 5 }: { count?: number }) {
         height: 100,
         alignItems: 'center',
       }}
+      className="flex itemsc-center justify-center"
     >
       {Array(count)
         .fill(null)
