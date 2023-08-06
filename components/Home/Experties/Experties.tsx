@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import HomeLayout from '../../Layouts/Layout'
 import TopHeading from '../Common/TopHeading'
@@ -7,6 +8,7 @@ import { BiLogoFacebook } from 'react-icons/bi'
 import { AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai'
 import { FaLinkedinIn } from 'react-icons/fa'
 import './experties.css'
+import { motion } from 'framer-motion'
 
 const expoerties = [
   {
@@ -62,9 +64,15 @@ function Experties() {
                 key={item.id}
                 className="col-span-4 border rounded-xl overflow-hidden experties"
               >
-                <div className="relative w-full h-[300px] md:h-[340px]">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: false }}
+                  className="relative w-full h-[300px] md:h-[340px]"
+                >
                   <Image src={item.img} alt="experts" fill />
-                </div>
+                </motion.div>
                 <div className="flex items-center flex-col my-8 expoerties-profile">
                   <h3 className="text-2xl font-semibold capitalize hover:text-primary cursor-pointer">
                     {item.name}
