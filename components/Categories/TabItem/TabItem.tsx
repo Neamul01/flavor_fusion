@@ -1,6 +1,7 @@
 import React from 'react'
 import CategoryItemCard from '../CategoryItemCard/CategoryItemCard'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function TabItem({ tabName }: { tabName: string }) {
   const mapTab = (name: string) => {
@@ -19,13 +20,25 @@ export default function TabItem({ tabName }: { tabName: string }) {
       ))}
 
       <div className="absolute left-[45%] top-0 h-full text-center hidden md:block">
-        <p className="w-5 h-5 relative">
+        <motion.p
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false }}
+          className="w-5 h-5 relative"
+        >
           <Image src={'/sub-title-vec.svg'} alt="vec" fill />
-        </p>
+        </motion.p>
         <div className="h-[90%] w-[1px] mx-auto my-1 border border-dashed border-primary/60"></div>
-        <p className="w-5 h-5 relative">
+        <motion.p
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false }}
+          className="w-5 h-5 relative"
+        >
           <Image src={'/sub-title-vec.svg'} alt="vec" fill />
-        </p>
+        </motion.p>
       </div>
     </div>
   )

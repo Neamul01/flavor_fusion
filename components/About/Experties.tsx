@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper'
 import Image from 'next/image'
 import './experties.css'
+import { motion } from 'framer-motion'
 
 const experties = [
   {
@@ -82,9 +83,15 @@ export default function Experties() {
           >
             {experties.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="w-[415px] h-[350px] relative rounded-lg overflow-hidden ">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: false }}
+                  className="w-[415px] h-[350px] relative rounded-lg overflow-hidden "
+                >
                   <Image src={item.img} alt="expert" fill />
-                </div>
+                </motion.div>
                 <div className="flex flex-col justify-center items-center">
                   <h2 className="text-3xl capitalize font-semibold text-center mt-4">
                     {item.name}
