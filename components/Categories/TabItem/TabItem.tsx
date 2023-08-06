@@ -20,25 +20,13 @@ export default function TabItem({ tabName }: { tabName: string }) {
       ))}
 
       <div className="absolute left-[45%] top-0 h-full text-center hidden md:block">
-        <motion.p
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: false }}
-          className="w-5 h-5 relative"
-        >
+        <p className="w-5 h-5 relative">
           <Image src={'/sub-title-vec.svg'} alt="vec" fill />
-        </motion.p>
+        </p>
         <div className="h-[90%] w-[1px] mx-auto my-1 border border-dashed border-primary/60"></div>
-        <motion.p
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: false }}
-          className="w-5 h-5 relative"
-        >
+        <p className="w-5 h-5 relative">
           <Image src={'/sub-title-vec.svg'} alt="vec" fill />
-        </motion.p>
+        </p>
       </div>
     </div>
   )
