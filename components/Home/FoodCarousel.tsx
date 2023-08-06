@@ -7,6 +7,7 @@ import './foodCarousel.css'
 import Image from 'next/image'
 import HomeLayout from '../Layouts/Layout'
 import { useWindowSize } from '@/hooks/useWindowSize'
+import { motion } from 'framer-motion'
 
 function FoodCarousel() {
   const screen = useWindowSize()
@@ -91,23 +92,28 @@ function FoodCarousel() {
       >
         {foodItems.map((food) => {
           return (
-            <SwiperSlide
-              key={food.id}
-              className="relative swiper-slide-food px-6 md:px-16"
-            >
-              <div className="left-3 absolute ">
-                <div className="food-img relative h-28 md:h-36 w-28 md:w-36">
-                  <Image src={food.img} alt={food.name} fill />
+            <SwiperSlide key={food.id}>
+              <motion.div
+                className="relative swiper-slide-food px-6 md:px-16"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: false }}
+              >
+                <div className="left-3 absolute ">
+                  <div className="food-img relative h-28 md:h-36 w-28 md:w-36">
+                    <Image src={food.img} alt={food.name} fill />
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col border ml-auto w-full pl-28">
-                <a className="md:text-2xl font-semibold text-xl text-secondary font-cormorant">
-                  {food.name}
-                </a>
-                <p className="text-sm max-w-[10rem] text-secondary/50 font-jost">
-                  {food.description}
-                </p>
-              </div>
+                <div className="flex flex-col border ml-auto w-full pl-28">
+                  <a className="md:text-2xl font-semibold text-xl text-secondary font-cormorant">
+                    {food.name}
+                  </a>
+                  <p className="text-sm max-w-[10rem] text-secondary/50 font-jost">
+                    {food.description}
+                  </p>
+                </div>
+              </motion.div>
             </SwiperSlide>
           )
         })}

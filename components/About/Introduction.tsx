@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { GiSupersonicArrow } from 'react-icons/gi'
 import { BsCheck2Circle } from 'react-icons/bs'
 import styles from './about.module.css'
+import { motion } from 'framer-motion'
 
 type Point = {
   id: number
@@ -48,9 +49,15 @@ function Introduction() {
       </HomeLayout>
       <div className="max-w-layour_large mx-auto mt-9 flex flex-col md:flex-row items-center gap-6">
         {/* left image  */}
-        <div className=" relative h-[19rem] md:h-[34.1875rem] w-[18rem] md:w-[33.125rem] rounded-tl-xl rounded-br-xl overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false }}
+          className=" relative h-[19rem] md:h-[34.1875rem] w-[18rem] md:w-[33.125rem] rounded-tl-xl rounded-br-xl overflow-hidden"
+        >
           <Image src={'/about/intro-left-img.png'} alt="chef" fill />
-        </div>
+        </motion.div>
         {/* right content  */}
         <div className="flex flex-col gap-8 mx-4 md:mx-0">
           <div className="flex flex-col md:flex-row items-center gap-4 max-w-4xl">
@@ -104,7 +111,13 @@ function Introduction() {
               </div>
             </div>
             {/* right image  */}
-            <div className="hidden md:block">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: false }}
+              className="hidden md:block"
+            >
               <Image
                 src={'/about/intro-right-img.png'}
                 alt="intro right"
@@ -112,7 +125,7 @@ function Introduction() {
                 height={382}
                 className="rounded-tl-xl rounded-br-xl"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

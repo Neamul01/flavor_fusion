@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from 'next/image'
 import { Autoplay, Navigation, Pagination } from 'swiper'
 import './gallery.css'
+import { motion } from 'framer-motion'
 
 const galleryItems = [
   {
@@ -117,7 +118,11 @@ function Gallery({
           {galleryItems.map((item) => {
             return (
               <SwiperSlide key={item.id}>
-                <div
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: false }}
                   className={`h-[296px] w-[351px] ${
                     item.id % 2 === 0 ? '' : 'mt-3'
                   } relative overlay-gallery-parent`}
@@ -140,7 +145,7 @@ function Gallery({
                       </div>
                     )}
                   </div>
-                </div>
+                </motion.div>
               </SwiperSlide>
             )
           })}

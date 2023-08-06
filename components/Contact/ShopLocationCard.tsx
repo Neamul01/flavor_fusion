@@ -4,6 +4,7 @@ import { TfiLocationPin } from 'react-icons/tfi'
 import { BiPhoneCall } from 'react-icons/bi'
 import { Divider } from '@mantine/core'
 import { AiOutlineMail } from 'react-icons/ai'
+import { motion } from 'framer-motion'
 
 type ShopLocationCardProps = {
   title: string
@@ -21,9 +22,15 @@ export default function ShopLocationCard({
 }) {
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="mx-auto w-[272px] h-[266px] md:w-[368px] md:h-[375px] relative md:rounded-tl-xl md:rounded-br-xl overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: false }}
+        className="mx-auto w-[272px] h-[266px] md:w-[368px] md:h-[375px] relative md:rounded-tl-xl md:rounded-br-xl overflow-hidden"
+      >
         <Image src={location.img} fill alt="shop" />
-      </div>
+      </motion.div>
       <div className="flex flex-col items-center border md:m-6 mb-6 mx-6 md:ml-0 md:px-5 py-8 px-2 md:rounded-tr-xl rounded-br-xl md:rounded-br-none rounded-bl-xl md:w-[20rem] ">
         <div className=" inline-block">
           <h2 className=" text-3xl font-semibold">{location.title}</h2>

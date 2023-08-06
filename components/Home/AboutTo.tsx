@@ -6,6 +6,7 @@ import CustomButton from '../Common/CustomButton'
 import H2heading from './Common/H2heading'
 import TopHeading from './Common/TopHeading'
 import HomeLayout from '../Layouts/Layout'
+import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 
 function AboutTo() {
@@ -13,9 +14,15 @@ function AboutTo() {
 
   return (
     <HomeLayout className="grid grid-cols-1 md:grid-cols-12 gap-10 md:mb-20">
-      <div className="about-left md:col-span-5 col-span-1 h-[35.5625rem] max-w-xs md:max-w-full relative">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: false }}
+        className="about-left md:col-span-5 col-span-1 h-[35.5625rem] max-w-xs md:max-w-full relative"
+      >
         <Image src={'/about-img-full.png'} alt="about" fill />
-      </div>
+      </motion.div>
       <div className="about-right md:col-span-7 col-span-1 max-w-2xl">
         <TopHeading text="About to Flavor Fusion" />
         <H2heading

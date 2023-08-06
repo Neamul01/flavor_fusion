@@ -1,6 +1,7 @@
 import React from 'react'
 import CategoryItemCard from '../CategoryItemCard/CategoryItemCard'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function TabItem({ tabName }: { tabName: string }) {
   const mapTab = (name: string) => {
