@@ -11,7 +11,7 @@ const breadcrumbsItems = [
   { title: 'About', href: '/about' },
 ]
 
-function about() {
+function About() {
   return (
     <>
       <StyleHeading breadcrumbsItems={breadcrumbsItems} text="about us" />
@@ -24,4 +24,4 @@ function about() {
   )
 }
 
-export default about
+export default About

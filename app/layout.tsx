@@ -35,6 +35,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="shortcut icon"
+          href="/flavor-fusion-logo2.png"
+          type="image/x-icon"
+        />
+      </head>
       <body
         className={`min-h-screen ${cormorantGaramond.variable} ${jost.variable}`}
         suppressHydrationWarning={true}
