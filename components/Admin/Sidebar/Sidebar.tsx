@@ -37,6 +37,20 @@ export default function Sidebar() {
     )
   })
 
+  const authRoutes = authPages.map((page) => (
+    <li key={page.href} className="items-center">
+      <Link legacyBehavior href={page.href}>
+        <a
+          href="#pablo"
+          className="text-secondary/80 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+        >
+          <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>
+          {page.name}
+        </a>
+      </Link>
+    </li>
+  ))
+
   const collapseMenu = (
     <button
       className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
@@ -55,6 +69,8 @@ export default function Sidebar() {
           {collapseMenu}
           {/* Brand logo */}
           <AppLogo />
+
+          {/* ******************mobile */}
           {/* User */}
           <ul className="md:hidden items-center flex flex-wrap list-none">
             <li className="inline-block relative">
@@ -105,29 +121,7 @@ export default function Sidebar() {
               {/* Navigation */}
 
               <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
-                <li className="items-center">
-                  <Link legacyBehavior href="/auth/login">
-                    <a
-                      href="#pablo"
-                      className="text-secondary/80 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                    >
-                      <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i>{' '}
-                      Login
-                    </a>
-                  </Link>
-                </li>
-
-                <li className="items-center">
-                  <Link legacyBehavior href="/auth/register">
-                    <a
-                      href="#pablo"
-                      className="text-secondary/80 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                    >
-                      <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{' '}
-                      Register
-                    </a>
-                  </Link>
-                </li>
+                {authRoutes}
               </ul>
             </div>
           )}
@@ -136,6 +130,19 @@ export default function Sidebar() {
     </>
   )
 }
+
+const authPages = [
+  {
+    id: 1,
+    name: 'Login',
+    href: '/auth/login',
+  },
+  {
+    id: 2,
+    name: 'Register',
+    href: '/auth/register',
+  },
+]
 
 const adminPages = [
   {
