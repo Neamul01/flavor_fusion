@@ -22,7 +22,6 @@ export default function Sidebar() {
               ? 'text-primary bg-secondary/10 rounded-lg hover:text-lightBlue-600'
               : 'text-secondary/80 hover:text-blueGray-500')
           }
-          onClick={() => setCollapseShow(false)}
         >
           <i
             className={
