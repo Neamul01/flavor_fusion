@@ -4,7 +4,7 @@ import { useWindowSize } from '@/hooks/useWindowSize'
 import { motion } from 'framer-motion'
 import { createStyles, Group, Burger, rem, Button } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import AppLogo from './Common/AppLogo'
 import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
@@ -109,6 +109,10 @@ const links = [
   {
     link: '/contact',
     label: 'Contact',
+  },
+  {
+    link: '/admin/dashboard',
+    label: 'Dashboard(Admin)',
   },
 ]
 
