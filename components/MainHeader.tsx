@@ -110,6 +110,10 @@ const links = [
     link: '/contact',
     label: 'Contact',
   },
+  {
+    link: '/admin/dashboard',
+    label: 'Dashboard',
+  },
 ]
 
 function MainHeader() {
