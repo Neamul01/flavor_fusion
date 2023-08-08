@@ -112,7 +112,7 @@ const links = [
   },
   {
     link: '/admin/dashboard',
-    label: 'Dashboard',
+    label: 'Dashboard(Admin)',
   },
 ]
 

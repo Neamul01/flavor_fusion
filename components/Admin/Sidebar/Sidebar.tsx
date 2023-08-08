@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -7,7 +7,7 @@ import NotificationDropdown from '@/components/Admin/Dropdowns/NotificationDropd
 import UserDropdown from '@/components/Admin/Dropdowns/UserDropdown'
 
 export default function Sidebar() {
-  const [collapseShow, setCollapseShow] = React.useState('hidden')
+  const [collapseShow, setCollapseShow] = useState(false)
   const router = usePathname()
   return (
     <>
@@ -17,9 +17,9 @@ export default function Sidebar() {
           <button
             className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
             type="button"
-            // onClick={() => setCollapseShow('bg-white m-2 py-3 px-6')}
+            onClick={() => setCollapseShow(!collapseShow)}
           >
-            <i className="fas fa-bars"></i>
+            <i className="fas fa-bars"></i>i
           </button>
           {/* Brand */}
           <Link
@@ -39,160 +39,161 @@ export default function Sidebar() {
             </li>
           </ul>
           {/* Collapse */}
-          <div
-            className={
-              'md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded ' +
-              collapseShow
-            }
-          >
-            {/* Collapse header */}
-            <div className="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200">
-              <div className="flex flex-wrap">
-                <div className="w-6/12">
-                  <Link legacyBehavior href="/">
+          {collapseShow === false ? null : (
+            <div
+              className={
+                'md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded bg-white m-2 py-3 px-6'
+              }
+            >
+              {/* Collapse header */}
+              <div className="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200">
+                <div className="flex flex-wrap">
+                  <div className="w-6/12">
+                    <Link legacyBehavior href="/">
+                      <a
+                        href="#pablo"
+                        className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
+                      >
+                        Flavor Fusion
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="w-6/12 flex justify-end">
+                    <button
+                      type="button"
+                      className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
+                      onClick={() => setCollapseShow(!collapseShow)}
+                    >
+                      <i className="fas fa-times"></i>i
+                    </button>
+                  </div>
+                </div>
+              </div>
+              {/* Form */}
+              <form className="mt-6 mb-4 md:hidden">
+                <div className="mb-3 pt-0">
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    className="px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
+                  />
+                </div>
+              </form>
+
+              {/* Divider */}
+              <hr className="my-4 md:min-w-full" />
+              {/* Heading */}
+              <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+                Admin Pages
+              </h6>
+              {/* Navigation */}
+
+              <ul className="md:flex-col md:min-w-full flex flex-col list-none">
+                <li className="items-center">
+                  <Link
+                    href="/admin/dashboard"
+                    // href="#pablo"
+                    className={
+                      'text-xs uppercase py-3 font-bold block ' +
+                      (router.indexOf('/admin/dashboard') !== -1
+                        ? 'text-lightBlue-500 hover:text-lightBlue-600'
+                        : 'text-secondary/80 hover:text-blueGray-500')
+                    }
+                  >
+                    <i
+                      className={
+                        'fas fa-tv mr-2 text-sm ' +
+                        (router.indexOf('/admin/dashboard') !== -1
+                          ? 'opacity-75'
+                          : 'text-blueGray-300')
+                      }
+                    ></i>{' '}
+                    Dashboard
+                  </Link>
+                </li>
+
+                <li className="items-center">
+                  <Link
+                    href="/admin/settings"
+                    // href="#pablo"
+                    className={
+                      'text-xs uppercase py-3 font-bold block ' +
+                      (router.indexOf('/admin/settings') !== -1
+                        ? 'text-lightBlue-500 hover:text-lightBlue-600'
+                        : 'text-secondary/80 hover:text-blueGray-500')
+                    }
+                  >
+                    <i
+                      className={
+                        'fas fa-tools mr-2 text-sm ' +
+                        (router.indexOf('/admin/settings') !== -1
+                          ? 'opacity-75'
+                          : 'text-blueGray-300')
+                      }
+                    ></i>{' '}
+                    Settings
+                  </Link>
+                </li>
+
+                <li className="items-center">
+                  <Link
+                    href="/admin/tables"
+                    // href="#pablo"
+                    className={
+                      'text-xs uppercase py-3 font-bold block ' +
+                      (router.indexOf('/admin/tables') !== -1
+                        ? 'text-lightBlue-500 hover:text-lightBlue-600'
+                        : 'text-secondary/80 hover:text-blueGray-500')
+                    }
+                  >
+                    <i
+                      className={
+                        'fas fa-table mr-2 text-sm ' +
+                        (router.indexOf('/admin/tables') !== -1
+                          ? 'opacity-75'
+                          : 'text-blueGray-300')
+                      }
+                    ></i>{' '}
+                    Tables
+                  </Link>
+                </li>
+              </ul>
+
+              {/* Divider */}
+              <hr className="my-4 md:min-w-full" />
+              {/* Heading */}
+              <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+                Auth Pages
+              </h6>
+              {/* Navigation */}
+
+              <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+                <li className="items-center">
+                  <Link legacyBehavior href="/auth/login">
                     <a
                       href="#pablo"
-                      className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
+                      className="text-secondary/80 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                     >
-                      Flavor Fusion
+                      <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i>{' '}
+                      Login
                     </a>
                   </Link>
-                </div>
-                <div className="w-6/12 flex justify-end">
-                  <button
-                    type="button"
-                    className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
-                    // onClick={() => setCollapseShow('hidden')}
-                  >
-                    <i className="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
+                </li>
+
+                <li className="items-center">
+                  <Link legacyBehavior href="/auth/register">
+                    <a
+                      href="#pablo"
+                      className="text-secondary/80 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                    >
+                      <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{' '}
+                      Register
+                    </a>
+                  </Link>
+                </li>
+              </ul>
             </div>
-            {/* Form */}
-            <form className="mt-6 mb-4 md:hidden">
-              <div className="mb-3 pt-0">
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
-                />
-              </div>
-            </form>
-
-            {/* Divider */}
-            <hr className="my-4 md:min-w-full" />
-            {/* Heading */}
-            <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-              Admin Pages
-            </h6>
-            {/* Navigation */}
-
-            <ul className="md:flex-col md:min-w-full flex flex-col list-none">
-              <li className="items-center">
-                <Link
-                  href="/admin/dashboard"
-                  // href="#pablo"
-                  className={
-                    'text-xs uppercase py-3 font-bold block ' +
-                    (router.indexOf('/admin/dashboard') !== -1
-                      ? 'text-lightBlue-500 hover:text-lightBlue-600'
-                      : 'text-secondary/80 hover:text-blueGray-500')
-                  }
-                >
-                  <i
-                    className={
-                      'fas fa-tv mr-2 text-sm ' +
-                      (router.indexOf('/admin/dashboard') !== -1
-                        ? 'opacity-75'
-                        : 'text-blueGray-300')
-                    }
-                  ></i>{' '}
-                  Dashboard
-                </Link>
-              </li>
-
-              <li className="items-center">
-                <Link
-                  href="/admin/settings"
-                  // href="#pablo"
-                  className={
-                    'text-xs uppercase py-3 font-bold block ' +
-                    (router.indexOf('/admin/settings') !== -1
-                      ? 'text-lightBlue-500 hover:text-lightBlue-600'
-                      : 'text-secondary/80 hover:text-blueGray-500')
-                  }
-                >
-                  <i
-                    className={
-                      'fas fa-tools mr-2 text-sm ' +
-                      (router.indexOf('/admin/settings') !== -1
-                        ? 'opacity-75'
-                        : 'text-blueGray-300')
-                    }
-                  ></i>{' '}
-                  Settings
-                </Link>
-              </li>
-
-              <li className="items-center">
-                <Link
-                  href="/admin/tables"
-                  // href="#pablo"
-                  className={
-                    'text-xs uppercase py-3 font-bold block ' +
-                    (router.indexOf('/admin/tables') !== -1
-                      ? 'text-lightBlue-500 hover:text-lightBlue-600'
-                      : 'text-secondary/80 hover:text-blueGray-500')
-                  }
-                >
-                  <i
-                    className={
-                      'fas fa-table mr-2 text-sm ' +
-                      (router.indexOf('/admin/tables') !== -1
-                        ? 'opacity-75'
-                        : 'text-blueGray-300')
-                    }
-                  ></i>{' '}
-                  Tables
-                </Link>
-              </li>
-            </ul>
-
-            {/* Divider */}
-            <hr className="my-4 md:min-w-full" />
-            {/* Heading */}
-            <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-              Auth Pages
-            </h6>
-            {/* Navigation */}
-
-            <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
-              <li className="items-center">
-                <Link legacyBehavior href="/auth/login">
-                  <a
-                    href="#pablo"
-                    className="text-secondary/80 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  >
-                    <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i>{' '}
-                    Login
-                  </a>
-                </Link>
-              </li>
-
-              <li className="items-center">
-                <Link legacyBehavior href="/auth/register">
-                  <a
-                    href="#pablo"
-                    className="text-secondary/80 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  >
-                    <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{' '}
-                    Register
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </div>
+          )}
         </div>
       </nav>
     </>
