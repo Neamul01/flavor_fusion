@@ -64,11 +64,28 @@ export default function Sidebar() {
   return (
     <>
       <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
-        <div className="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
+        <div className="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between md:justify-normal w-full mx-auto">
           {/* Toggler */}
           {collapseMenu}
           {/* Brand logo */}
           <AppLogo />
+          {/* Divider */}
+          <hr className="my-4 md:min-w-full" />
+
+          <div className="hidden md:flex flex-col gap-4">
+            <ul className="md:flex-col md:min-w-full flex flex-col list-none">
+              {adminRoutes}
+            </ul>
+            <div className="">
+              <h6 className="md:min-w-full text-primary text-xs uppercase font-bold block pt-1 pb-2 no-underline">
+                Auth Pages
+              </h6>
+              {/* Navigation */}
+              <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+                {authRoutes}
+              </ul>
+            </div>
+          </div>
 
           {/* ******************mobile */}
           {/* User */}
