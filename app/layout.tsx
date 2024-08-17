@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Flavor fusion',
-  description: 'Take test to find your favourite food flavor',
+  description: 'Take test to find your favorite food flavor',
 }
 
 const jost = Jost({
